@@ -2,7 +2,7 @@ import cottonGreenLogo from "../../assets/images/cotton-green-logo.png";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-around items-center p-4 text-black">
+    <div className="flex justify-between items-center px-34 text-black">
       {/* Cotton Logo */}
       <img
         src={cottonGreenLogo}
