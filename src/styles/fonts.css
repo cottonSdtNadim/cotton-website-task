@@ -129,3 +129,263 @@
   font-weight: 100;
   font-style: italic;
 }
+
+/* Noto Serif Bengali font-face declarations */
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali_Condensed-Black.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali_Condensed-Bold.ttf") format("ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali_Condensed-ExtraBold.ttf") format("ttf");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali_Condensed-ExtraLight.ttf") format("ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali_Condensed-Light.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali_Condensed-Medium.ttf") format("ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali_Condensed-Regular.ttf") format("ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali_Condensed-SemiBold.ttf") format("ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali_Condensed-Thin.ttf") format("ttf");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali_ExtraCondensed-Black.ttf") format("ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali_ExtraCondensed-Bold.ttf") format("ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali_ExtraCondensed-ExtraBold.ttf")
+    format("ttf");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali_ExtraCondensed-ExtraLight.ttf")
+    format("ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali_ExtraCondensed-Light.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali_ExtraCondensed-Medium.ttf") format("ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali_ExtraCondensed-Regular.ttf")
+    format("ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali_ExtraCondensed-SemiBold.ttf")
+    format("ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali_ExtraCondensed-Thin.ttf") format("ttf");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali_SemiCondensed-Black.ttf") format("ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali_SemiCondensed-Bold.ttf") format("ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali_SemiCondensed-ExtraBold.ttf")
+    format("ttf");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali_SemiCondensed-ExtraLight.ttf")
+    format("ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali_SemiCondensed-Light.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali_SemiCondensed-Medium.ttf") format("ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali_SemiCondensed-Regular.ttf") format("ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali_SemiCondensed-SemiBold.ttf")
+    format("ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali_SemiCondensed-Thin.ttf") format("ttf");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali-Black.ttf") format("ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali-Bold.ttf") format("ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali-ExtraBold.ttf") format("ttf");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali-ExtraLight.ttf") format("ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali-Light.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali-Medium.ttf") format("ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali-Regular.ttf") format("ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali-SemiBold.ttf") format("ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Serif Bengali";
+  src: url("/src/fonts/NotoSansBengali-Thin.ttf") format("ttf");
+  font-weight: 100;
+  font-style: normal;
+}
