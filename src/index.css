@@ -4,6 +4,10 @@
   font-family: "Poppins";
 }
 
+.bengali-text {
+  font-family: "Noto Sans Bengali", sans-serif;
+}
+
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
