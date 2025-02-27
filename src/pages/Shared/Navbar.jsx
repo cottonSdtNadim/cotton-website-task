@@ -1,8 +1,19 @@
 import cottonGreenLogo from "../../assets/images/cotton-green-logo.png";
 
 const Navbar = () => {
+  const navItems = (
+    <>
+      <li>Home</li>
+      <li>About Cotton</li>
+      <li>Work</li>
+      <li>Sustainability</li>
+      <li>Order</li>
+      <li>Contact</li>
+    </>
+  );
+
   return (
-    <div className="flex justify-between items-center px-34 text-black">
+    <div className="flex justify-between items-center px-[110px] py-[50px] text-black">
       {/* Cotton Logo */}
       <img
         src={cottonGreenLogo}
@@ -11,13 +22,7 @@ const Navbar = () => {
       />
 
       {/* NavItems Container */}
-      <ul className="flex space-x-[55px]">
-        <li>Home</li>
-        <li>About Us</li>
-        <li>Services</li>
-        <li>Products</li>
-        <li>Contact Us</li>
-      </ul>
+      <ul className="flex gap-[55px] font-semibold">{navItems}</ul>
     </div>
   );
 };
