@@ -7,7 +7,7 @@ import BasicRoute from "./routes/BasicRoute.jsx";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     {/* <App /> */}
-    <BasicRoute></BasicRoute>
     <GridWithLines></GridWithLines>
+    <BasicRoute></BasicRoute>
   </StrictMode>
 );
