@@ -33,7 +33,10 @@ const Header = () => {
           </div>
 
           {/* English Text */}
-          <h1 className="font-extrabold text-5xl">
+          <h1
+            className="font-extrabold text-5xl"
+            // style={{ fontFamily: "Poppins" }}
+          >
             We are a leading sustainability-inspired, 100% export-oriented
             readymade garments powerhouse
           </h1>

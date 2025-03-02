@@ -1,7 +1,10 @@
+import ImageSlider from "../../components/ImageSlider";
+
 const Home = () => {
   return (
-    <div>
-      <h2>This is Home Page</h2>
+    <div className="my-52">
+      {/* <h2>This is Home Page</h2> */}
+      <ImageSlider></ImageSlider>
     </div>
   );
 };

@@ -22,7 +22,7 @@ const Navbar = () => {
       />
 
       {/* NavItems Container */}
-      <ul className="flex gap-[55px] font-semibold">{navItems}</ul>
+      <ul className="flex gap-[55px] font-semibold text-base">{navItems}</ul>
     </div>
   );
 };

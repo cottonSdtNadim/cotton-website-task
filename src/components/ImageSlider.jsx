@@ -1,163 +1,149 @@
-import { Swiper, SwiperSlide } from "swiper/react";
+// import { useState } from "react";
+// import slider1 from "../assets/images/image-sliders/image-slider-1.png";
+// import slider3 from "../assets/images/image-sliders/image-slider-3.png";
+// import slider4 from "../assets/images/image-sliders/image-slider-4.png";
+// import slider5 from "../assets/images/image-sliders/image-slider-5.png";
+// import slider2 from "../assets/images/image-sliders/image0-slider-2.png";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/navigation";
-import "swiper/css/thumbs";
+// const images = [slider1, slider2, slider3, slider4, slider5];
 
-import { FreeMode, Thumbs } from "swiper/modules";
+// const ImageSlider = () => {
+//   const [selectedIndex, setSelectedIndex] = useState(0);
+
+//   const handleThumbnailClick = (index) => {
+//     setSelectedIndex(index); // Update main image when a thumbnail is clicked
+//   };
+
+//   // Reorder images to move the selected thumbnail to the top
+//   const orderedImages = [
+//     images[selectedIndex], // Add the selected image first
+//     ...images.slice(0, selectedIndex), // Add the images before the selected one
+//     ...images.slice(selectedIndex + 1), // Add the images after the selected one
+//   ];
+
+//   return (
+//     <div className="flex items-center gap-4 px-[102px]">
+//       {/* Main Image */}
+//       <div className="w-[967px] h-[558px] flex justify-center items-center border border-gray-300 rounded-lg shadow-lg">
+//         <img
+//           src={images[selectedIndex]}
+//           alt={`Selected ${selectedIndex + 1}`}
+//           className="rounded-lg object-cover w-full h-full"
+//         />
+//       </div>
+
+//       {/* Vertical Thumbnails */}
+//       <div className="flex flex-col gap-4 h-[558px] w-56 overflow-hidden border border-gray-200 rounded-lg">
+//         {orderedImages.map((img, index) => (
+//           <div
+//             key={index}
+//             className={`relative cursor-pointer rounded-md overflow-hidden transition-all duration-300`}
+//             onClick={() => handleThumbnailClick(images.indexOf(img))}
+//           >
+//             <img
+//               src={img}
+//               alt={`Thumbnail ${index + 1}`}
+//               className={`w-full h-[100px] object-cover rounded-md transition-transform duration-300 ${
+//                 selectedIndex === images.indexOf(img)
+//                   ? "scale-110 border-2 border-blue-500"
+//                   : "border-2 border-transparent"
+//               }`}
+//             />
+//             {selectedIndex === images.indexOf(img) && (
+//               <div className="absolute top-0 left-0 right-0 bottom-0 bg-blue-500 opacity-20"></div>
+//             )}
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default ImageSlider;
+
+import { motion } from "framer-motion";
 import { useState } from "react";
+import slider1 from "../assets/images/image-sliders/image-slider-1.png";
+import slider3 from "../assets/images/image-sliders/image-slider-3.png";
+import slider4 from "../assets/images/image-sliders/image-slider-4.png";
+import slider5 from "../assets/images/image-sliders/image-slider-5.png";
+import slider2 from "../assets/images/image-sliders/image0-slider-2.png";
+
+const images = [slider1, slider2, slider3, slider4, slider5];
 
 const ImageSlider = () => {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const handleThumbnailClick = (index) => {
+    setSelectedIndex(index); // Update main image when a thumbnail is clicked
+  };
+
+  // Reorder images to move the selected thumbnail to the top
+  const orderedImages = [
+    images[selectedIndex], // Add the selected image first
+    ...images.slice(0, selectedIndex), // Add the images before the selected one
+    ...images.slice(selectedIndex + 1), // Add the images after the selected one
+  ];
 
   return (
-    <div className="flex">
-      {/* Main Image Swiper */}
-      <Swiper
-        style={{
-          "--swiper-navigation-color": "#fff",
-          "--swiper-pagination-color": "#fff",
-        }}
-        spaceBetween={10}
-        thumbs={{ swiper: thumbsSwiper }}
-        modules={[FreeMode, Thumbs]}
-        className="mySwiper2"
+    <div className="flex items-center gap-4 px-[102px]">
+      {/* Main Image container */}
+      <motion.div
+        className="w-[967px] h-[558px] flex justify-center items-center border border-gray-300 rounded-lg shadow-lg"
+        key={selectedIndex} // Key prop triggers re-render when the selectedIndex changes
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5 }} // Animation duration
       >
-        <SwiperSlide>
-          <img
-            src="https://swiperjs.com/demos/images/nature-1.jpg"
-            alt="Nature 1"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://swiperjs.com/demos/images/nature-2.jpg"
-            alt="Nature 2"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://swiperjs.com/demos/images/nature-3.jpg"
-            alt="Nature 3"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://swiperjs.com/demos/images/nature-4.jpg"
-            alt="Nature 4"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://swiperjs.com/demos/images/nature-5.jpg"
-            alt="Nature 5"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://swiperjs.com/demos/images/nature-6.jpg"
-            alt="Nature 6"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://swiperjs.com/demos/images/nature-7.jpg"
-            alt="Nature 7"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://swiperjs.com/demos/images/nature-8.jpg"
-            alt="Nature 8"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://swiperjs.com/demos/images/nature-9.jpg"
-            alt="Nature 9"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://swiperjs.com/demos/images/nature-10.jpg"
-            alt="Nature 10"
-          />
-        </SwiperSlide>
-      </Swiper>
+        <motion.img
+          src={images[selectedIndex]}
+          alt={`Selected ${selectedIndex + 1}`}
+          className="rounded-lg object-cover w-full h-full"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+        />
+      </motion.div>
 
-      {/* Thumbnails */}
-      <Swiper
-        onSwiper={setThumbsSwiper}
-        spaceBetween={10}
-        slidesPerView={4}
-        freeMode={true}
-        watchSlidesProgress={true}
-        modules={[FreeMode, Thumbs]}
-        className="mySwiper"
+      {/* Vertical Thumbnails container */}
+      <motion.div
+        className="flex flex-col gap-4 h-[558px] w-56 overflow-hidden border border-gray-200 rounded-lg"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5 }}
       >
-        <SwiperSlide>
-          <img
-            src="https://swiperjs.com/demos/images/nature-1.jpg"
-            alt="Nature 1"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://swiperjs.com/demos/images/nature-2.jpg"
-            alt="Nature 2"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://swiperjs.com/demos/images/nature-3.jpg"
-            alt="Nature 3"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://swiperjs.com/demos/images/nature-4.jpg"
-            alt="Nature 4"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://swiperjs.com/demos/images/nature-5.jpg"
-            alt="Nature 5"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://swiperjs.com/demos/images/nature-6.jpg"
-            alt="Nature 6"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://swiperjs.com/demos/images/nature-7.jpg"
-            alt="Nature 7"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://swiperjs.com/demos/images/nature-8.jpg"
-            alt="Nature 8"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://swiperjs.com/demos/images/nature-9.jpg"
-            alt="Nature 9"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://swiperjs.com/demos/images/nature-10.jpg"
-            alt="Nature 10"
-          />
-        </SwiperSlide>
-      </Swiper>
+        {orderedImages.map((img, index) => (
+          <motion.div
+            key={index}
+            className={`relative cursor-pointer rounded-md overflow-hidden transition-all duration-300`}
+            onClick={() => handleThumbnailClick(images.indexOf(img))}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <motion.img
+              src={img}
+              alt={`Thumbnail ${index + 1}`}
+              className={`w-full h-[100px] object-cover rounded-md transition-transform duration-300 ${
+                selectedIndex === images.indexOf(img)
+                  ? "scale-110 border-2 border-blue-500"
+                  : "border-2 border-transparent"
+              }`}
+              initial={{ scale: 0.8 }}
+              animate={{ scale: selectedIndex === index ? 1.1 : 1 }}
+              exit={{ scale: 0.8 }}
+              transition={{ duration: 0.3 }}
+            />
+            {selectedIndex === images.indexOf(img) && (
+              <div className="absolute top-0 left-0 right-0 bottom-0 bg-blue-500 opacity-20"></div>
+            )}
+          </motion.div>
+        ))}
+      </motion.div>
     </div>
   );
 };
