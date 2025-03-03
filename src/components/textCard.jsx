@@ -1,16 +1,25 @@
-const textCard = ({ svg, textBold, textSmall }) => {
+import PropTypes from "prop-types";
+
+const TextCard = ({ svg, textBold, textSmall }) => {
   return (
-    <div className="bg-[#0B714C] rounded-2xl">
+    <div className="bg-[#0B714C] rounded-md flex justify-start items-center p-2 w-56 h-24 text-white">
       {/* Svg */}
       <img src={svg} alt="" className="w-[65px] h-[65px]" />
 
       {/* Text Container */}
-      <div>
-        <h2 className="text-4xl ">{textBold}</h2>
-        <p>{textSmall}</p>
+      <div className="ml-2">
+        <h2 className="text-4xl font-bold">{textBold}</h2>
+        <p className="text-xs font-semibold uppercase">{textSmall}</p>
       </div>
     </div>
   );
 };
 
-export default textCard;
+// PropTypes for validation
+TextCard.propTypes = {
+  svg: PropTypes.string.isRequired, // expects a string for the image source URL
+  textBold: PropTypes.string.isRequired, // expects a string for the bold text
+  textSmall: PropTypes.string.isRequired, // expects a string for the small text
+};
+
+export default TextCard;

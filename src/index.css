@@ -1,15 +1,27 @@
 @import "tailwindcss";
+@import "../src/styles/fonts.css"; /* Import your centralized fonts file */
 
-/* :root {
+:root {
   font-family: "Poppins";
 }
 
 .bengali-text {
   font-family: "Noto Sans Bengali", sans-serif;
-} */
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  font-family: "Poppins", sans-serif;
+}
 
 /* Font setup */
-@font-face {
+/* @font-face {
   font-family: "Poppins";
   src: url("/fonts/Poppins-Regular.ttf") format("truetype");
   font-weight: 400;
@@ -78,4 +90,4 @@ body {
 
 .bengali-text {
   font-family: "Noto Sans Bengali", sans-serif;
-}
+} */
