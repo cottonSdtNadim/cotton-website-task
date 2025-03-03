@@ -1,4 +1,4 @@
-"use client"
+// "use client"
 
 import { useEffect, useRef, useState } from "react"
 import accessoriesIcon from "../assets/svgs/Accessories.svg"
@@ -34,7 +34,7 @@ const ProcessFlow = () => {
     { icon: finishingIcon, label: "Finishing" },
   ]
 
-  useEffect(() => {
+ /*  useEffect(() => {
     const handleScroll = () => {
       if (scrollContainerRef.current) {
         const container = scrollContainerRef.current
@@ -59,8 +59,35 @@ const ProcessFlow = () => {
         scrollContainer.removeEventListener("scroll", handleScroll)
       }
     }
-  }, [processSteps.length])
+  }, [processSteps.length]) */
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (scrollContainerRef.current) {
+        const container = scrollContainerRef.current
+        const scrollLeft = container.scrollLeft
+        const scrollWidth = container.scrollWidth - container.clientWidth
+        const percentage = (scrollLeft / scrollWidth) * 100
+        setScrollPercentage(percentage)
+  
+        // Calculate active step based on scroll percentage
+        const newActiveStep = Math.min(Math.floor((percentage / 100) * processSteps.length), processSteps.length - 1)
+        setActiveStepIndex(newActiveStep)
+      }
+    }
+  
+    const scrollContainer = scrollContainerRef.current
+    if (scrollContainer) {
+      scrollContainer.addEventListener("scroll", handleScroll)
+    }
+  
+    return () => {
+      if (scrollContainer) {
+        scrollContainer.removeEventListener("scroll", handleScroll)
+      }
+    }
+  }, [processSteps.length])
+  
   return (
     <div className="w-full relative py-6 px-4">
       {/* Scrollable container */}
@@ -77,9 +104,12 @@ const ProcessFlow = () => {
           {/* The completed portion of the line with increased thickness */}
           <div
             className="h-[4px] bg-[#0B714C] absolute top-[23px] left-0 z-10 transition-all duration-300"
-            style={{
+           /*  style={{
               width: `${activeStepIndex * 80 + 40}px`, // Adjust based on your spacing
-            }}
+            }} */
+              style={{
+                width: `${(activeStepIndex + 1) * (135)}px`, // Adjust the multiplier based on actual step width
+              }}
           ></div>
 
           {/* Process steps with proper spacing */}
