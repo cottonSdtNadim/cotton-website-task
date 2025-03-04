@@ -1,7 +1,7 @@
 import "../styles/verticalLine.css"; // Import your CSS file
 
 const GridWithLines = () => {
-  const numOfLines = 11;
+  const numOfLines = 12;
 
   // Generate column lines
   const lines = Array.from({ length: numOfLines }, (_, index) => index);
