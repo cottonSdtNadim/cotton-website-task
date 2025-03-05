@@ -52,7 +52,7 @@ const VideoModule = () => {
           className="bg-[#0B714C] h-[550px] p-[30px]"
           // style={{ borderRadius: "0px 15px 15px 0px", width: "377px" }}
         >
-          <h2 className="text-2xl text-white font-bold w-[290px]">
+          <h2 className="text-2xl text-white font-bold w-[290px] mt-5">
             Sustainability is integral to the way we do business.
           </h2>
           <p className="text-white mt-4">
