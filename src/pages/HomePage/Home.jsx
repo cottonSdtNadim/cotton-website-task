@@ -1,3 +1,4 @@
+import ClientCollaborationHeader from "../../components/ClientCollaborationHeader";
 import ImageSlider from "../../components/ImageSlider";
 import Process from "../../components/Process";
 import VideoModule from "../../components/VideoModule";
@@ -8,6 +9,7 @@ const Home = () => {
       <ImageSlider></ImageSlider>
       <Process></Process>
       <VideoModule></VideoModule>
+      <ClientCollaborationHeader></ClientCollaborationHeader>
     </div>
   );
 };
