@@ -1,6 +1,7 @@
 import greenLeafSmallIcon from "../../assets/images/green-leaf-small-icon.png";
 import leftGreenLeafVector from "../../assets/images/left-green-leaf-vector.png";
 import rightGreenLeafVector from "../../assets/images/right-green-leaf-vector.png";
+import AnimatedButton from "../../components/AnimatedButton";
 import Navbar from "./Navbar";
 
 const Header = () => {
@@ -41,9 +42,14 @@ const Header = () => {
             readymade garments powerhouse
           </h1>
           {/* About Us Button */}
-          <button className="text-white bg-[#0B714C] px-[20px] py-[8px] rounded-lg mt-[50px]">
+          {/* <button className="text-white bg-[#0B714C] px-[20px] py-[8px] rounded-lg mt-[50px]">
             <span className="text-base font-semibold">About us</span>
-          </button>
+          </button> */}
+          <AnimatedButton
+          label={"About us"}
+          labelColor={"white"}
+          bgColor={"#0B714C"}
+          ></AnimatedButton>
         </div>
 
         <img

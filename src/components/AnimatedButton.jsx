@@ -1,7 +1,8 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import PropTypes from "prop-types";
-import rightArrow from "../assets/svgs/right-arrow.svg"
+// import rightArrow from "../assets/svgs/right-arrow.svg"
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 
 const AnimatedButton = ({ label, labelColor, bgColor }) => {
@@ -36,7 +37,8 @@ const AnimatedButton = ({ label, labelColor, bgColor }) => {
           variants={arrowVariants}
           transition={{ duration: 0.3 }}
         >
-          <img src={rightArrow} alt="Right Arrow Symbol" />
+          {/* <img src={rightArrow} alt="Right Arrow Symbol" /> */}
+          <MdKeyboardArrowRight className="w-6 h-6" />
         </motion.span>
       </motion.button>
     </div>
