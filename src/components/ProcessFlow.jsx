@@ -124,7 +124,7 @@ const ProcessFlow = () => {
             style={{
               // width: `${(activeStepIndex / (processSteps.length - 1)) * 100}%`,
               left: `${(activeStepIndex / processSteps.length) * 100}%`,
-              width: `${(1 / processSteps.length) * 200}%`,
+              width: `${(1 / processSteps.length) * 100}%`,
             }}
           ></div>
         </div>
