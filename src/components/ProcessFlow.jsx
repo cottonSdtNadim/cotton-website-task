@@ -19,6 +19,8 @@ const ProcessFlow = () => {
   const [activeStepIndex, setActiveStepIndex] = useState(0);
   const scrollContainerRef = useRef(null);
 
+  console.log("scrollPercentage in ProcessFlow:", scrollPercentage);
+
   // Define all process steps
   const processSteps = [
     { icon: knittingIcon, label: "Knitting" },
@@ -103,11 +105,27 @@ const ProcessFlow = () => {
       </div>
 
       {/* Progress indicator */}
-      <div className="absolute bottom-0 left-0 right-0 flex justify-center">
+      {/* <div className="absolute bottom-0 left-0 right-0 flex justify-center">
         <div className="w-full max-w-md h-1 bg-gray-200 rounded-full overflow-hidden">
           <div
             className="h-full bg-[#0B714C] rounded-full transition-all duration-300"
             style={{ width: `${scrollPercentage}%` }}
+          ></div>
+        </div>
+      </div> */}
+
+      {/* Custom Progress Indicator Bar */}
+      <div className="absolute -bottom-3 left-6 right-6">
+        {/* Full width background line */}
+        <div className="relative w-full h-2 bg-gray-300 rounded-full overflow-hidden">
+          {/* Moving progress fill */}
+          <div
+            className="absolute top-0 left-0 h-2 bg-[#0B714C] rounded-full transition-all duration-300"
+            style={{
+              // width: `${(activeStepIndex / (processSteps.length - 1)) * 100}%`,
+              left: `${(activeStepIndex / processSteps.length) * 100}%`,
+              width: `${(1 / processSteps.length) * 200}%`,
+            }}
           ></div>
         </div>
       </div>

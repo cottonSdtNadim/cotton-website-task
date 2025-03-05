@@ -35,6 +35,3 @@ ProcessStep.defaultProps = {
 }
 
 export default ProcessStep
-
-
-
