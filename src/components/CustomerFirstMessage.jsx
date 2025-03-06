@@ -47,7 +47,7 @@ const CustomerFirstMessage = () => {
       {/* Container of Text and Image */}
       <div className="flex">
         {/* Text Container */}
-        <div className="w-[639px]">
+        <div className="w-[639px] mt-14">
           <h2 className="text-4xl font-bold italic">
             &quot;Make a customer, build a relationship, not a sale.&quot;
           </h2>
@@ -68,7 +68,7 @@ const CustomerFirstMessage = () => {
             alt="Chairman Sir"
             className="ml-[54px]"
           />
-          <div className="absolute bottom-0 left-0 right-0 bg-opacity-50 text-white text-center p-2">
+          <div className="absolute bottom-0 left-0 right-0 text-white bg-opacity-50 text-center px-2 py-6">
             <p className="text-lg font-semibold">Shaheen Mahmud</p>
             <p className="text-sm">Founder and Chairman</p>
           </div>
@@ -78,4 +78,4 @@ const CustomerFirstMessage = () => {
   );
 };
 
-export default CustomerFirstMessage;
+export default CustomerFirstMessage; 
