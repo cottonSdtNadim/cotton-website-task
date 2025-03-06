@@ -17,7 +17,6 @@ const AnimatedLink = ({content}) => {
      {content}
         <motion.div
           className="absolute left-0 bg-white bottom-[-4px]"
-        //   style={{ bottom: '-4px' }} // Gap between text and underline
           initial={{ width: '19px', height: '1px' }}
           animate={{ 
             width: isHovered ? '100%' : '19px',
