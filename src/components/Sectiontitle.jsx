@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const SectionTitle = ({ title }) => {
     return (
-      <div className="relative">
+      <div className="relative mb-20">
         <img src={greenLeafSmallIcon}
          alt="Green Leaf Small Icon"
          className="absolute top-[-25px] left-[495px] w-7 h-11"
