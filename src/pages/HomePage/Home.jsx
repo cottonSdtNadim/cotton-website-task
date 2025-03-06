@@ -1,6 +1,7 @@
 import ClientCollaborationHeader from "../../components/ClientCollaborationHeader";
 import CustomerFirstMessage from "../../components/CustomerFirstMessage";
 import ImageSlider from "../../components/ImageSlider";
+import LatestNews from "../../components/LatestNews";
 import Process from "../../components/Process";
 import VideoModule from "../../components/VideoModule";
 
@@ -12,6 +13,7 @@ const Home = () => {
       <VideoModule></VideoModule>
       <ClientCollaborationHeader></ClientCollaborationHeader>
       <CustomerFirstMessage></CustomerFirstMessage>
+      <LatestNews></LatestNews>
     </div>
   );
 };

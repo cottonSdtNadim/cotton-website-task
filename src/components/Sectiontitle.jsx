@@ -1,11 +1,21 @@
-// import greenLeafSmallIcon from "../assets/images/green-leaf-small-icon";
+import greenLeafSmallIcon from "../assets/images/green-leaf-small-icon.png";
+import PropTypes from 'prop-types';
 
-const Sectiontitle = () => {
+const SectionTitle = ({ title }) => {
     return (
-        <div>
-            <h1>Latest News</h1>
-        </div>
+      <div className="relative">
+        <img src={greenLeafSmallIcon}
+         alt="Green Leaf Small Icon"
+         className="absolute top-[-25px] left-[495px] w-7 h-11"
+         />
+        <h1 className="text-center text-4xl font-extrabold">{title}</h1>
+      </div>
     );
-};
+  };
 
-export default Sectiontitle;
+  SectionTitle.propTypes = {
+    title: PropTypes.string.isRequired
+  }
+  
+  export default SectionTitle;
+  
