@@ -2,6 +2,7 @@ import ClientCollaborationHeader from "../../components/ClientCollaborationHeade
 import CustomerFirstMessage from "../../components/CustomerFirstMessage";
 import ImageSlider from "../../components/ImageSlider";
 import LatestNews from "../../components/LatestNews";
+import Partners from "../../components/Partners";
 import Process from "../../components/Process";
 import VideoModule from "../../components/VideoModule";
 
@@ -14,6 +15,7 @@ const Home = () => {
       <ClientCollaborationHeader></ClientCollaborationHeader>
       <CustomerFirstMessage></CustomerFirstMessage>
       <LatestNews></LatestNews>
+      <Partners></Partners>
     </div>
   );
 };
