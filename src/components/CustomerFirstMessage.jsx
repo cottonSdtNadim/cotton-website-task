@@ -51,7 +51,7 @@ const CustomerFirstMessage = () => {
           <h2 className="text-4xl font-bold italic">
             &quot;Make a customer, build a relationship, not a sale.&quot;
           </h2>
-          <p className="text-lg mt-9">
+          <p className="text-lg mt-9 font-medium">
             At Cotton Group, we believe in partnership. Every single customer
             and employee, who we believe to be our partners, have empowered us
             to produce a better quality of products and solutions. We like to

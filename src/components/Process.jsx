@@ -30,7 +30,7 @@ const Process = () => {
 
       {/* Process Container */}
       <div className="ml-14 max-w-[480px]">
-        <p className="text-xl mb-6">
+        <p className="text-xl mb-6 font-medium">
           Cotton Group can meet your requirements of high-quality manufacturing
           of knit garments in all categories, such as basics, casual and active
           wear for men, women and children.{" "}
