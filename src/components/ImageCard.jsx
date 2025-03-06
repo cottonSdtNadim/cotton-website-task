@@ -76,16 +76,6 @@ const ImageCard = ({ singleNews }) => {
           </p>
         </div>
 
-        {/* Read the story link */}
-        {/* <div className="mt-auto pt-2">
-          <a
-            href="#"
-            className="text-white text-lg font-medium hover:underline"
-          >
-            Read the story
-          </a>
-        </div> */}
-
         <div className="mt-auto pt-2">
           <AnimatedLink content={"Read the story"}>
           </AnimatedLink>
