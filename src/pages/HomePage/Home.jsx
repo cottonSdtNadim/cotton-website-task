@@ -4,6 +4,7 @@ import ImageSlider from "../../components/ImageSlider";
 import LatestNews from "../../components/LatestNews";
 import Partners from "../../components/Partners";
 import Process from "../../components/Process";
+import ReadOurStory from "../../components/ReadOurStory";
 import VideoModule from "../../components/VideoModule";
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
       <CustomerFirstMessage></CustomerFirstMessage>
       <LatestNews></LatestNews>
       <Partners></Partners>
+      <ReadOurStory></ReadOurStory>
     </div>
   );
 };

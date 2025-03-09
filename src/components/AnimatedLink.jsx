@@ -7,7 +7,7 @@ const AnimatedLink = ({content}) => {
   const [isHovered, setIsHovered] = useState(false);
   
   return (
-    <div className="mt-auto pt-2 pb-6">
+    <div className="pt-2 pb-6">
       <Link
         to={"/"}
         className="text-white text-base font-medium relative"
