@@ -6,7 +6,7 @@ import "./index.css";
 import BasicRoute from "./routes/BasicRoute.jsx";
 
 // Create a client
-const queryClient = new QueryClient()
+const queryClient = new QueryClient();
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

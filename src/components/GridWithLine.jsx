@@ -1,24 +1,24 @@
-import "../styles/verticalLine.css"; // Import your CSS file
-
 const GridWithLines = () => {
-  const numOfLines = 12;
-
-  // Generate column lines
-  const lines = Array.from({ length: numOfLines }, (_, index) => index);
+  const numOfLines = 12
+  const lines = Array.from({ length: numOfLines }, (_, index) => index)
 
   return (
-    <div className="grid-container">
+    <div className="fixed inset-0 -z-10 pointer-events-none">
       {lines.map((line, index) => (
         <div
           key={index}
-          className="grid-line"
+          className="absolute top-0 bottom-0 w-[1px] bg-gray-200"
           style={{
-            left: `${(index + 1) * 100 - 1}px`, // Adjust for the 1px line width
+            left: `${(index + 1) * 116 - 1}px`,
           }}
         />
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default GridWithLines;
+export default GridWithLines
+
+
+
+
