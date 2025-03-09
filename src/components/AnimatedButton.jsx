@@ -13,6 +13,7 @@ const AnimatedButton = ({ label, labelColor, bgColor }) => {
     color: labelColor,
     backgroundColor: bgColor,
     paddingRight: isHovered ? "20px" : "0px", // Dynamic padding based on hover state
+
   }
 
   // Framer Motion animation properties for the arrow
@@ -52,6 +53,3 @@ AnimatedButton.propTypes = {
 };
 
 export default AnimatedButton
-
-
-
