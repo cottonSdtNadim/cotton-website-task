@@ -42,13 +42,10 @@ const Header = () => {
             readymade garments powerhouse
           </h1>
           {/* About Us Button */}
-          {/* <button className="text-white bg-[#0B714C] px-[20px] py-[8px] rounded-lg mt-[50px]">
-            <span className="text-base font-semibold">About us</span>
-          </button> */}
           <AnimatedButton
-          label={"About us"}
-          labelColor={"white"}
-          bgColor={"#0B714C"}
+            label={"About us"}
+            labelColor={"white"}
+            bgColor={"#0B714C"}
           ></AnimatedButton>
         </div>
 
