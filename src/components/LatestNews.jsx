@@ -18,13 +18,13 @@ const LatestNews = () => {
       <SectionTitle title={"Latest News"}></SectionTitle>
 
       {/* Looping Latest News with map() */}
-      <div className="grid grid-cols-3 gap-4 mx-[141px]">
+      <div className="grid grid-cols-3 gap-4 mx-[141px] mb-24">
         {latestNews.map((singleNews, index) => (
           <ImageCard key={index} singleNews={singleNews}></ImageCard>
         ))}
       </div>
 
-      <div className="mt-16 flex justify-center">
+      <div className="flex justify-center">
         <AnimatedButton
           label={"View More"}
           labelColor={"white"}

@@ -35,7 +35,7 @@ const Header = () => {
 
           {/* English Text */}
           <h1
-            className="font-extrabold text-5xl"
+            className="font-extrabold text-5xl mb-9"
             // style={{ fontFamily: "Poppins" }}
           >
             We are a leading sustainability-inspired, 100% export-oriented

@@ -23,7 +23,7 @@ const AnimatedButton = ({ label, labelColor, bgColor }) => {
   }
 
   return (
-    <div className="mt-9">
+    <div className="">
       <motion.button
         className="px-5 py-2 rounded-lg transition-all duration-300 ease-in-out flex items-center justify-center text-[16px] font-semibold"
         style={buttonStyle}
@@ -32,7 +32,7 @@ const AnimatedButton = ({ label, labelColor, bgColor }) => {
       >
         {label}
         <motion.span
-          className="inline-flex ml-1"
+          // className="inline-flex ml-1"
           initial="hidden"
           animate={isHovered ? "visible" : "hidden"}
           variants={arrowVariants}
