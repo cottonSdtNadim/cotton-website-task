@@ -5,7 +5,8 @@ import ellipse from "../../assets/svgs/Ellipse.svg";
 
 const Navbar = () => {
   const [selectedItem, setSelectedItem] = useState("Home");
-
+  const [hoveredItem, setHoveredItem] = useState(null);
+  
   const navItemsList = [
     "Home",
     "About Cotton",
@@ -14,12 +15,12 @@ const Navbar = () => {
     "Order",
     "Contact",
   ];
-
+  
   return (
     <div className="flex justify-between items-center px-[110px] py-[50px] text-black">
       {/* Cotton Logo */}
       <img
-        src={cottonGreenLogo || "/placeholder.svg"}
+        src={cottonGreenLogo}
         alt="Cotton Green Logo"
         className="w-[99px] h-[86px]"
       />
@@ -35,29 +36,29 @@ const Navbar = () => {
                 : "text-black font-semibold"
             }`}
             onClick={() => setSelectedItem(item)}
-            whileHover={{ x: selectedItem !== item ? 15 : 0 }} // Move right on hover for non-active
-            initial={{ x: 0 }}
-            animate={{ x: 0 }}
+            onMouseEnter={() => setHoveredItem(item)}
+            onMouseLeave={() => setHoveredItem(null)}
+            animate={{ 
+              x: hoveredItem === item && selectedItem !== item ? 15 : 0 
+            }}
+            transition={{ duration: 0.3 }}
           >
             {/* Bullet point for non-active items */}
             {selectedItem !== item && (
-              <motion.span
-                className="absolute -left-1 mt-2"
-                variants={{
-                  hover: { opacity: 1, x: 0 },
-                  idle: { opacity: 0, x: -10 },
+              <motion.div
+                className="absolute -left-1 top-1/2 -translate-y-1/2"
+                animate={{ 
+                  opacity: hoveredItem === item ? 1 : 0,
+                  x: hoveredItem === item ? 0 : -10
                 }}
-                initial="idle"
-                animate="idle"
-                whileHover="hover"
                 transition={{ duration: 0.3 }}
               >
                 <img
                   src={ellipse}
                   alt="Bullet Point"
-                  className="w-1.5 h-1.5 text-[#0B714C]"
+                  className="w-1.5 h-1.5"
                 />
-              </motion.span>
+              </motion.div>
             )}
 
             {item}
