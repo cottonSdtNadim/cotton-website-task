@@ -30,7 +30,7 @@ const Navbar = () => {
         {navItemsList.map((item) => (
           <motion.li
             key={item}
-            className={`relative cursor-pointer px-4 py-2 rounded-md ${
+            className={`relative cursor-pointer px-4 py-1 rounded-md ${
               selectedItem === item
                 ? "bg-[#0B714C] text-white"
                 : "text-black font-semibold"
