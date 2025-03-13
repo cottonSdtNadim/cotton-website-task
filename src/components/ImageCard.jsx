@@ -46,8 +46,10 @@
 
 import PropTypes from "prop-types";
 import AnimatedLink from "./AnimatedLink";
+import { content } from "../content/content.js";
 
 const ImageCard = ({ singleNews }) => {
+  const {label} = content.en.readTheStoryLink
   const { image, title, details } = singleNews;
 
   return (
@@ -77,7 +79,10 @@ const ImageCard = ({ singleNews }) => {
         </div>
 
         <div className="mt-auto pt-2">
-          <AnimatedLink content={"Read the story"}>
+          <AnimatedLink 
+          // content={"Read the story"}
+          content={label}
+          >
           </AnimatedLink>
         </div>
       </div>

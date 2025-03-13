@@ -2,11 +2,11 @@ import greenLeafSmallIcon from "../../assets/images/green-leaf-small-icon.png";
 import leftGreenLeafVector from "../../assets/images/left-green-leaf-vector.png";
 import rightGreenLeafVector from "../../assets/images/right-green-leaf-vector.png";
 import AnimatedButton from "../../components/AnimatedButton";
-import { content } from "../../content/content";
+import { content } from "../../content/content.js";
 import Navbar from "./Navbar";
 
 const Header = () => {
-  const {bengaliText, englishText, aboutUsButton} = content.header;
+  const {bengaliText, englishText, aboutUsButton} = content.en.header;
 
   return (
     <div>

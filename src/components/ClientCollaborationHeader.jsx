@@ -1,6 +1,8 @@
 import clientHeader from "../assets/images/client-collaboration-header.jpg";
+import {content} from "../content/content.js";
 
 const ClientCollaborationHeader = () => {
+  const {description} = content.en.clientCollaborationHeader;
   return (
     <div
       className="my-40"
@@ -11,8 +13,13 @@ const ClientCollaborationHeader = () => {
         height: "350px",
       }}
     >
-      <h2 className="text-white font-extrabold text-4xl text-center p-[120px]">By partnering with our clients to create what matters, we improve the
-      value chain experience.</h2>
+      <h2 className="text-white font-extrabold text-4xl text-center p-[120px]">
+       {/*  By partnering with our clients to create what matters, we improve the
+      value chain experience. */}
+      {
+        description
+      }
+      </h2>
     </div>
   );
 };

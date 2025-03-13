@@ -96,6 +96,7 @@ import trueWorths from "../assets/images/partners-logo/true-worth.jpg";
 import verbaudets from "../assets/images/partners-logo/verbaudet.png";
 import vfAsia from "../assets/images/partners-logo/vf-asia.png";
 import SectionTitle from "./Sectiontitle";
+import { content } from "../content/content";
 
 const partners = [
   aldi,
@@ -120,9 +121,13 @@ const partners = [
 const Partners = () => {
   // Calculate the width needed to ensure one complete set is always visible
   // This approach uses CSS to create a continuous flow effect
+  const {header} = content.en.ourPartners
   return (
     <div className="mt-32">
-      <SectionTitle title={"Our Partners"}></SectionTitle>
+      <SectionTitle 
+      // title={"Our Partners"}
+      title={header}
+      ></SectionTitle>
 
       <div className="relative w-full overflow-hidden">
         {/* Outer container with overflow hidden */}

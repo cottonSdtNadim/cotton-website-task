@@ -1,8 +1,11 @@
 import factoryOutside from "../../assets/images/factory-outside.jpg";
 import AnimatedButton from "../../components/AnimatedButton";
 import AnimatedLink from "../../components/AnimatedLink";
+import { content } from "../../content/content";
 
 export default function Footer() {
+  const {firstHeader, secondHeader,  contactUsButton, copyRightText , privacyPolicyLink} = content.en.footer;
+
   return (
     <footer className="relative w-full">
       <div
@@ -17,8 +20,10 @@ export default function Footer() {
           <div className="pt-14 flex flex-col md:flex-row items-center justify-center gap-8 pr-28">
             <div>
               <h2 className="text-2xl md:text-3xl font-bold text-white text-center md:text-left max-w-[686px] mr-36">
-                Ready to talk further? <br />
-                Let&apos;s see how we can create value, together.
+               {/*  Ready to talk further? <br />
+                Let&apos;s see how we can create value, together. */}
+                {firstHeader} <br />
+                {secondHeader}
               </h2>
             </div>
             {/*  <div className="border-2 border-red-500">
@@ -31,9 +36,12 @@ export default function Footer() {
             <div className="">
               <div className="absolute top-22">
                 <AnimatedButton
-                  label="Contact Us"
+                  /* label="Contact Us"
                   labelColor="white"
-                  bgColor="#0B714C"
+                  bgColor="#0B714C" */
+                  label={contactUsButton.label}
+                  labelColor={contactUsButton.labelColor}
+                  bgColor={contactUsButton.bgColor}
                 />
               </div>
             </div>
@@ -51,10 +59,14 @@ export default function Footer() {
           {/* Copyright and Privacy Policy Container */}
           <div className="pb-10 flex flex-col md:flex-row items-center justify-between gap-4 px-4 md:px-6 lg:px-28">
             <p className="text-[#F8FBFA] font-medium text-center">
-              Copyright © {new Date().getFullYear()} Cotton Group. All rights
-              reserved.
+              {/* Copyright © {new Date().getFullYear()} Cotton Group. All rights
+              reserved. */}
+              {copyRightText}
             </p>
-            <AnimatedLink content="Privacy Policy" />
+            <AnimatedLink 
+            // content="Privacy Policy" 
+            content={privacyPolicyLink.label}
+            />
           </div>
         </div>
       </div>
