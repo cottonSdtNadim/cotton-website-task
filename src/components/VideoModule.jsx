@@ -286,6 +286,8 @@
 
 // export default VideoModule;
 
+/* Closest Response  */
+
 "use client";
 import {  motion } from "framer-motion";
 import { useState } from "react";
@@ -349,7 +351,7 @@ const VideoModule = () => {
   
   return (
     <div
-      className="relative mx-24 max-w-[1236px] h-[550px]" /* mx-auto w-full */
+      className="relative mx-24 max-w-[1236px] h-[550px] border-2 border-amber-400" /* mx-auto w-full */
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -415,6 +417,151 @@ const VideoModule = () => {
 
 export default VideoModule;
 
+
+
+
+
+
+/* Final Response */
+
+// "use client";
+// import { motion } from "framer-motion";
+// import { useState, useRef, useEffect } from "react";
+// import AnimatedButton from "./AnimatedButton.jsx";
+// import { GoUnmute } from "react-icons/go";
+// import { IoVolumeMuteOutline } from "react-icons/io5";
+// import { content } from "../content/content.js";
+
+// const VideoModule = () => {
+//   const { title, description, learnMoreButton } = content.en.sustainability;
+//   const [isHovered, setIsHovered] = useState(false);
+//   const [isMuted, setIsMuted] = useState(true);
+//   const [isAnimating, setIsAnimating] = useState(false);
+//   const textContainerRef = useRef(null);
+
+//   // Handle hover events
+//   const handleMouseEnter = () => {
+//     setIsHovered(true);
+//     setIsAnimating(true);
+//   };
+
+//   const handleMouseLeave = () => {
+//     setIsHovered(false);
+//     setIsAnimating(true);
+//   };
+
+//   // Effect to track animation completion
+//   useEffect(() => {
+//     const animationTimer = setTimeout(() => {
+//       setIsAnimating(false);
+//     }, 850); // Slightly longer than animation duration
+
+//     return () => clearTimeout(animationTimer);
+//   }, [isHovered]);
+
+//   const toggleMute = () => {
+//     setIsMuted((prev) => !prev);
+//   };
+
+//   const videoSrc = isMuted
+//     ? "https://www.youtube.com/embed/gpUDSPPhf_M?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=gpUDSPPhf_M&playsinline=1"
+//     : "https://www.youtube.com/embed/gpUDSPPhf_M?autoplay=1&mute=0&controls=0&showinfo=0&rel=0&loop=1&playlist=gpUDSPPhf_M&playsinline=1";
+
+//   // Animation variants
+//   const videoVariants = {
+//     expanded: {
+//       width: "100%",
+//       height: 550,
+//       borderRadius: "15px",
+//       transition: {
+//         duration: 0.5,
+//         ease: "easeInOut",
+//       }
+//     },
+//     collapsed: {
+//       width: [
+//         "100%",
+//         "calc(100% - 383px)",
+//         "calc(100% - 380px)",
+//         "calc(100% - 377px)",
+//         "calc(100% - 382px)",
+//         "calc(100% - 377px)",
+//       ],
+//       height: 550,
+//       borderRadius: "15px 0 0 15px",
+//       transition: {
+//         width: {
+//           duration: 0.8,
+//           times: [0, 0.4, 0.6, 0.75, 0.9, 1],
+//           ease: "easeInOut",
+//         }
+//       }
+//     }
+//   };
+
+//   return (
+//     <div
+//       className="relative mx-24 max-w-[1236px] h-[550px] border-2 border-amber-400"
+//       onMouseEnter={handleMouseEnter}
+//       onMouseLeave={handleMouseLeave}
+//     >
+//       {/* Text Container - Only visible when video is hovered */}
+//       <div 
+//         ref={textContainerRef}
+//         className="absolute top-0 right-0 h-full w-[377px]"
+//         style={{ 
+//           visibility: isHovered || isAnimating ? "visible" : "hidden",
+//           opacity: isHovered ? 1 : 0,
+//           transition: "opacity 0.3s ease-in-out"
+//         }}
+//       >
+//         <div className="bg-[#0B714C] h-full p-[30px] w-full rounded-r-2xl">
+//           <h2 className="text-2xl text-white font-bold w-[290px] mt-5">
+//             {title}
+//           </h2>
+//           <p className="text-white mt-4">
+//             {description}
+//           </p>
+//           <div className="mt-6">
+//             <AnimatedButton
+//               label={learnMoreButton.label}
+//               labelColor={learnMoreButton.labelColor}
+//               bgColor={learnMoreButton.bgColor}
+//             />
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* Video Container */}
+//       <motion.div
+//         className="absolute top-0 left-0 overflow-hidden"
+//         variants={videoVariants}
+//         initial="expanded"
+//         animate={isHovered ? "collapsed" : "expanded"}
+//         onAnimationComplete={() => setIsAnimating(false)}
+//       >
+//         <iframe
+//           src={videoSrc}
+//           title="YouTube video player"
+//           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+//           allowFullScreen
+//           className="w-full h-full absolute top-0 left-0"
+//           style={{ border: "none" }}
+//         ></iframe>
+//       </motion.div>
+
+//       {/* Mute/Unmute Button */}
+//       <button
+//         onClick={toggleMute}
+//         className="absolute bottom-4 left-2 p-2 bg-white text-black rounded-full z-10"
+//       >
+//         {isMuted ? <IoVolumeMuteOutline /> : <GoUnmute />}
+//       </button>
+//     </div>
+//   );
+// };
+
+// export default VideoModule;
 
 /* Transition with more bounce */
 // "use client";
