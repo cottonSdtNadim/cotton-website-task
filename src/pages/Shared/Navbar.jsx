@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import cottonGreenLogo from "../../assets/images/cotton-green-logo.png";
+import cottonWhiteLogo from "../../assets/images/cotton-white-logo.png";
 import ellipse from "../../assets/svgs/Ellipse.svg";
 import { NavLink, useLocation } from "react-router"; // Added useLocation
 import PropTypes from 'prop-types';  
@@ -17,13 +18,15 @@ const Navbar = ({ nonActiveTextColor = "black" }) => {
     { name: "Order", path: "/order" },
     { name: "Contact", path: "/contact" },
   ];
+
+  const isHomePage = location.pathname === '/';
   
   return (
     <div className="flex justify-between items-center px-[110px] py-[50px] text-black">
       {/* Cotton Logo */}
       <img
-        src={cottonGreenLogo}
-        alt="Cotton Green Logo"
+        src={isHomePage ? cottonGreenLogo : cottonWhiteLogo}
+        alt="Cotton Logo"
         className="w-[99px] h-[86px]"
       />
       {/* NavItems Container */}
