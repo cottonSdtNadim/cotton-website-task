@@ -237,7 +237,7 @@ const VideoModule = () => {
       <div 
       // className="w-full h-full overflow-hidden rounded-2xl relative"
       // className="relative mx-24 max-w-[1236px] h-[550px]" /* mx-auto w-full */
-      className="relative rounded-2xl max-w-[1236px] mx-24 h-full overflow-hidden"
+      className="relative rounded-2xl max-w-[1236px] mx-20 h-full overflow-hidden" /* mx-25 */
       >
         
         {/* Text Container - Always present but only visible when video shrinks */}
