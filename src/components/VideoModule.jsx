@@ -151,7 +151,6 @@ const VideoModule = () => {
   useEffect(() => {
     const handleScroll = () => {
       lastScrollTimeRef.current = Date.now();
-      console.log("lastScrollTimeRef.current", lastScrollTimeRef.current);
       
       // Force state to non-hovered during scroll
       if (isHovered) {
@@ -165,7 +164,6 @@ const VideoModule = () => {
     const checkScrollingState = () => {
       const now = Date.now();
       const timeSinceLastScroll = now - lastScrollTimeRef.current;
-      console.log("timeSinceLastScroll", timeSinceLastScroll);
       
       // If it's been more than 300ms since last scroll event, consider scrolling stopped
       if (timeSinceLastScroll > 300 && isScrolling) {
