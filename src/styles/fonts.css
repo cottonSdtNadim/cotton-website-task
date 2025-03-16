@@ -1,127 +1,10 @@
-:root {
-  font-family: "Poppins";
-}
-
 /* Poppins Font Declaration */
-
-@font-face {
-  font-family: "Poppins";
-  src: url("/src/fonts/Poppins-Black.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("/src/fonts/Poppins-BlackItalic.ttf") format("truetype");
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("/src/fonts/Poppins-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("/src/fonts/Poppins-BoldItalic.ttf") format("truetype");
-  font-weight: 700;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("/src/fonts/Poppins-ExtraBold.ttf") format("truetype");
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("/src/fonts/Poppins-ExtraBoldItalic.ttf") format("truetype");
-  font-weight: 800;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("/src/fonts/Poppins-ExtraLight.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("/src/fonts/Poppins-ExtraLightItalic.ttf") format("truetype");
-  font-weight: 300;
-  font-style: initial;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("/src/fonts/Poppins-Italic.ttf") format("truetype");
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("/src/fonts/Poppins-Light.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("/src/fonts/Poppins-LightItalic.ttf") format("truetype");
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("/src/fonts/Poppins-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("/src/fonts/Poppins-MediumItalic.ttf") format("truetype");
-  font-weight: 500;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("/src/fonts/Poppins-Regular.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("/src/fonts/Poppins-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("/src/fonts/Poppins-SemiBoldItalic.ttf") format("truetype");
-  font-weight: 600;
-  font-style: italic;
-}
-
 @font-face {
   font-family: "Poppins";
   src: url("/src/fonts/Poppins-Thin.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -129,253 +12,144 @@
   src: url("/src/fonts/Poppins-ThinItalic.ttf") format("truetype");
   font-weight: 100;
   font-style: italic;
+  font-display: swap;
 }
 
-/* Noto Sans Bengali font-face declarations */
 @font-face {
-  font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali_Condensed-Black.ttf") format("truetype");
-  font-weight: 400;
+  font-family: "Poppins";
+  src: url("/src/fonts/Poppins-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali_Condensed-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
+  font-family: "Poppins";
+  src: url("/src/fonts/Poppins-ExtraLightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali_Condensed-ExtraBold.ttf")
-    format("truetype");
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali_Condensed-ExtraLight.ttf")
-    format("truetype");
+  font-family: "Poppins";
+  src: url("/src/fonts/Poppins-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali_Condensed-Light.ttf") format("truetype");
+  font-family: "Poppins";
+  src: url("/src/fonts/Poppins-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/src/fonts/Poppins-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali_Condensed-Medium.ttf") format("truetype");
+  font-family: "Poppins";
+  src: url("/src/fonts/Poppins-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/src/fonts/Poppins-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali_Condensed-Regular.ttf")
-    format("truetype");
+  font-family: "Poppins";
+  src: url("/src/fonts/Poppins-MediumItalic.ttf") format("truetype");
   font-weight: 500;
-  font-style: normal;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali_Condensed-SemiBold.ttf")
-    format("truetype");
+  font-family: "Poppins";
+  src: url("/src/fonts/Poppins-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali_Condensed-Thin.ttf") format("truetype");
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali_ExtraCondensed-Black.ttf")
-    format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali_ExtraCondensed-Bold.ttf")
-    format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali_ExtraCondensed-ExtraBold.ttf")
-    format("truetype");
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali_ExtraCondensed-ExtraLight.ttf")
-    format("truetype");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali_ExtraCondensed-Light.ttf")
-    format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali_ExtraCondensed-Medium.ttf")
-    format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali_ExtraCondensed-Regular.ttf")
-    format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali_ExtraCondensed-SemiBold.ttf")
-    format("truetype");
+  font-family: "Poppins";
+  src: url("/src/fonts/Poppins-SemiBoldItalic.ttf") format("truetype");
   font-weight: 600;
-  font-style: normal;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali_ExtraCondensed-Thin.ttf")
-    format("truetype");
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali_SemiCondensed-Black.ttf")
-    format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali_SemiCondensed-Bold.ttf")
-    format("truetype");
+  font-family: "Poppins";
+  src: url("/src/fonts/Poppins-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali_SemiCondensed-ExtraBold.ttf")
-    format("truetype");
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali_SemiCondensed-ExtraLight.ttf")
-    format("truetype");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali_SemiCondensed-Light.ttf")
-    format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali_SemiCondensed-Medium.ttf")
-    format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali_SemiCondensed-Regular.ttf")
-    format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali_SemiCondensed-SemiBold.ttf")
-    format("truetype");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali_SemiCondensed-Thin.ttf")
-    format("truetype");
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali-Black.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali-Bold.ttf") format("truetype");
+  font-family: "Poppins";
+  src: url("/src/fonts/Poppins-BoldItalic.ttf") format("truetype");
   font-weight: 700;
-  font-style: normal;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali-ExtraBold.ttf") format("truetype");
+  font-family: "Poppins";
+  src: url("/src/fonts/Poppins-ExtraBold.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali-ExtraLight.ttf") format("truetype");
-  font-weight: 300;
+  font-family: "Poppins";
+  src: url("/src/fonts/Poppins-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/src/fonts/Poppins-Black.ttf") format("truetype");
+  font-weight: 900;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
+  font-family: "Poppins";
+  src: url("/src/fonts/Poppins-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Noto Sans Bengali font declarations - Include only the ones you need */
+@font-face {
   font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali-Light.ttf") format("truetype");
+  src: url("/src/fonts/NotoSansBengali-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -383,13 +157,7 @@
   src: url("/src/fonts/NotoSansBengali-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
-}
-
-@font-face {
-  font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali-Regular.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -397,11 +165,13 @@
   src: url("/src/fonts/NotoSansBengali-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Noto Sans Bengali";
-  src: url("/src/fonts/NotoSansBengali-Thin.ttf") format("truetype");
-  font-weight: 100;
+  src: url("/src/fonts/NotoSansBengali-Bold.ttf") format("truetype");
+  font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }

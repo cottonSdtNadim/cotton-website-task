@@ -1,7 +1,12 @@
+import image from '../assets/images/factory-inside.jpg'
+import Certified from '../components/Certified';
+import Cover from './Shared/Cover';
+
 const AboutCotton = () => {
     return (
         <div>
-            <h2>This is About Cotton Page</h2>
+           <Cover image={image} heading={"Our Story"}></Cover>
+           <Certified></Certified>
         </div>
     );
 };

@@ -8,7 +8,7 @@ import { content } from "../content/content.js";
 const Process = () => {
         const { textCards, description, heading} = content.en.process;
   return (
-    <div className="flex my-20 w-[960px] mx-auto px-20">
+    <div className="flex my-20 w-[960px] mx-auto px-10">
       {/* Text Card Container */}
       <div className="space-y-[36px]">
         {/* <TextCard
@@ -39,8 +39,8 @@ const Process = () => {
       </div>
 
       {/* Process Container */}
-      <div className="ml-14 max-w-[480px]">
-        <p className="text-xl mb-6 font-medium">
+      <div className="ml-14 max-w-[646px]"> {/* 480px */}
+        <p className="text-3xl mb-6">
           {/* Cotton Group can meet your requirements of high-quality manufacturing
           of knit garments in all categories, such as basics, casual and active
           wear for men, women and children.{" "} */}
