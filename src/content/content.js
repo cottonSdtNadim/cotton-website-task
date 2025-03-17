@@ -100,6 +100,9 @@ export const content = {
       certifiedContent:  `We seek to empower communities of creators, customers, and partners by
         crafting products of utmost quality while mitigating environmental
         footprints along the entire value chain in which we operate.`,
+        ourCompanies: {
+          headingTitle: "Our Companies"
+        }
     },
   },
 };
