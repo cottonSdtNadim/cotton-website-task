@@ -96,5 +96,10 @@ export const content = {
         label: "Privacy Policy",
       },
     },
+    ourStoryPage: {
+      certifiedContent:  `We seek to empower communities of creators, customers, and partners by
+        crafting products of utmost quality while mitigating environmental
+        footprints along the entire value chain in which we operate.`,
+    },
   },
 };
