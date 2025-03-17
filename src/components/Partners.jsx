@@ -76,7 +76,6 @@
 
 // export default Partners;
 
-
 import { motion } from "framer-motion";
 import aldi from "../assets/images/partners-logo/aldi.png";
 import auchan from "../assets/images/partners-logo/auchan.png";
@@ -95,8 +94,8 @@ import topPNG from "../assets/images/partners-logo/top-png.png";
 import trueWorths from "../assets/images/partners-logo/true-worth.jpg";
 import verbaudets from "../assets/images/partners-logo/verbaudet.png";
 import vfAsia from "../assets/images/partners-logo/vf-asia.png";
-import SectionTitle from "./Sectiontitle";
 import { content } from "../content/content";
+import SectionTitle from "./SectionTitle.jsx";
 
 const partners = [
   aldi,
@@ -121,12 +120,16 @@ const partners = [
 const Partners = () => {
   // Calculate the width needed to ensure one complete set is always visible
   // This approach uses CSS to create a continuous flow effect
-  const {header} = content.en.ourPartners
+  const { header } = content.en.ourPartners;
   return (
     <div className="mt-32">
-      <SectionTitle 
-      // title={"Our Partners"}
-      title={header}
+      <SectionTitle
+        // title={"Our Partners"}
+        title={header}
+        iconTop="-30px"
+        iconLeft="495px"
+        iconWidth="w-8"
+        iconHeight="h-12"
       ></SectionTitle>
 
       <div className="relative w-full overflow-hidden">
@@ -148,7 +151,10 @@ const Partners = () => {
             >
               {/* First set of logos */}
               {partners.map((partner, index) => (
-                <div key={`original-${index}`} className="w-40 h-16 flex-shrink-0 mx-16 inline-block">
+                <div
+                  key={`original-${index}`}
+                  className="w-40 h-16 flex-shrink-0 mx-16 inline-block"
+                >
                   <img
                     src={partner}
                     alt={`Partner ${index}`}
@@ -156,10 +162,13 @@ const Partners = () => {
                   />
                 </div>
               ))}
-              
+
               {/* Second set of logos (identical duplicate) */}
               {partners.map((partner, index) => (
-                <div key={`duplicate-${index}`} className="w-40 h-16 flex-shrink-0 mx-16 inline-block">
+                <div
+                  key={`duplicate-${index}`}
+                  className="w-40 h-16 flex-shrink-0 mx-16 inline-block"
+                >
                   <img
                     src={partner}
                     alt={`Partner ${index}`}

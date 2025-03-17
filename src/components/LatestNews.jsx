@@ -1,12 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import { content } from "../content/content.js";
 import AnimatedButton from "./AnimatedButton";
 import ImageCard from "./ImageCard";
-import SectionTitle from "./Sectiontitle";
-import {content} from "../content/content.js";
+import SectionTitle from "./SectionTitle.jsx";
 
 const LatestNews = () => {
-  const {title, viewMoreButton} = content.en.latestNews;
+  const { title, viewMoreButton } = content.en.latestNews;
   const { data: latestNews = [] } = useQuery({
     queryKey: ["latestNews"],
     queryFn: async () => {
@@ -17,9 +17,13 @@ const LatestNews = () => {
 
   return (
     <div className="mt-[164px]">
-      <SectionTitle 
-      // title={"Latest News"}
-      title={title}
+      <SectionTitle
+        // title={"Latest News"}
+        title={title}
+        iconTop="-30px"
+        iconLeft="495px"
+        iconWidth="w-7"
+        iconHeight="h-11"
       ></SectionTitle>
 
       {/* Looping Latest News with map() */}
@@ -31,7 +35,7 @@ const LatestNews = () => {
 
       <div className="flex justify-center">
         <AnimatedButton
-         /*  label={"View More"}
+          /*  label={"View More"}
           labelColor={"white"}
           bgColor={"#0B714C"} */
           label={viewMoreButton.label}
