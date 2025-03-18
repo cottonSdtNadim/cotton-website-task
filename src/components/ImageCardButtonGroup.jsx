@@ -77,7 +77,7 @@ const ImageCardButtonGroup = () => {
           {imageButtonCards.map((item) => (
             <button
               key={item.buttonName}
-              className={`py-4 px-6 text-center rounded-md transition-all duration-300 border-2 ${
+              className={`py-4 px-6 text-center rounded-xl transition-all duration-300 border-2 ${
                 activeButton === item.buttonName
                   ? "bg-emerald-700 text-white border-emerald-700"
                   : "bg-white text-gray-800 border-gray-200 hover:bg-gray-50"
@@ -92,7 +92,7 @@ const ImageCardButtonGroup = () => {
         {/* Right column - Content Card with fixed height */}
         <div className="md:w-2/3">
           <motion.div
-            className="bg-emerald-700 rounded-md overflow-hidden text-white px-9 pt-10 flex flex-col"
+            className="bg-emerald-700 rounded-xl overflow-hidden text-white px-9 pt-10 flex flex-col"
             style={{ height: `${totalButtonsHeight}px` }}
             layout
           >
