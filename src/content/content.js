@@ -103,7 +103,10 @@ export const content = {
         ourCompanies: {
           headingTitle: "Our Companies"
         },
-        ourMessage: `We recognize ourselves as a value-driven organization. Our values continue to be the catalyst of our growth and business here at Cotton Group.`
+        ourMessage: `We recognize ourselves as a value-driven organization. Our values continue to be the catalyst of our growth and business here at Cotton Group.`,
+        ourCoreValues: {
+          header: `Our Core Values`
+        }
     },
   },
 };

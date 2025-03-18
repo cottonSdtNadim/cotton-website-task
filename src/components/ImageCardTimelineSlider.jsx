@@ -293,12 +293,12 @@ const ImageCardTimelineSlider = () => {
                 <div className="flex items-center justify-center relative">
                   <div
                     className={`w-12 h-12 rounded-full flex items-center justify-center ${
-                      index <= currentSlide ? "bg-[#B2D4C9]" : "bg-[#5A9B83]"
+                      index <= currentSlide ? "bg-[#B2D4C9]" : "bg-[#B2D4C9]"
                     }`}
                   >
                     <div
                       className={`w-5 h-5 rounded-full ${
-                        index <= currentSlide ? "bg-white" : "bg-[#84B19F]"
+                        index <= currentSlide ? "bg-white" : "bg-[#859E95]"
                       }`}
                     ></div>
                   </div>
