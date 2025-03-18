@@ -3,6 +3,7 @@ import Certified from '../components/Certified';
 import OurCompanies from '../components/OurCompanies';
 import Cover from './Shared/Cover';
 import ImageCardTimelineSlider from "../components/ImageCardTimelineSlider.jsx"
+import OurMessage from '../components/OurMessage.jsx';
 
 const AboutCotton = () => {
     return (
@@ -11,6 +12,7 @@ const AboutCotton = () => {
            <Certified></Certified>
            <OurCompanies></OurCompanies>
            <ImageCardTimelineSlider></ImageCardTimelineSlider>
+           <OurMessage></OurMessage>
         </div>
     );
 };

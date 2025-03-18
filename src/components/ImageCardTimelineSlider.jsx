@@ -102,7 +102,7 @@ const ImageCardTimelineSlider = () => {
 
               {/* Connecting Lines */}
               {index < timelineData.length - 1 && (
-                <div className="flex-1 relative">
+                <div className="flex-1 relative z-10">
                   {/* Base connecting line */}
                   <div className="h-[3px] bg-[#B2D4C9] absolute top-5 transform -translate-y-1/2 w-full"></div>
 
