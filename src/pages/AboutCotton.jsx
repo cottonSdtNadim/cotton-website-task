@@ -6,6 +6,7 @@ import ImageCardTimelineSlider from "../components/ImageCardTimelineSlider.jsx"
 import OurMessage from '../components/OurMessage.jsx';
 import ImageCardButtonGroup from '../components/ImageCardButtonGroup.jsx';
 import OurVisionaries from '../components/OurVisionaries.jsx';
+import OurAwards from '../components/OurAwards.jsx';
 
 const AboutCotton = () => {
     return (
@@ -17,6 +18,7 @@ const AboutCotton = () => {
            <OurMessage></OurMessage>
            <ImageCardButtonGroup></ImageCardButtonGroup>
            <OurVisionaries></OurVisionaries>
+           <OurAwards></OurAwards>
         </div>
     );
 };
