@@ -1,82 +1,7 @@
-// import AwardCard from "./AwardCard";
-// import medal from "../assets/olympic-medal.svg";
-
-// const OurAwards = () => {
-//   const awards = [
-//     {
-//       id: 1,
-//       awardName: "National Export Trophy (Gold) by Ministry Of Commerce",
-//       awardYear: "Awarded in 1993",
-//       medal: medal,
-//     },
-//     {
-//       id: 2,
-//       awardName: "National Export Trophy (Gold) by Ministry Of Commerce",
-//       awardYear: "Awarded in 1994",
-//       medal: medal,
-//     },
-//     {
-//       id: 3,
-//       awardName: "Best Stall (Batexpo) by BGMEA",
-//       awardYear: "Awarded in 1998",
-//       medal: medal,
-//     },
-//     {
-//       id: 4,
-//       awardName: "Best Stall (Batexpo) by BGMEA",
-//       awardYear: "Awarded in 1997",
-//       medal: medal,
-//     },
-//     {
-//       id: 5,
-//       awardName: "Supplier of the Year by REDCATS",
-//       awardYear: "Awarded in 2013",
-//       medal: medal,
-//     },
-//     {
-//       id: 6,
-//       awardName:
-//         "Best Performance by Sustainable Water Management (Stockholm International Water Institute)",
-//       awardYear: "Awarded in 2015",
-//       medal: medal,
-//     },
-//     {
-//       id: 7,
-//       awardName: "Gold Certificate of Compliance by WRAP",
-//       awardYear: "Awarded in 2017",
-//       medal: medal,
-//     },
-//     {
-//       id: 8,
-//       awardName: "Best Performance by the ALDI Factory Project",
-//       awardYear: "Awarded in 2018",
-//       medal: medal,
-//     },
-//   ];
-
-//   return (
-//     <div className="bg-[#0B714C]">
-//       <h2 className="text-2xl font-bold text-white text-center pt-12 mb-16">
-//         Our Awards
-//       </h2>
-//       <div className="grid grid-cols-4 gap-4">
-//         {awards.map((award) => (
-//           <AwardCard 
-//           key={award.id}
-//          award={award}
-//           ></AwardCard>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default OurAwards;
-
-
-import { useRef, useState, useEffect } from "react";
-import AwardCard from "./AwardCard";
+import { useEffect, useRef, useState } from "react";
 import medal from "../assets/olympic-medal.svg";
+import AwardCard from "./AwardCard";
+import { content } from "../content/content";
 
 const OurAwards = () => {
   const awards = [
@@ -95,13 +20,13 @@ const OurAwards = () => {
     {
       id: 3,
       awardName: "Best Stall (Batexpo) by BGMEA",
-      awardYear: "Awarded in 1998",
+      awardYear: "Awarded in 1997",
       medal: medal,
     },
     {
       id: 4,
       awardName: "Best Stall (Batexpo) by BGMEA",
-      awardYear: "Awarded in 1997",
+      awardYear: "Awarded in 1998",
       medal: medal,
     },
     {
@@ -131,86 +56,167 @@ const OurAwards = () => {
     },
   ];
 
+  const {heading} = content.en.ourStoryPage.ourAwards;
   const carouselRef = useRef(null);
-  const [progressWidth, setProgressWidth] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+  /* const [isAtStart, setIsAtStart] = useState(true);
+  const [isAtEnd, setIsAtEnd] = useState(false); */
 
-  const handleScroll = () => {
-    if (carouselRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
-      const scrollPercentage = (scrollLeft / (scrollWidth - clientWidth)) * 100;
-      setProgressWidth(scrollPercentage);
-    }
-  };
-
-  // const scrollNext = () => {
-  //   if (carouselRef.current) {
-  //     const cardWidth = carouselRef.current.querySelector("div").offsetWidth + 16; // width + gap
-  //     carouselRef.current.scrollBy({ left: cardWidth, behavior: "smooth" });
-  //   }
-  // };
-
-  // const scrollPrev = () => {
-  //   if (carouselRef.current) {
-  //     const cardWidth = carouselRef.current.querySelector("div").offsetWidth + 16; // width + gap
-  //     carouselRef.current.scrollBy({ left: -cardWidth, behavior: "smooth" });
-  //   }
-  // };
-
+  // Handle scroll events to update progress bar
   useEffect(() => {
+    const handleScroll = () => {
+      if (carouselRef.current) {
+        const { scrollLeft } =
+          carouselRef.current; /* , scrollWidth, clientWidth */
+
+        // Update edge detection states
+        /* const atStart = scrollLeft <= 1;
+        const atEnd = scrollLeft + clientWidth >= scrollWidth - 1;
+        setIsAtStart(atStart);
+        setIsAtEnd(atEnd); */
+
+        // Calculate which card is currently active based on scroll position
+        const cardWidth =
+          carouselRef.current.querySelector("div").offsetWidth + 16; // width + gap
+        const newActiveIndex = Math.min(
+          Math.floor(scrollLeft / cardWidth),
+          awards.length - 1
+        );
+        setActiveIndex(newActiveIndex);
+      }
+    };
+
     const carousel = carouselRef.current;
     if (carousel) {
       carousel.addEventListener("scroll", handleScroll);
       return () => carousel.removeEventListener("scroll", handleScroll);
     }
-  }, []);
+  }, [awards.length]);
+
+  // Mouse drag scroll functionality
+  const handleMouseDown = (e) => {
+    e.preventDefault(); // Prevent text selection
+    setIsDragging(true);
+    setStartX(e.pageX - carouselRef.current.offsetLeft);
+    setScrollLeft(carouselRef.current.scrollLeft);
+
+    // Change cursor to grabbing
+    if (carouselRef.current) {
+      carouselRef.current.style.cursor = "grabbing";
+      carouselRef.current.style.userSelect = "none";
+    }
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+
+    // Restore cursor
+    if (carouselRef.current) {
+      carouselRef.current.style.cursor = "grab";
+      carouselRef.current.style.userSelect = "";
+    }
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault(); // Prevent text selection during drag
+
+    const x = e.pageX - carouselRef.current.offsetLeft;
+    const walk = (x - startX) * 4; // Scroll speed multiplier : 1.5
+    carouselRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+
+    // Restore cursor
+    if (carouselRef.current) {
+      carouselRef.current.style.cursor = "grab";
+      carouselRef.current.style.userSelect = "";
+    }
+  };
 
   return (
-    <div className="bg-[#0B714C] py-12">
-      <h2 className="text-2xl font-bold text-white text-center mb-16">
-        Our Awards
+    /* Parent Container with the exact green color from the design */
+    <div className="bg-[#0B714C] py-16 relative">
+      {/* Title using the exact font size and spacing from design */}
+      <h2 className="text-2xl font-bold text-white text-center mb-12">
+        {heading}
       </h2>
 
-      <div className="relative px-10 md:px-16">
+      {/* Carousel Container with proper padding matching the design */}
+      <div className="relative">
+        {" "}
+        {/* px-16 */}
         {/* Carousel with cards */}
-        <div 
+        <div
           ref={carouselRef}
-          className="flex overflow-x-auto gap-4 pb-8 pt-2 snap-x scroll-smooth hide-scrollbar"
-          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          className="flex overflow-x-auto gap-16 pb-16 snap-x scroll-smooth hide-scrollbar cursor-grab select-none" /* cursor-grab */
+          style={{
+            scrollbarWidth: "none",
+            msOverflowStyle: "none",
+            WebkitUserSelect: "none",
+            MozUserSelect: "none",
+            userSelect: "none",
+          }}
+          onMouseDown={handleMouseDown}
+          onMouseUp={handleMouseUp}
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
+          // Prevent text selection on touch devices
+          onTouchStart={() => {
+            if (carouselRef.current) {
+              carouselRef.current.style.userSelect = "none";
+            }
+          }}
+          onTouchEnd={() => {
+            if (carouselRef.current) {
+              carouselRef.current.style.userSelect = "";
+            }
+          }}
         >
-          {awards.map((award) => (
-            <div key={award.id} className="flex-none w-[300px] snap-start">
+          {awards.map((award, index) => (
+            <div
+              key={award.id}
+              onDragStart={(e) => e.preventDefault()} // Prevent default drag behavior
+              style={{
+                // paddingLeft: index === 0 && isAtStart ? "102px" : "0",
+                // paddingRight: index === awards.length - 1 && isAtEnd ? '102px' : '0',
+                // transition: "padding 0.3s ease",
+
+                paddingLeft: index === 0 ? "102px" : "0",
+                paddingRight: index === awards.length - 1 ? "102px" : "0",
+                transition: "padding 0.3s ease",
+              }}
+            >
+              {/* className="flex-none w-[400px] snap-start border-2" */}
               <AwardCard award={award} />
             </div>
           ))}
         </div>
-
-        {/* Navigation buttons */}
-        {/* <button 
-          onClick={scrollPrev} 
-          className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full"
-          aria-label="Previous award"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-        <button 
-          onClick={scrollNext} 
-          className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full"
-          aria-label="Next award"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </button> */}
       </div>
 
-      {/* Progress bar */}
-      <div className="max-w-md mx-auto mt-8 px-4">
-        <div className="h-2 bg-white/20 rounded-full relative">
-          <div 
-            className="h-1 bg-white absolute top-0.5 left-0 rounded-full transition-all duration-300 ease-out"
-            style={{ width: `${progressWidth}%` }}
+      {/* Progress Bar matching the design - centered, with segment highlighting */}
+      <div className="w-full max-w-3xl mx-auto px-4 pb-7">
+        <div className="relative h-[3px]  bg-[#859E95] rounded-full">
+          {/* Active segment of the progress bar */}
+          <div
+            className="absolute h-[6px] bg-white rounded-full transition-all duration-300"
+            /* style={{
+              left: `${(activeIndex / awards.length) * 100}%`,
+              width: `${(1 / awards.length) * 100}%`,
+            }} */
+            style={{
+              width: `${250 / awards.length}%`,
+              left: `${
+                (activeIndex / (awards.length - 1)) *
+                (133 - 100 / awards.length)
+              }%`,
+              transform: "translateY(-30%)",
+            }}
           ></div>
         </div>
       </div>

@@ -47,7 +47,7 @@ const ProcessFlow = () => {
 
         // Calculate active step based on scroll percentage
         const newActiveStep = Math.min(
-          Math.floor((percentage / 100) * processSteps.length),
+          Math.floor((scrollPercentage / 100) * processSteps.length), /* percentage */
           processSteps.length - 1
         );
         setActiveStepIndex(newActiveStep);
@@ -64,7 +64,7 @@ const ProcessFlow = () => {
         scrollContainer.removeEventListener("scroll", handleScroll);
       }
     };
-  }, [processSteps.length]);
+  }, [processSteps.length, scrollPercentage]);
 
   return (
     <div className="w-full relative py-6 px-4">

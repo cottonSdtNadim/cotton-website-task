@@ -111,6 +111,9 @@ export const content = {
           animatedButton: {
             title: "More Info"
           }
+        },
+        ourAwards: {
+          heading: "Our Awards"
         }
     },
   },
