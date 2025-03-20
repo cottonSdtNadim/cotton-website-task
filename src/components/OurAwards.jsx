@@ -57,13 +57,11 @@ const OurAwards = () => {
   ];
 
   const {heading} = content.en.ourStoryPage.ourAwards;
-  const carouselRef = useRef(null);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
-  /* const [isAtStart, setIsAtStart] = useState(true);
-  const [isAtEnd, setIsAtEnd] = useState(false); */
+  const carouselRef = useRef(null); // A reference to the carousel container, which allows direct manipulation of the DOM element.
+  const [activeIndex, setActiveIndex] = useState(0); // A function to update activeIndex.
+  const [isDragging, setIsDragging] = useState(false); // A boolean state to track if the user is dragging the carousel
+  const [startX, setStartX] = useState(0); // The starting position of the mouse when the user starts dragging.
+  const [scrollLeft, setScrollLeft] = useState(0); // The scroll position of the carousel.
 
   // Handle scroll events to update progress bar
   useEffect(() => {
@@ -72,15 +70,9 @@ const OurAwards = () => {
         const { scrollLeft } =
           carouselRef.current; /* , scrollWidth, clientWidth */
 
-        // Update edge detection states
-        /* const atStart = scrollLeft <= 1;
-        const atEnd = scrollLeft + clientWidth >= scrollWidth - 1;
-        setIsAtStart(atStart);
-        setIsAtEnd(atEnd); */
-
         // Calculate which card is currently active based on scroll position
         const cardWidth =
-          carouselRef.current.querySelector("div").offsetWidth + 16; // width + gap
+          carouselRef.current.querySelector("div").offsetWidth + 64; // width + gap
         const newActiveIndex = Math.min(
           Math.floor(scrollLeft / cardWidth),
           awards.length - 1
@@ -149,12 +141,11 @@ const OurAwards = () => {
 
       {/* Carousel Container with proper padding matching the design */}
       <div className="relative">
-        {" "}
-        {/* px-16 */}
+
         {/* Carousel with cards */}
         <div
           ref={carouselRef}
-          className="flex overflow-x-auto gap-16 pb-16 snap-x scroll-smooth hide-scrollbar cursor-grab select-none" /* cursor-grab */
+          className="flex overflow-x-auto gap-16 pb-16 snap-mandatory scroll-smooth hide-scrollbar cursor-grab select-none" /* cursor-grab */
           style={{
             scrollbarWidth: "none",
             msOverflowStyle: "none",
@@ -183,13 +174,9 @@ const OurAwards = () => {
               key={award.id}
               onDragStart={(e) => e.preventDefault()} // Prevent default drag behavior
               style={{
-                // paddingLeft: index === 0 && isAtStart ? "102px" : "0",
-                // paddingRight: index === awards.length - 1 && isAtEnd ? '102px' : '0',
-                // transition: "padding 0.3s ease",
-
                 paddingLeft: index === 0 ? "102px" : "0",
                 paddingRight: index === awards.length - 1 ? "102px" : "0",
-                transition: "padding 0.3s ease",
+                transition: "padding 0.3s ease", 
               }}
             >
               {/* className="flex-none w-[400px] snap-start border-2" */}
@@ -205,15 +192,11 @@ const OurAwards = () => {
           {/* Active segment of the progress bar */}
           <div
             className="absolute h-[6px] bg-white rounded-full transition-all duration-300"
-            /* style={{
-              left: `${(activeIndex / awards.length) * 100}%`,
-              width: `${(1 / awards.length) * 100}%`,
-            }} */
             style={{
-              width: `${250 / awards.length}%`,
+              width: `${300 / awards.length}%`,
               left: `${
                 (activeIndex / (awards.length - 1)) *
-                (133 - 100 / awards.length)
+                (125 - 100 / awards.length)
               }%`,
               transform: "translateY(-30%)",
             }}
