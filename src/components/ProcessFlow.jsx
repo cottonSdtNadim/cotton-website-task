@@ -19,7 +19,7 @@ const ProcessFlow = () => {
   const [activeStepIndex, setActiveStepIndex] = useState(0);
   const scrollContainerRef = useRef(null);
 
-  console.log("scrollPercentage in ProcessFlow:", scrollPercentage);
+  // console.log("scrollPercentage in ProcessFlow:", scrollPercentage);
 
   // Define all process steps
   const processSteps = [
