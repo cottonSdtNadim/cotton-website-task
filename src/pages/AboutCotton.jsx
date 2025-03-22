@@ -7,6 +7,7 @@ import OurMessage from '../components/OurMessage.jsx';
 import ImageCardButtonGroup from '../components/ImageCardButtonGroup.jsx';
 import OurVisionaries from '../components/OurVisionaries.jsx';
 import OurAwards from '../components/OurAwards.jsx';
+import SisterConcerns from '../components/SisterConcerns.jsx';
 
 const AboutCotton = () => {
     return (
@@ -19,6 +20,7 @@ const AboutCotton = () => {
            <ImageCardButtonGroup></ImageCardButtonGroup>
            <OurVisionaries></OurVisionaries>
            <OurAwards></OurAwards>
+           <SisterConcerns></SisterConcerns>
         </div>
     );
 };
