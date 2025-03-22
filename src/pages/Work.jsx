@@ -1,4 +1,5 @@
 import image from "../assets/images/covers/machines.png";
+import CultureCollaboration from "../components/CultureCollaboration";
 import CustomerRelationship from "../components/CustomerRelationship";
 import Partners from "../components/Partners";
 import { content } from "../content/content";
@@ -21,6 +22,7 @@ const Work = () => {
         ></CustomerRelationship>
       </div>
       <Partners></Partners>
+      <CultureCollaboration></CultureCollaboration>
     </div>
   );
 };

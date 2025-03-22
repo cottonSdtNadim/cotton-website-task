@@ -122,6 +122,9 @@ export const content = {
       chairman: {
         name: 'Shaheen Mahmud',
         designation: 'Founder and Chairman'
+      },
+      cultureCollaboration: {
+        heading: 'We believe in the power of culture, collaboration and cohesion to propel our partners forward.',
       }
     }
   },
