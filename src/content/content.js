@@ -118,7 +118,11 @@ export const content = {
         }
     },
     workPage: {
-      header: 'Our Process',
+      coverHeader: 'Our Process',
+      chairman: {
+        name: 'Shaheen Mahmud',
+        designation: 'Founder and Chairman'
+      }
     }
   },
 };

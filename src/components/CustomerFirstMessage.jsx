@@ -18,6 +18,7 @@ const CustomerFirstMessage = () => {
       <div className="flex">
         {/* Text Container */}
         <CustomerRelationship
+          width="w-[639px]"
           header={header}
           description={description}
         ></CustomerRelationship>
