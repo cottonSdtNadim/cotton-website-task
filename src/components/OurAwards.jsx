@@ -270,11 +270,11 @@ const OurAwards = () => {
   ];
 
   const {heading} = content.en.ourStoryPage.ourAwards;
-  const carouselRef = useRef(null);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
+  const carouselRef = useRef(null); // A reference to the carousel container, which allows direct manipulation of the DOM element.
+  const [activeIndex, setActiveIndex] = useState(0); // A function to update activeIndex.
+  const [isDragging, setIsDragging] = useState(false); // A boolean state to track if the user is dragging the carousel
+  const [startX, setStartX] = useState(0); // The starting position of the mouse when the user starts dragging.
+  const [scrollLeft, setScrollLeft] = useState(0); // The scroll position of the carousel.
   const cardWidth = 350; // Match the width in AwardCard.jsx
 
   // Handle scroll events to update progress bar

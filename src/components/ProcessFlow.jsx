@@ -18,6 +18,9 @@ const ProcessFlow = () => {
   const [scrollPercentage, setScrollPercentage] = useState(0);
   const [activeStepIndex, setActiveStepIndex] = useState(0);
   const scrollContainerRef = useRef(null);
+  const [isDragging, setIsDragging] = useState(false); // A boolean state to track if the user is dragging the carousel
+  const [startX, setStartX] = useState(0); // The starting position of the mouse when the user starts dragging.
+  const [scrollLeft, setScrollLeft] = useState(0); // The scroll position of the carousel.
 
   // console.log("scrollPercentage in ProcessFlow:", scrollPercentage);
 
@@ -47,7 +50,9 @@ const ProcessFlow = () => {
 
         // Calculate active step based on scroll percentage
         const newActiveStep = Math.min(
-          Math.floor((scrollPercentage / 100) * processSteps.length), /* percentage */
+          Math.floor(
+            (scrollPercentage / 100) * processSteps.length
+          ) /* percentage */,
           processSteps.length - 1
         );
         setActiveStepIndex(newActiveStep);
@@ -66,13 +71,73 @@ const ProcessFlow = () => {
     };
   }, [processSteps.length, scrollPercentage]);
 
+  // Mouse drag scroll functionality
+  const handleMouseDown = (e) => {
+    e.preventDefault();
+    setIsDragging(true);
+    setStartX(e.pageX - scrollContainerRef.current.offsetLeft);
+    setScrollLeft(scrollContainerRef.current.scrollLeft);
+
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.style.cursor = "grabbing";
+      scrollContainerRef.current.style.userSelect = "none";
+    }
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.style.cursor = "grab";
+      scrollContainerRef.current.style.userSelect = "";
+    }
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+
+    const x = e.pageX - scrollContainerRef.current.offsetLeft;
+    const walk = (x - startX) * 3; // Adjusted scroll speed for better control
+    scrollContainerRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.style.cursor = "grab";
+      scrollContainerRef.current.style.userSelect = "";
+    }
+  };
+
   return (
     <div className="w-full relative py-6 px-4">
       {/* Scrollable container */}
       <div
         ref={scrollContainerRef}
-        className="overflow-x-auto flex items-center pb-4 hide-scrollbar"
-        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        className="overflow-x-auto flex items-center pb-4 hide-scrollbar cursor-grab select-none"
+        style={{
+          scrollbarWidth: "none",
+          msOverflowStyle: "none",
+          WebkitUserSelect: "none",
+          MozUserSelect: "none",
+          userSelect: "none",
+        }}
+        onMouseDown={handleMouseDown}
+        onMouseUp={handleMouseUp}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        onTouchStart={() => {
+          if (scrollContainerRef.current) {
+            scrollContainerRef.current.style.userSelect = "none";
+          }
+        }}
+        onTouchEnd={() => {
+          if (scrollContainerRef.current) {
+            scrollContainerRef.current.style.userSelect = "";
+          }
+        }}
       >
         {/* Steps container with green line */}
         <div className="flex items-center relative min-w-max px-6">
