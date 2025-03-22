@@ -8,11 +8,14 @@ import ImageCardButtonGroup from '../components/ImageCardButtonGroup.jsx';
 import OurVisionaries from '../components/OurVisionaries.jsx';
 import OurAwards from '../components/OurAwards.jsx';
 import SisterConcerns from '../components/SisterConcerns.jsx';
+import { content } from '../content/content.js';
 
 const AboutCotton = () => {
+    const {header} = content.en.ourStoryPage;
+
     return (
         <div>
-           <Cover image={image} heading={"Our Story"}></Cover>
+           <Cover image={image} heading={header}></Cover>
            <Certified></Certified>
            <OurCompanies></OurCompanies>
            <ImageCardTimelineSlider></ImageCardTimelineSlider>

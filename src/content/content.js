@@ -97,6 +97,7 @@ export const content = {
       },
     },
     ourStoryPage: {
+      header: "Our Story",
       certifiedContent:  `We seek to empower communities of creators, customers, and partners by
         crafting products of utmost quality while mitigating environmental
         footprints along the entire value chain in which we operate.`,
@@ -116,5 +117,8 @@ export const content = {
           heading: "Our Awards"
         }
     },
+    workPage: {
+      header: 'Our Process',
+    }
   },
 };
