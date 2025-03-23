@@ -126,6 +126,14 @@ export const content = {
       cultureCollaboration: {
         heading: 'We believe in the power of culture, collaboration and cohesion to propel our partners forward.',
       }
+    },
+    sustainabilityPage: {
+      subHeading: 'We believe in',
+      headingOne: 'Doing well',
+      headingTwo: 'by doing good',
+      overview: {
+        heading: 'Sustainability is a core driver of our business strategy, and our day-to-day practices.'
+      }
     }
   },
 };
