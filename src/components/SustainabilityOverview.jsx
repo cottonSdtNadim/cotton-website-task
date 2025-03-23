@@ -5,8 +5,7 @@ const SustainabilityOverview = () => {
   const { heading, paragraph } = content.en.sustainabilityPage.overview;
 
   return (
-    <div className="px-[243px] py-36">
-      <div className="grid grid-cols-2 gap-80">
+      <div className="grid grid-cols-2 gap-96 px-[235px] py-36">
         <div className="w-[524px] h-[403px]">
           <h3 className="text-3xl font-medium mb-10">{heading}</h3>
           <p className="text-lg font-light">{paragraph}</p>
@@ -15,7 +14,6 @@ const SustainabilityOverview = () => {
           <img src={sdg} alt="" className="w-full h-80" />
         </div>
       </div>
-    </div>
   );
 };
 
