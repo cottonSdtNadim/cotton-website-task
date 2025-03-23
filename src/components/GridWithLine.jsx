@@ -1,5 +1,5 @@
 const GridWithLines = () => {
-  const numOfLines = 12
+  const numOfLines = 12;
   const lines = Array.from({ length: numOfLines }, (_, index) => index)
 
   return (

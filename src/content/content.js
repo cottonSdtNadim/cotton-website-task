@@ -98,42 +98,45 @@ export const content = {
     },
     ourStoryPage: {
       header: "Our Story",
-      certifiedContent:  `We seek to empower communities of creators, customers, and partners by
+      certifiedContent: `We seek to empower communities of creators, customers, and partners by
         crafting products of utmost quality while mitigating environmental
         footprints along the entire value chain in which we operate.`,
-        ourCompanies: {
-          headingTitle: "Our Companies"
+      ourCompanies: {
+        headingTitle: "Our Companies",
+      },
+      ourMessage: `We recognize ourselves as a value-driven organization. Our values continue to be the catalyst of our growth and business here at Cotton Group.`,
+      ourCoreValues: {
+        header: `Our Core Values`,
+      },
+      ourVisionaries: {
+        animatedButton: {
+          title: "More Info",
         },
-        ourMessage: `We recognize ourselves as a value-driven organization. Our values continue to be the catalyst of our growth and business here at Cotton Group.`,
-        ourCoreValues: {
-          header: `Our Core Values`
-        },
-        ourVisionaries: {
-          animatedButton: {
-            title: "More Info"
-          }
-        },
-        ourAwards: {
-          heading: "Our Awards"
-        }
+      },
+      ourAwards: {
+        heading: "Our Awards",
+      },
     },
     workPage: {
-      coverHeader: 'Our Process',
+      coverHeader: "Our Process",
       chairman: {
-        name: 'Shaheen Mahmud',
-        designation: 'Founder and Chairman'
+        name: "Shaheen Mahmud",
+        designation: "Founder and Chairman",
       },
       cultureCollaboration: {
-        heading: 'We believe in the power of culture, collaboration and cohesion to propel our partners forward.',
-      }
+        heading:
+          "We believe in the power of culture, collaboration and cohesion to propel our partners forward.",
+      },
     },
     sustainabilityPage: {
-      subHeading: 'We believe in',
-      headingOne: 'Doing well',
-      headingTwo: 'by doing good',
+      subHeading: "We believe in",
+      headingOne: "Doing well",
+      headingTwo: "by doing good",
       overview: {
-        heading: 'Sustainability is a core driver of our business strategy, and our day-to-day practices.'
-      }
-    }
+        heading:
+          "Sustainability is a core driver of our business strategy, and our day-to-day practices.",
+        paragraph: `We are committed to uplifting the livelihoods of our people by creating a safe, equitable, and inclusive community where we thrive, together. We believe that sustainability means, solidifying clear and attainable goals, and formulating a strategy to achieve those goals. Hence, our environmental, social, and corporate goals led us to embracing the triple-bottom-line approach in alignment with the United Nations Sustainable Goals (UN SDGs).`,
+      },
+    },
   },
 };
