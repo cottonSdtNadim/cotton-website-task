@@ -137,6 +137,10 @@ export const content = {
           "Sustainability is a core driver of our business strategy, and our day-to-day practices.",
         paragraph: `We are committed to uplifting the livelihoods of our people by creating a safe, equitable, and inclusive community where we thrive, together. We believe that sustainability means, solidifying clear and attainable goals, and formulating a strategy to achieve those goals. Hence, our environmental, social, and corporate goals led us to embracing the triple-bottom-line approach in alignment with the United Nations Sustainable Goals (UN SDGs).`,
       },
-    },
+      sdg: {
+        firstHeading:  'Through CottonCares™️, we strive to prioritize the',
+        secondHeading: "following SDGs"
+      }
+    }
   },
 };

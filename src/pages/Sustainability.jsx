@@ -1,5 +1,5 @@
 import sustainability from "../assets/images/covers/sustainability.jpg";
-import SDGGoalsExpandable from "../components/SDGGoalExpanable";
+import SDGs from "../components/SDGs";
 import SustainabilityOverview from "../components/SustainabilityOverview";
 import { content } from "../content/content";
 import Cover from "./Shared/Cover";
@@ -21,7 +21,7 @@ const Sustainability = () => {
         pagename="sustainability"
       ></Cover>
       <SustainabilityOverview></SustainabilityOverview>
-      <SDGGoalsExpandable></SDGGoalsExpandable>
+     <SDGs></SDGs>
     </div>
   );
 };
