@@ -165,16 +165,16 @@
 
 // export default Navbar;
 
-import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import PropTypes from "prop-types";
+import { useEffect, useState } from "react";
+import { NavLink, useLocation } from "react-router";
 import cottonGreenLogo from "../../assets/images/cotton-green-logo.png";
 import cottonWhiteLogo from "../../assets/images/cotton-white-logo.png";
-import ellipse from "../../assets/svgs/Ellipse.svg";
-import { NavLink, useLocation } from "react-router";
-import PropTypes from "prop-types";
-import rightArrow from "../../assets/images/hamburger-menu-mobile/right-arrow.png";
 import hamburgerMenu from "../../assets/images/hamburger-menu-mobile/hamburger-menu.png";
+import rightArrow from "../../assets/images/hamburger-menu-mobile/right-arrow.png";
 import whiteHamburgerMenu from "../../assets/images/hamburger-menu-mobile/white-hamhurger-menu.png";
+import ellipse from "../../assets/svgs/Ellipse.svg";
 
 const Navbar = ({ nonActiveTextColor = "black" }) => {
   const [hoveredItem, setHoveredItem] = useState(null);
@@ -261,7 +261,7 @@ const Navbar = ({ nonActiveTextColor = "black" }) => {
   return (
     <div
       className={`w-full ${
-        isMobile ? "px-5 py-4" : "px-[110px] py-[50px]"
+        isMobile ? "px-5 py-4" : "px-28 py-12" /* px-[110px] py-[50px] */
       } text-black relative`}
     >
       <div className="flex justify-between items-center">
@@ -269,8 +269,8 @@ const Navbar = ({ nonActiveTextColor = "black" }) => {
         <img
           src={isHomePage ? cottonGreenLogo : cottonWhiteLogo}
           alt="Cotton Logo"
-          className={isMobile ? "w-[70px] h-[60px]" : "w-[99px] h-[86px]"}
-        />
+          className={isMobile ? "w-16 h-14" : "w-24 h-20"}
+        /> {/* w-[70px] h-[60px] :  w-[99px] h-[86px]*/}
 
         {/* Desktop Navigation */}
         {!isMobile && (
