@@ -138,8 +138,37 @@ export const content = {
         paragraph: `We are committed to uplifting the livelihoods of our people by creating a safe, equitable, and inclusive community where we thrive, together. We believe that sustainability means, solidifying clear and attainable goals, and formulating a strategy to achieve those goals. Hence, our environmental, social, and corporate goals led us to embracing the triple-bottom-line approach in alignment with the United Nations Sustainable Goals (UN SDGs).`,
       },
       sdg: {
-        firstHeading:  'Through CottonCares™️, we strive to prioritize the',
-        secondHeading: "following SDGs"
+        firstHeading: "Through CottonCares™️, we strive to prioritize the",
+        secondHeading: "following SDGs",
+      },
+      supportingOurPeople: {
+        heading: "Supporting Our People, Always",
+        paragraph: `In adapting to the post-pandemic landscape, we&apos;ve implemented
+        enhanced operating procedures as part of our commitment to the
+        well-being of everyone in our facilities, leading to swift adjustments
+        in how we live and conduct business. Our dedicated employees, essential
+        to our success, have shown remarkable resilience, maintaining the
+        highest service standards for our clients. Their commitment and
+        experience have been crucial in navigating these changes. As we, along
+        with our clients and the global community, look ahead to recovery, we
+        recognize the vital role of our facilities. Our adjusted procedures
+        align with best practices for health and safety, incorporating measures
+        for physical distancing and disease prevention.`,
+      },
+    },
+    orderPage: {
+      heading: "Order",
+    },
+    contactPage: {
+      firstHeader: "Create value for globally",
+      secondHeader: "recognized brands with us",
+      workCulture: `We strive to be a great place to work – a progressive company where talented people have the opportunity to learn, grow and build their futures.`,
+      whyCotton: {
+        header: "Why Cotton?",
+        paragraph: `Our values guide our day-to-day operations; they inspire us, they keep us focused on our mission and they define us as an industry leader. Our environment is fast-paced and challenging, but also supportive, because we know that it takes teamwork to succeed. With a global clientbase, we recognize the importance of having a workforce that reflects the communities in which we operate. We are committed to building a workplace where people can grow, and in turn, create value for our clients.`,
+        animatedLink: {
+          title: "Learn about our mission and values",
+        }
       }
     }
   },

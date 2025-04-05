@@ -12,8 +12,12 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     {/* <App /> */}
     <QueryClientProvider client={queryClient}>
-      <GridWithLines></GridWithLines>
-      <BasicRoute></BasicRoute>
+      {/* <GridWithLines></GridWithLines>
+      <BasicRoute></BasicRoute> */}
+      <div className="container mx-auto px-10 xl:max-w-screen-xl 2xl:max-w-screen-2xl">
+        <GridWithLines />
+        <BasicRoute />
+      </div>
     </QueryClientProvider>
   </StrictMode>
 );

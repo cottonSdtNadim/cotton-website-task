@@ -5,6 +5,8 @@ import AboutCotton from "../pages/AboutCotton";
 import Home from "../pages/HomePage/Home";
 import Work from "../pages/Work";
 import Sustainability from "../pages/Sustainability";
+import Order from "../pages/Order";
+import Contact from "../pages/Contact";
 
 const BasicRoute = () => {
   return (
@@ -23,6 +25,8 @@ const BasicRoute = () => {
           ></Route>
           <Route path="/work" element={<Work></Work>}></Route>
           <Route path="/sustainability" element={<Sustainability></Sustainability>}></Route>
+          <Route path="/order" element={<Order></Order>}></Route>
+          <Route path="/contact" element={<Contact></Contact>}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

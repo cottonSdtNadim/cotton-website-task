@@ -4,7 +4,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
 const SDGGoalsExpandable = () => {
-  const [hoveredGoal, setHoveredGoal] = useState(null);
+  // const [hoveredGoal, setHoveredGoal] = useState(null);
+  const [expandedGoal, setExpandedGoal] = useState(null);
 
   const goals = [
     {
@@ -96,122 +97,129 @@ const SDGGoalsExpandable = () => {
   // const { data: goals = [] } = useQuery({
   //   queryKey: ["goals"],
   //   queryFn: async () => {
-  //     const corsProxyUrl = "https://cors-anywhere.herokuapp.com/";
   //     const res = await axios.get(
-  //       // "https://cottonstock.com/frontendDeveloper.php",
-  //       `${corsProxyUrl}https://cottonstock.com/frontendDeveloper.php`,
+  //       "https://cottonstock.com/frontendDeveloper.php",
   //       {
   //         headers: {
   //           Authorization: "Bearer bnjkvb6755fyVBH*(ghub",
-  //           "X-Requested-With": "XMLHttpRequest"
   //         },
-  //         // withCredentials: true,
+  //         withCredentials: true,
   //       }
   //     );
+  //     // const res = await axios.get("http://localhost:3001/api/proxy");
   //     return res.data;
   //   },
   // });
 
   // console.log("Goals", goals);
 
+  //   const goals = [
+  //     {
+  //         number: 3,
+  //         color: "#2FD400",
+  //         icon: "SDG_03.svg",
+  //         title: "Good Health And Well-Being",
+  //         items: [
+  //             "On-Site Daycare Facility",
+  //             "Women’s (Menstrual) Health",
+  //             "On-Site Medical Support",
+  //             "Vaccine Promotion"
+  //         ]
+  //     },
+  //     {
+  //         number: 5,
+  //         color: "#FF3A21",
+  //         icon: "SDG_05.svg",
+  //         title: "Gender EC",
+  //         items: [
+  //             "Equal Opportunity for Employees",
+  //             "Skill Refinement Opportunities for"
+  //         ]
+  //     },
+  //     {
+  //         number: 6,
+  //         color: "#26BDE2",
+  //         icon: "SDG_06.svg",
+  //         title: "Clean Water And Sanitation",
+  //         items: [
+  //             "Sanitation and Worker Safety Measures During COVID-19",
+  //             "Rainwater Harvesting",
+  //             "Clean Drinking Water",
+  //             "24/7 Effluent Treatment Plant (ETP)"
+  //         ]
+  //     },
+  //     {
+  //         number: 8,
+  //         color: "#840038",
+  //         icon: "SDG_08.svg",
+  //         title: "Decent Work & Economic growth",
+  //         items: [
+  //             "RMG Contributes to 84% of Bangladesh’s Total Exports"
+  //         ]
+  //     },
+  //     {
+  //         number: 9,
+  //         color: "#FD6925",
+  //         icon: "SDG_09.svg",
+  //         title: "Industry, Innovation and Infrastructure",
+  //         items: [
+  //             "Skills Development of All Employees",
+  //             "Management-Frontline Mentorship Initiative",
+  //             "Innovation Labs for Social Impact"
+  //         ]
+  //     },
+  //     {
+  //         number: 12,
+  //         color: "#BF8B2E",
+  //         icon: "SDG_12.svg",
+  //         title: "Responsible Consumption And Production",
+  //         items: [
+  //             "Efficient of Natural Resources (i.e., ETP, Solar Energy)",
+  //             "Energy-Compliant Servomotor Use",
+  //             "Responsible Toxic Waste Management"
+  //         ]
+  //     },
+  //     {
+  //         number: 13,
+  //         color: "#3F7E44",
+  //         icon: "SDG_13.svg",
+  //         title: "Climate Action",
+  //         items: [
+  //             "Plantations for Carbon Emission Offsets through Sequestration",
+  //             "Renewable Energy Source Evaluation and Implementation",
+  //             "Paper Use Minimization",
+  //             "Energy-Efficient Lighting System (LED)"
+  //         ]
+  //     }
+  // ]
 
-//   const goals = [
-//     {
-//         number: 3,
-//         color: "#2FD400",
-//         icon: "SDG_03.svg",
-//         title: "Good Health And Well-Being",
-//         items: [
-//             "On-Site Daycare Facility",
-//             "Women’s (Menstrual) Health",
-//             "On-Site Medical Support",
-//             "Vaccine Promotion"
-//         ]
-//     },
-//     {
-//         number: 5,
-//         color: "#FF3A21",
-//         icon: "SDG_05.svg",
-//         title: "Gender EC",
-//         items: [
-//             "Equal Opportunity for Employees",
-//             "Skill Refinement Opportunities for"
-//         ]
-//     },
-//     {
-//         number: 6,
-//         color: "#26BDE2",
-//         icon: "SDG_06.svg",
-//         title: "Clean Water And Sanitation",
-//         items: [
-//             "Sanitation and Worker Safety Measures During COVID-19",
-//             "Rainwater Harvesting",
-//             "Clean Drinking Water",
-//             "24/7 Effluent Treatment Plant (ETP)"
-//         ]
-//     },
-//     {
-//         number: 8,
-//         color: "#840038",
-//         icon: "SDG_08.svg",
-//         title: "Decent Work & Economic growth",
-//         items: [
-//             "RMG Contributes to 84% of Bangladesh’s Total Exports"
-//         ]
-//     },
-//     {
-//         number: 9,
-//         color: "#FD6925",
-//         icon: "SDG_09.svg",
-//         title: "Industry, Innovation and Infrastructure",
-//         items: [
-//             "Skills Development of All Employees",
-//             "Management-Frontline Mentorship Initiative",
-//             "Innovation Labs for Social Impact"
-//         ]
-//     },
-//     {
-//         number: 12,
-//         color: "#BF8B2E",
-//         icon: "SDG_12.svg",
-//         title: "Responsible Consumption And Production",
-//         items: [
-//             "Efficient of Natural Resources (i.e., ETP, Solar Energy)",
-//             "Energy-Compliant Servomotor Use",
-//             "Responsible Toxic Waste Management"
-//         ]
-//     },
-//     {
-//         number: 13,
-//         color: "#3F7E44",
-//         icon: "SDG_13.svg",
-//         title: "Climate Action",
-//         items: [
-//             "Plantations for Carbon Emission Offsets through Sequestration",
-//             "Renewable Energy Source Evaluation and Implementation",
-//             "Paper Use Minimization",
-//             "Energy-Efficient Lighting System (LED)"
-//         ]
-//     }
-// ]
+  const toggleGoal = (index) => {
+    // If the clicked goal is already expanded, collapse it
+    // Otherwise, expand the clicked goal
+    setExpandedGoal(expandedGoal === index ? null : index);
+  };
 
   return (
-    <div className="flex w-full h-screen overflow-hidden px-28">
+    <div className="flex w-full h-screen overflow-hidden px-28 cursor-pointer">
       {goals.map((goal, index) => {
-        const isHovered = hoveredGoal === index;
+        // const isHovered = hoveredGoal === index;
+        const isExpanded = expandedGoal === index;
+        const isDefault = expandedGoal === null;
 
         return (
           <motion.div
             key={goal.number}
             className="h-full"
             style={{
-              flex: isHovered ? "5" : "1",
+              // flex: isHovered ? "5" : "1",
+              flex: isExpanded ? "5" : "1",
             }}
-            onMouseEnter={() => setHoveredGoal(index)}
-            onMouseLeave={() => setHoveredGoal(null)}
+            // onMouseEnter={() => setHoveredGoal(index)}
+            // onMouseLeave={() => setHoveredGoal(null)}
+            onClick={() => toggleGoal(index)}
           >
             <AnimatePresence>
-              {isHovered ? (
+              {isExpanded ? (
                 // Expanded state with content
                 <motion.div
                   className="flex h-full"
@@ -219,8 +227,7 @@ const SDGGoalsExpandable = () => {
                   animate={{ width: "auto" }}
                   exit={{ width: 0 }}
                   transition={{
-                    // duration: 0.5,
-                    duration: 10,
+                    duration: 0.5,
                     ease: "easeInOut",
                   }}
                 >
@@ -299,9 +306,10 @@ const SDGGoalsExpandable = () => {
               ) : (
                 // Collapsed state - just the colored bar with number and icon
                 <motion.div
-                  className={`h-full flex flex-col items-center justify-start pt-20 px-2 ${
-                    hoveredGoal === null ? "default-phase" : ""
-                  }`}
+                  className={`h-full flex flex-col items-center justify-start pt-20 px-2`} /* ${
+                    // hoveredGoal === null ? "default-phase" : ""
+                    isExpanded === null ? "default-phase" : ""
+                  } */
                   style={{ backgroundColor: goal.color }}
                   initial={{ width: "auto" }}
                   animate={{ width: "auto" }}
@@ -313,14 +321,17 @@ const SDGGoalsExpandable = () => {
                 >
                   <div
                     className={`text-white ${
-                      hoveredGoal === null ? "w-20 h-24" : "w-12 h-11"
+                      // isExpanded === null ? "w-20 h-24" : "w-12 h-11"
+                      isDefault ? "w-20 h-24" : "w-12 h-11"
                     } flex items-center justify-center mb-${
-                      hoveredGoal === null ? 4 : 9
+                      // isExpanded === null ? 4 : 9
+                      isDefault ? 4 : 9
                     }`}
                   >
                     <span
                       className={`${
-                        hoveredGoal === null ? "text-8xl" : "text-5xl"
+                        // isExpanded === null ? "text-8xl" : "text-5xl"
+                        isDefault ? "text-8xl" : "text-5xl"
                       }`}
                     >
                       {goal.icon}
@@ -328,7 +339,8 @@ const SDGGoalsExpandable = () => {
                   </div>
                   <div
                     className={`text-white font-bold ${
-                      hoveredGoal === null ? "text-9xl" : "text-6xl"
+                      // isExpanded === null ? "text-9xl" : "text-6xl"
+                      isDefault ? "text-9xl" : "text-6xl"
                     }`}
                   >
                     {goal.number}

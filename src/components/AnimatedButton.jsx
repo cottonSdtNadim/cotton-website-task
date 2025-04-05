@@ -56,4 +56,5 @@ AnimatedButton.propTypes = {
   bgColor: PropTypes.string.isRequired,
 };
 
+
 export default AnimatedButton
