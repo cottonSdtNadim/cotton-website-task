@@ -1,19 +1,18 @@
+import PropTypes from "prop-types";
 import greenLeafSmallIcon from "../assets/images/green-leaf-small-icon.png";
-import PropTypes from 'prop-types';
 
-const SectionTitle = ({ title, iconTop, iconLeft, iconWidth, iconHeight }) => {
+const SectionTitle = ({
+  title,
+  iconPositionClass,
+  iconWidth,
+  iconHeight,
+}) => {
   return (
     <div className="relative mb-20">
       <img
         src={greenLeafSmallIcon}
         alt="Green Leaf Small Icon"
-        className="absolute"
-        style={{
-          top: iconTop,
-          left: iconLeft,
-          width: iconWidth,
-          height: iconHeight,
-        }}
+        className={`absolute ${iconPositionClass} ${iconWidth} ${iconHeight}`}
       />
       <h1 className="text-center text-4xl font-extrabold">{title}</h1>
     </div>
@@ -22,19 +21,16 @@ const SectionTitle = ({ title, iconTop, iconLeft, iconWidth, iconHeight }) => {
 
 SectionTitle.propTypes = {
   title: PropTypes.string.isRequired,
-  iconTop: PropTypes.string,        
-  iconLeft: PropTypes.string,       
-  iconWidth: PropTypes.string,      
-  iconHeight: PropTypes.string,    
+  iconWidth: PropTypes.string,
+  iconHeight: PropTypes.string,
+  iconPositionClass: PropTypes.string,
 };
 
+
 SectionTitle.defaultProps = {
-  iconTop: '-25px',
-  iconLeft: '495px',
+  iconPositionClass: '-top-[25px] left-[495px] 2xl:left-[605px]',
   iconWidth: 'w-7',
   iconHeight: 'h-11',
 };
 
 export default SectionTitle;
-
-  

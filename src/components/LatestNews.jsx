@@ -16,18 +16,16 @@ const LatestNews = () => {
   });
 
   return (
-    <div className="mt-[164px]">
+    <div className="mt-40">
       <SectionTitle
-        // title={"Latest News"}
         title={title}
-        iconTop="-30px"
-        iconLeft="495px"
+        iconPositionClass="-top-[30px] left-[495px] 2xl:left-[630px]"
         iconWidth="w-7"
         iconHeight="h-11"
       ></SectionTitle>
 
       {/* Looping Latest News with map() */}
-      <div className="grid grid-cols-3 gap-4 mx-[141px] mb-24">
+      <div className="grid grid-cols-3 gap-4 mx-[150px] 2xl:mx-[280px] mb-24">
         {latestNews.map((singleNews, index) => (
           <ImageCard key={index} singleNews={singleNews}></ImageCard>
         ))}
