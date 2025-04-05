@@ -7,7 +7,7 @@ const ReadOurStory = () => {
   const { label} = content.en.readTheStoryLink;
 
   return (
-    <div className="relative w-full mx-auto mt-24 max-w-6xl h-96 overflow-hidden rounded-lg">
+    <div className="relative w-full mx-auto mt-24 max-w-6xl 2xl:max-w-7xl h-96 overflow-hidden rounded-xl">
       <div 
         className="w-full h-full bg-cover bg-center bg-no-repeat"
         style={{
