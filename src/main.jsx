@@ -14,7 +14,7 @@ createRoot(document.getElementById("root")).render(
     <QueryClientProvider client={queryClient}>
       {/* <GridWithLines></GridWithLines>
       <BasicRoute></BasicRoute> */}
-        <div className="mx-auto w-full max-w-screen-xl 2xl:max-w-screen-2xl px-4">
+        <div className="mx-auto w-full max-w-screen-xl 2xl:max-w-screen-2xl">
         <GridWithLines />
         <BasicRoute />
       </div>
