@@ -19,7 +19,7 @@ const LatestNews = () => {
     <div className="mt-40">
       <SectionTitle
         title={title}
-        iconPositionClass="-top-[30px] left-[495px] 2xl:left-[630px]"
+        iconPositionClass="-top-[30px] left-[500px] 2xl:left-[635px]"
         iconWidth="w-7"
         iconHeight="h-11"
       ></SectionTitle>
