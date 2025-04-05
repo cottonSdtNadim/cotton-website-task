@@ -5,7 +5,7 @@ const Cover = ({ image, heading, subHeading = "" }) => {
   return (
     <div className="relative overflow-hidden">
       <div
-        className="w-[1440px] h-[520px]" /* w-full h-screen */
+        className="w-full h-[585px]" /* w-full h-screen */
         style={{
           backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%), url(${image})`,
           backgroundPosition: "50%",
