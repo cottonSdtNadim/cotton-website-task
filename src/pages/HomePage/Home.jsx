@@ -9,7 +9,7 @@ import VideoModule from "../../components/VideoModule";
 
 const Home = () => {
   return (
-    <div className="my-52">
+    <div className="my-64 2xl:my-52">
       <ImageSlider></ImageSlider>
       <Process></Process>
       <VideoModule></VideoModule>
