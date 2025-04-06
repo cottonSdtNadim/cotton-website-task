@@ -49,7 +49,7 @@ const SupportingOurPeople = () => {
       <p className="text-lg mt-5 font-light mb-40">
         {paragraph}
       </p>
-      <ImageCardButtonGroup data={imageButtonCards} width={"w-[150px]"} height={"h-[150px]"}></ImageCardButtonGroup>
+      <ImageCardButtonGroup data={imageButtonCards} width={"w-36"} height={"h-36"}></ImageCardButtonGroup>
     </div>
   );
 };

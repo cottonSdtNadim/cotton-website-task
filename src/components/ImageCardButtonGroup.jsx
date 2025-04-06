@@ -107,7 +107,7 @@
 //                   className="flex flex-col"
 //                 >
 //                   {activeCard.image && (
-//                     <motion.div 
+//                     <motion.div
 //                       className="mb-4 flex justify-center"
 //                       initial={{ opacity: 0 }}
 //                       animate={{ opacity: 1 }}
@@ -121,7 +121,7 @@
 //                       />
 //                     </motion.div>
 //                   )}
-//                   <motion.p 
+//                   <motion.p
 //                     className="text-lg leading-relaxed mb-20 mt-2"
 //                     initial={{ opacity: 0 }}
 //                     animate={{ opacity: 1 }}
@@ -142,26 +142,213 @@
 
 // export default ImageCardButtonGroup;
 
+// import { useState } from "react";
+// import { motion } from "motion/react";
+// import PropTypes from "prop-types";
 
-import { useState } from "react";
+// const ImageCardButtonGroup = ({data, width, height}) => {
+//   const [activeButton, setActiveButton] = useState(data[0]?.buttonName || "");
+//   const activeCard = data.find((card) => card.buttonName === activeButton
+//   );
+
+//   // Calculate the fixed height based on the number of buttons
+//   // Each button is approximately 64px (py-4 = 2rem = 32px top + bottom) plus gaps
+//   const buttonCount = data.length;
+//   const totalButtonsHeight = buttonCount * 64 + (buttonCount - 1) * 16; // 64px per button + 16px gap between
+
+//   return (
+//     <div className="mx-40 border-2">
+//       <div className="flex flex-col md:flex-row gap-6 mb-60">
+//         {/* Left column - Buttons */}
+//         <div className="2xl:w-1/3 flex flex-col gap-4">
+//           {data.map((item) => (
+//             <button
+//               key={item.buttonName}
+//               className={`py-4 px-6 text-center rounded-xl transition-all duration-300 border-2 ${
+//                 activeButton === item.buttonName
+//                   ? "bg-emerald-700 text-white border-emerald-700"
+//                   : "bg-white text-gray-800 border-gray-200 hover:bg-gray-50"
+//               }`}
+//               onClick={() => setActiveButton(item.buttonName)}
+//             >
+//               <span className="font-medium text-lg">{item.buttonName}</span>
+//             </button>
+//           ))}
+//         </div>
+
+//         {/* Right column - Content Card with fixed height */}
+//         <div className="2xl:w-2/3">
+//           <motion.div
+//             className="bg-emerald-700 rounded-xl overflow-hidden text-white px-9 pt-10 flex flex-col"
+//             style={{ height: `${totalButtonsHeight}px` }}
+//             layout
+//           >
+//             <>
+//               {activeCard && (
+//                 <motion.div
+//                   key={activeButton}
+//                   initial={{ opacity: 0, }}
+//                   animate={{ opacity: 1 }}
+//                   exit={{ opacity: 0 }}
+//                   transition={{ duration: 0.5 }}
+//                   className="flex flex-col"
+//                 >
+//                   {activeCard.image && (
+//                     <motion.div
+//                       className="mb-4 flex justify-center"
+//                       initial={{ opacity: 0 }}
+//                       animate={{ opacity: 1 }}
+//                       exit={{ opacity: 0 }}
+//                       transition={{ duration: 0.5 }}
+//                     >
+//                       <img
+//                         src={activeCard.image}
+//                         alt={activeCard.buttonName}
+//                         // className="w-[550px] h-[190px] rounded-md object-cover"
+//                         className={`${width} ${height} rounded-md object-cover`}
+//                       />
+//                     </motion.div>
+//                   )}
+//                   <motion.p
+//                     className="text-lg leading-relaxed mb-20 mt-2"
+//                     initial={{ opacity: 0 }}
+//                     animate={{ opacity: 1 }}
+//                     exit={{ opacity: 0 }}
+//                     transition={{ duration: 0.5 }}
+//                   >
+//                     {activeCard.textContent}
+//                   </motion.p>
+//                 </motion.div>
+//               )}
+//             </>
+//           </motion.div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// ImageCardButtonGroup.propTypes = {
+//   data: PropTypes.array.isRequired,
+//   width: PropTypes.string.isRequired,
+//   height: PropTypes.string.isRequired,
+// };
+
+// export default ImageCardButtonGroup;
+
+// import { motion } from "motion/react";
+// import PropTypes from "prop-types";
+// import { useState } from "react";
+
+// const ImageCardButtonGroup = ({ data, width, height }) => {
+//   const [activeButton, setActiveButton] = useState(data[0]?.buttonName || "");
+//   const activeCard = data.find((card) => card.buttonName === activeButton);
+
+//   // Calculate the fixed height based on the number of buttons
+//   // Each button is approximately 64px (py-4 = 2rem = 32px top + bottom) plus gaps
+//   const buttonCount = data.length;
+//   const totalButtonsHeight = buttonCount * 64 + (buttonCount - 1) * 16; // 64px per button + 16px gap between
+
+//   return (
+//     <div className="mx-32 2xl:mx-40">
+//       {/* xl:mx-32 */}
+//       <div className="flex flex-col md:flex-row gap-6 mb-60 border-2">
+//         {/* Left column - Buttons */}
+//         <div className="w-1/2 2xl:w-1/3 flex flex-col gap-4 border-2 border-red-500">
+//           {/* w-1/2 2xl:w-1/3 */}
+//           {data.map((item) => (
+//             <button
+//               key={item.buttonName}
+//               className={`py-4 px-6 text-center rounded-xl transition-all duration-300 border-2 ${
+//                 activeButton === item.buttonName
+//                   ? "bg-emerald-700 text-white border-emerald-700"
+//                   : "bg-white text-gray-800 border-gray-200 hover:bg-gray-50"
+//               }`}
+//               onClick={() => setActiveButton(item.buttonName)}
+//             >
+//               <span className="font-medium text-lg">{item.buttonName}</span>
+//             </button>
+//           ))}
+//         </div>
+//         {/* Right column - Content Card with fixed height */}
+//         <div className="w-3/5 2xl:w-2/3 border-2 border-blue-500">
+//           {/* xl:w-2/3 2xl:w-2/3 */}
+//           <motion.div
+//             className="bg-emerald-700 rounded-xl overflow-hidden text-white px-9 pt-10 flex flex-col"
+//             style={{ height: `${totalButtonsHeight}px` }}
+//             layout
+//           >
+//             <>
+//               {activeCard && (
+//                 <motion.div
+//                   key={activeButton}
+//                   initial={{ opacity: 0 }}
+//                   animate={{ opacity: 1 }}
+//                   exit={{ opacity: 0 }}
+//                   transition={{ duration: 0.5 }}
+//                   className="flex flex-col"
+//                 >
+//                   {activeCard.image && (
+//                     <motion.div
+//                       className="mb-4 flex justify-center"
+//                       initial={{ opacity: 0 }}
+//                       animate={{ opacity: 1 }}
+//                       exit={{ opacity: 0 }}
+//                       transition={{ duration: 0.5 }}
+//                     >
+//                       <img
+//                         src={activeCard.image}
+//                         alt={activeCard.buttonName}
+//                         // className="w-[550px] h-[190px] rounded-md object-cover"
+//                         className={`${width} ${height} rounded-md object-cover`}
+//                       />
+//                     </motion.div>
+//                   )}
+//                   <motion.p
+//                     className="text-lg leading-relaxed mb-20 mt-2"
+//                     initial={{ opacity: 0 }}
+//                     animate={{ opacity: 1 }}
+//                     exit={{ opacity: 0 }}
+//                     transition={{ duration: 0.5 }}
+//                   >
+//                     {activeCard.textContent}
+//                   </motion.p>
+//                 </motion.div>
+//               )}
+//             </>
+//           </motion.div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// ImageCardButtonGroup.propTypes = {
+//   data: PropTypes.array.isRequired,
+//   width: PropTypes.string.isRequired,
+//   height: PropTypes.string.isRequired,
+// };
+
+// export default ImageCardButtonGroup;
+
+
 import { motion } from "motion/react";
 import PropTypes from "prop-types";
+import { useState } from "react";
 
-const ImageCardButtonGroup = ({data, width, height}) => {
+const ImageCardButtonGroup = ({ data, width, height }) => {
   const [activeButton, setActiveButton] = useState(data[0]?.buttonName || "");
-  const activeCard = data.find((card) => card.buttonName === activeButton
-  );
+  const activeCard = data.find((card) => card.buttonName === activeButton);
 
   // Calculate the fixed height based on the number of buttons
-  // Each button is approximately 64px (py-4 = 2rem = 32px top + bottom) plus gaps
   const buttonCount = data.length;
   const totalButtonsHeight = buttonCount * 64 + (buttonCount - 1) * 16; // 64px per button + 16px gap between
 
   return (
-    <div className="mx-40">
-      <div className="flex flex-col md:flex-row gap-6 mb-60">
+    <div className="2xl:mx-40">
+      <div className="flex flex-col md:flex-row gap-6 mb-20 lg:mb-40 xl:mb-60">
         {/* Left column - Buttons */}
-        <div className="md:w-1/3 flex flex-col gap-4">
+        <div className="xl:w-4/12 2xl:w-1/3 flex flex-col gap-4">
           {data.map((item) => (
             <button
               key={item.buttonName}
@@ -176,52 +363,49 @@ const ImageCardButtonGroup = ({data, width, height}) => {
             </button>
           ))}
         </div>
-
+        
         {/* Right column - Content Card with fixed height */}
-        <div className="md:w-2/3">
+        <div className="xl:w-7/12 2xl:w-2/3">
           <motion.div
-            className="bg-emerald-700 rounded-xl overflow-hidden text-white px-9 pt-10 flex flex-col"
+            className="bg-emerald-700 rounded-xl overflow-hidden text-white px-8 xl:px-9 pt-10 flex flex-col"
             style={{ height: `${totalButtonsHeight}px` }}
             layout
           >
-            <>
-              {activeCard && (
-                <motion.div
-                  key={activeButton}
-                  initial={{ opacity: 0, }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.5 }}
-                  className="flex flex-col"
-                >
-                  {activeCard.image && (
-                    <motion.div 
-                      className="mb-4 flex justify-center"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.5 }}
-                    >
-                      <img
-                        src={activeCard.image}
-                        alt={activeCard.buttonName}
-                        // className="w-[550px] h-[190px] rounded-md object-cover"
-                        className={`${width} ${height} rounded-md object-cover`}
-                      />
-                    </motion.div>
-                  )}
-                  <motion.p 
-                    className="text-lg leading-relaxed mb-20 mt-2"
+            {activeCard && (
+              <motion.div
+                key={activeButton}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                className="flex flex-col"
+              >
+                {activeCard.image && (
+                  <motion.div
+                    className="mb-4 flex justify-center"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
                   >
-                    {activeCard.textContent}
-                  </motion.p>
-                </motion.div>
-              )}
-            </>
+                    <img
+                      src={activeCard.image}
+                      alt={activeCard.buttonName}
+                      className={`${width} ${height} rounded-md object-cover`}
+                    />
+                  </motion.div>
+                )}
+                <motion.p
+                  className="text-lg leading-relaxed mb-20 mt-2"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  {activeCard.textContent}
+                </motion.p>
+              </motion.div>
+            )}
           </motion.div>
         </div>
       </div>
@@ -234,6 +418,5 @@ ImageCardButtonGroup.propTypes = {
   width: PropTypes.string.isRequired,
   height: PropTypes.string.isRequired,
 };
-
 
 export default ImageCardButtonGroup;
