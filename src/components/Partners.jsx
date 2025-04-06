@@ -48,7 +48,7 @@ const Partners = () => {
       <SectionTitle
         // title={"Our Partners"}
         title={header}
-        iconPositionClass="-top-[30px] left-[495px] 2xl:left-[630px]"
+        iconPositionClass="-top-[30px] left-[492px] 2xl:left-[627px]"
         iconWidth="w-8"
         iconHeight="h-12"
       ></SectionTitle>

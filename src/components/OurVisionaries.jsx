@@ -37,13 +37,12 @@ const OurVisionaries = () => {
     <div>
       <SectionTitle
         title={"Meet Our Visionaries"}
-        iconTop="-30px"
-        iconLeft="415px"
+         iconPositionClass="-top-[30px] left-[415px] 2xl:left-[550px]"
         iconWidth="w-8"
         iconHeight="h-12"
       ></SectionTitle>
 
-      <div className="grid grid-cols-4 gap-12 px-16">
+      <div className="grid grid-cols-4 gap-12 px-16 2xl:px-40">
         {visionaries.map((person) => (
           <VisionaryPersonCard
             key={person.id}

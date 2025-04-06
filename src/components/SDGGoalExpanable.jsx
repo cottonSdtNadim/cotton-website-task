@@ -200,7 +200,7 @@ const SDGGoalsExpandable = () => {
   };
 
   return (
-    <div className="flex w-full h-screen overflow-hidden px-28 cursor-pointer">
+    <div className="flex w-full h-[700px] overflow-hidden px-28 cursor-pointer">
       {goals.map((goal, index) => {
         // const isHovered = hoveredGoal === index;
         const isExpanded = expandedGoal === index;

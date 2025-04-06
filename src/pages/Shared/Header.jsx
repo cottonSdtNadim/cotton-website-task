@@ -12,7 +12,7 @@ const Header = () => {
     <div>
       <Navbar></Navbar>
 
-      <div className="mt-12">
+      <div className="mt-12 2xl:mt-16">
         {" "}
         {/* mt-[50px] */}
         <img

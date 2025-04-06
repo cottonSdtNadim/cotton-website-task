@@ -54,12 +54,15 @@ const OurCoreValues = () => {
     <div>
       <SectionTitle
         title={header}
-        iconTop="-30px"
-        iconLeft="305px"
+        iconPositionClass="-top-[30px] left-[460px] 2xl:left-[595px]"
         iconWidth="w-8"
         iconHeight="h-12"
       />
-      <ImageCardButtonGroup data={imageButtonCards} width={"w-[550px]"} height={"h-[190px]"}></ImageCardButtonGroup>
+      <ImageCardButtonGroup
+        data={imageButtonCards}
+        width={"w-[550px]"}
+        height={"h-[190px]"}
+      ></ImageCardButtonGroup>
     </div>
   );
 };

@@ -20,17 +20,16 @@ const OurCompanies = () => {
       establishedDate: "est. 2023",
     },
   ];
-  
+
   return (
     <div className="mb-32">
       <SectionTitle
         title={headingTitle}
-        iconTop="-30px"
-        iconLeft="470px"
+        iconPositionClass="-top-[30px] left-[465px] 2xl:left-[600px]"
         iconWidth="w-8"
         iconHeight="h-12"
       ></SectionTitle>
-      
+
       {/* Text Card Container */}
       <div className="grid grid-cols-3 gap-24 px-28">
         {companies.map((company) => (
