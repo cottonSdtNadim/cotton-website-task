@@ -302,7 +302,7 @@ const MultiStepForm = () => {
 
           <div className="mb-12">
             <div>
-              <div className="absolute left-10/12 transform -translate-x-1/6">
+              <div className="absolute left-10/12 transform translate-x-1/4">
                 <AnimatedButton
                   label="Next"
                   labelColor="White"
@@ -395,7 +395,7 @@ const MultiStepForm = () => {
             ></AnimatedNavLink>
             <div>
               <div>
-                <div className="absolute left-8/12 translate-x-1/6">
+                <div className="absolute left-8/12 translate-x-2/3">
                   <AnimatedButton
                     label="Submit Request"
                     labelColor="white"
