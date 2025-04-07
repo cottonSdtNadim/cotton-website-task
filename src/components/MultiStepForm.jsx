@@ -71,62 +71,45 @@ const MultiStepForm = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto p-6 rounded-lg shadow-xl my-40">
-      {/* Progress Indicator Container */}
+    <div className="max-w-5xl mx-auto p-6 rounded-lg shadow-2xl my-40">
 
+      {/* Progress Indicator Container */}
       <div className="relative mb-10">
         {/* Two Circles and Connecting Line Container */}
         <div className="flex justify-between items-center">
           {/* Circle 1 Container with Label */}
           <div className="flex flex-col items-center">
-            <span className="mb-2 text-[#0B714C] font-medium">
-              Personal Info
-            </span>{" "}
-            {/* w-12 h-12 */}
+            <span className="mb-2 text-[#0B714C] font-medium">Personal Info</span>
             <div
-              className={`w-12 h-12 rounded-full flex items-center justify-center text-white font-bold ${
-                currentStep === 1 ? "bg-[#0B714C]" : "bg-[#0B714C]"
-              }`}
+              className={`w-12 h-12 rounded-full flex items-center justify-center text-white font-bold bg-[#0B714C]`}
             >
-              {/* {currentStep > 1 ? <CheckIcon className="w-6 h-6" /> : 1} */}
-              {currentStep > 1 ? <FaCheck className="w-6 h-6" /> : 1}
+              {currentStep > 1 ? <FaCheck className="w-6 h-6" /> : "1"}
             </div>
           </div>
 
           {/* Circle 2 Container with Label */}
           <div className="flex flex-col items-center">
-            <span
-              className={`mt-2 font-medium ${
-                currentStep === 2 ? "text-[#0B714C]" : "text-[#0B714C]"
-              }`}
-            >
-              {currentStep === 2 ? "Technical Info" : ""}
+            <span className={`mb-2 font-medium ${currentStep === 2 ? "text-[#0B714C]" : "text-transparent"}`}>
+              Technical Info
             </span>
             <div
-              className={`w-12 h-12 rounded-full flex items-center justify-center text-white font-bold ${
-                currentStep >= 2
-                  ? "bg-[#0B714C]"
-                  : "border-2 border-[#0B714C] text-[#0B714C] bg-white"
+              className={`w-12 h-12 rounded-full flex items-center justify-center font-bold ${
+                currentStep >= 2 ? "bg-[#0B714C] text-white" : "border-2 border-[#0B714C] text-[#0B714C] bg-white"
               }`}
             >
-              {/* 2 */}
-              {currentStep > 2 ? <FaCheck className="w-6 h-6" /> : 2}
+              {currentStep > 2 ? <FaCheck className="w-6 h-6" /> : "2"}
             </div>
           </div>
         </div>
 
         {/* Connecting Line */}
-        {/* <div
-          className="absolute top-[3.25rem] left-0 right-0 h-0.5 bg-[#0B714C]"
-          style={{ zIndex: -1 }}
-        ></div> */}
         <div
-          className="absolute h-[2px] bg-[#0B714C]"
+          className="absolute h-[4px] bg-[#0B714C]"
           style={{
             zIndex: -1,
             top: "calc(50% + 12px)",
-            left: "calc(6% + 24px)",
-            right: "calc(2% + 24px)",
+            left: "calc(4% + 24px)",
+            right: "calc(4% + 24px)",
           }}
         ></div>
       </div>
