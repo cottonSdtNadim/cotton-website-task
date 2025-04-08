@@ -9,7 +9,7 @@ const GetInTouch = () => {
       {/* Head Office and Factory Container */}
       <div>
         {/* Head Office Container */}
-        <div className="flex">
+        <div className="flex border-2">
           <div>
             <img src={headOffice} alt="" className="object-cover" />
           </div>
@@ -30,7 +30,7 @@ const GetInTouch = () => {
         </div>
 
         {/* Factory Container */}
-        <div className="flex mt-14">
+        <div className="flex mt-7">
           <div>
             <img src={factory} alt="" className="object-cover" />
           </div>
