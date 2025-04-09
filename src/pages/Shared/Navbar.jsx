@@ -274,7 +274,7 @@ const Navbar = ({ nonActiveTextColor = "black" }) => {
 
         {/* Desktop Navigation */}
         {!isMobile && (
-          <ul className="flex gap-[45px] font-semibold text-base">
+          <ul className="flex gap-11 2xl:gap-20 font-semibold text-base"> {/* gap-[45px] 2xl:gap-[70px] */}
             {navItemsList.map(({ name, path }) => {
               const isActive = location.pathname === path;
 
