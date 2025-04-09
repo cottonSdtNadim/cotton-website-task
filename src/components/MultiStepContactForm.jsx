@@ -39,7 +39,10 @@ const MultiStepContactForm = () => {
   };
 
   return (
-    <div className="rounded-2xl bg-[#b8d8cf] p-10 relative">
+    <div 
+    // className="rounded-2xl bg-[#b8d8cf] p-10 relative w-[710px] h-[686px]"
+    className="rounded-2xl bg-[#b8d8cf] p-4 sm:p-6 md:p-8 lg:p-10 relative w-full max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto"
+    >
       {currentStep === 1 ? (
         <div>
           <h2 className="text-3xl font-medium text-[#0B714C] mb-8">
@@ -153,3 +156,5 @@ const MultiStepContactForm = () => {
 };
 
 export default MultiStepContactForm;
+
+
