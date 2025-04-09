@@ -8,6 +8,15 @@ export const content = {
       bengaliText: "স্বাগতম",
       englishText:
         "We are a leading sustainability-inspired, 100% export-oriented readymade garments powerhouse",
+        englishTextMobile: {
+          firstText: "We are a leading",
+          secondText: "sustainability-",
+          thirdText: "inspired,",
+          fourthText: "100% export-",
+          fifthText: "oriented readymade",
+          sixthText: "garments",
+          seventhText: "powerhouse"
+        },
       aboutUsButton: {
         label: "About us",
         labelColor: "white",
