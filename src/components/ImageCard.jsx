@@ -36,6 +36,7 @@ const ImageCard = ({ singleNews }) => {
           <AnimatedLink
             // content={"Read the story"}
             content={label}
+            paddingBottom="pb-6"
           ></AnimatedLink>
         </div>
       </div>

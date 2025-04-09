@@ -3,14 +3,14 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import { Link } from "react-router";
 
-const AnimatedLink = ({ fontSize = "text-base", content, color , fontWeight = "font-medium"}) => {
+const AnimatedLink = ({ fontSize = "text-base", content, color , fontWeight = "font-medium", paddingBottom = "pb-0",}) => {
   const [isHovered, setIsHovered] = useState(false);
 
   // Set the default color to white (#F8FBFA) if no color prop is passed
   const textColor = color || "#F8FBFA";
 
   return (
-    <div className="pt-2 pb-6">
+    <div className={`pt-2  ${paddingBottom}`}> {/* pb-6 */}
       <Link
         to={"/"}
         // className="text-base font-medium relative"
@@ -39,7 +39,8 @@ AnimatedLink.propTypes = {
   fontSize: PropTypes.string,
   content: PropTypes.string.isRequired,
   color: PropTypes.string,
-  fontWeight: PropTypes.string
+  fontWeight: PropTypes.string,
+  paddingBottom: PropTypes.string
 };
 
 export default AnimatedLink;

@@ -1,5 +1,5 @@
-import factory from "../assets/images/getInTouch/factory.png";
-import headOffice from "../assets/images/getInTouch/headOffice.png";
+import factory from "../assets/images/getInTouch/factory.svg";
+import headOffice from "../assets/images/getInTouch/headOffice.svg";
 import AnimatedLink from "./AnimatedLink";
 import MultiStepContactForm from "./MultiStepContactForm";
 
@@ -11,16 +11,16 @@ const GetInTouch = () => {
         <div className="lg:col-span-2 xl:col-span-2 2xl:col-span-4 min-h-[574px] my-10">
           {/* Head Office Container */}
           <div className="flex flex-col md:flex-row p-4 rounded-lg">
-            <div className="md:w-1/3 max-w-[120px]">
+            <div className="w-[120px] bg-[#0B714C] flex items-center justify-center p-6 rounded-l-xl">
               <img
                 src={headOffice}
                 alt="Head Office"
-                className="object-cover w-full h-auto"
+                className="object-cover w-10 h-10"
               />
             </div>
             <div className="md:ml-5 mt-3 md:mt-0">
-              <h3 className="font-medium text-3xl mb-3">Head Office</h3>
-              <div className="my-4 text-lg font-light">
+              <h3 className="font-medium text-3xl">Head Office</h3>
+              <div className="text-lg my-4 font-light"> {/*   */}
                 <p>Cotton House</p>
                 <p>H# 2, R# 113/A</p>
                 <p>Gulshan 2</p>
@@ -38,11 +38,11 @@ const GetInTouch = () => {
 
           {/* Factory Container */}
           <div className="flex flex-col md:flex-row p-4 rounded-lg">
-            <div className="md:w-1/3 max-w-[120px]">
+          <div className="w-[120px] bg-[#B2D4C9] flex items-center justify-center p-6 rounded-l-xl">
               <img
                 src={factory}
                 alt="Factory"
-                className="object-cover w-full h-auto"
+                className="object-cover w-10 h-10"
               />
             </div>
             <div className="md:ml-5 mt-3 md:mt-0">
@@ -74,5 +74,3 @@ const GetInTouch = () => {
 };
 
 export default GetInTouch;
-
-
