@@ -5,10 +5,10 @@ import MultiStepContactForm from "./MultiStepContactForm";
 
 const GetInTouch = () => {
   return (
-    <div className="container mx-auto px-4 lg:px-20 py-9">
+    <div className="container mx-auto px-10  py-9">
       <div className="grid grid-cols-1 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-12 gap-8">
         {/* Head Office and Factory Container */}
-        <div className="lg:col-span-2 xl:col-span-2 2xl:col-span-4">
+        <div className="lg:col-span-2 xl:col-span-2 2xl:col-span-4 min-h-[574px] my-10">
           {/* Head Office Container */}
           <div className="flex flex-col md:flex-row p-4 rounded-lg">
             <div className="md:w-1/3 max-w-[120px]">
@@ -37,7 +37,7 @@ const GetInTouch = () => {
           </div>
 
           {/* Factory Container */}
-          <div className="flex flex-col md:flex-row mt-8 p-4 rounded-lg">
+          <div className="flex flex-col md:flex-row p-4 rounded-lg">
             <div className="md:w-1/3 max-w-[120px]">
               <img
                 src={factory}
@@ -74,3 +74,5 @@ const GetInTouch = () => {
 };
 
 export default GetInTouch;
+
+
