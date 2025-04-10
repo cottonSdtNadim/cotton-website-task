@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import slider1 from "../assets/images/image-sliders/image-slider-1.png";
 import slider3 from "../assets/images/image-sliders/image-slider-3.png";
 import slider4 from "../assets/images/image-sliders/image-slider-4.png";
@@ -10,6 +10,16 @@ const images = [slider1, slider2, slider3, slider4, slider5];
 
 const ImageSlider = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
+
+  useEffect(() => {
+    // Set up the interval for autoplay (3 seconds)
+    const interval = setInterval(() => {
+      setSelectedIndex((prevIndex) => (prevIndex + 1) % images.length); // Loop back to 0 after the last image
+    }, 3000);
+
+    // Clean up the interval when the component unmounts
+    return () => clearInterval(interval);
+  }, []);
 
   const handleThumbnailClick = (index) => {
     setSelectedIndex(index); // Update main image when a thumbnail is clicked
