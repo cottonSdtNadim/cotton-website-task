@@ -54,7 +54,7 @@ const OurCoreValues = () => {
     <div>
       <SectionTitle
         title={header}
-        iconPositionClass="-top-[30px] left-[460px] 2xl:left-[595px]"
+        iconPositionClass="-top-[30px] left-[18px] xl:left-[460px] 2xl:left-[595px]"
         iconWidth="w-8"
         iconHeight="h-12"
       />
@@ -68,3 +68,4 @@ const OurCoreValues = () => {
 };
 
 export default OurCoreValues;
+

@@ -4,8 +4,8 @@ const OurMessage = () => {
     const {ourMessage} = content.en.ourStoryPage;
 
     return (
-        <div className="mt-28 mb-20 mx-58">
-            <p className="text-2xl font-light">{ourMessage}</p>
+        <div className="mt-28 mb-20 mx-10 xl:mx-58">
+            <p className="text-lg xl:text-2xl font-light">{ourMessage}</p>
         </div>
     );
 };
