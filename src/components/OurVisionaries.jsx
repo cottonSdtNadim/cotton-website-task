@@ -37,9 +37,9 @@ const OurVisionaries = () => {
     <div>
       <SectionTitle
         title={"Meet Our Visionaries"}
-         iconPositionClass="-top-[30px] left-[415px] 2xl:left-[550px]"
-        iconWidth="w-8"
-        iconHeight="h-12"
+         iconPositionClass="-top-[13px] xl:-top-[30px] left-[40px] xl:left-[415px] 2xl:left-[550px]"
+        iconWidth="w-5 xl:w-8"
+        iconHeight="h-7 xl:h-12"
       ></SectionTitle>
 
       <div className="grid grid-cols-4 gap-12 px-16 2xl:px-40">
