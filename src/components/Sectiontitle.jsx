@@ -14,7 +14,7 @@ const SectionTitle = ({
         alt="Green Leaf Small Icon"
         className={`absolute ${iconPositionClass} ${iconWidth} ${iconHeight}`}
       />
-      <h1 className="text-center text-4xl font-extrabold">{title}</h1>
+      <h1 className="text-center text-2xl xl:text-4xl font-extrabold">{title}</h1>
     </div>
   );
 };

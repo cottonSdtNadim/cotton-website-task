@@ -69,9 +69,9 @@ const LatestNews = () => {
     <div className="mt-20 md:mt-40">
       <SectionTitle
         title={title}
-        iconPositionClass="-top-[30px] left-[55px] xl:left-[500px] 2xl:left-[635px]"
-        iconWidth="w-7"
-        iconHeight="h-11"
+        iconPositionClass="-top-[13px] xl:-top-[30px] left-[95px] xl:left-[500px] 2xl:left-[635px]"
+        iconWidth="w-5 xl:w-8"
+        iconHeight="h-7 xl:h-12"
       />
       
       {/* Mobile swipeable horizontal scroll container */}

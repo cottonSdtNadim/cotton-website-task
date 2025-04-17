@@ -54,9 +54,9 @@ const OurCoreValues = () => {
     <div>
       <SectionTitle
         title={header}
-        iconPositionClass="-top-[30px] left-[18px] xl:left-[460px] 2xl:left-[595px]"
-        iconWidth="w-8"
-        iconHeight="h-12"
+        iconPositionClass="-top-[13px] xl:-top-[30px] left-[73px] xl:left-[460px] 2xl:left-[595px]"
+        iconWidth="w-5 xl:w-8"
+        iconHeight="h-7 xl:h-12"
       />
       <ImageCardButtonGroup
         data={imageButtonCards}
