@@ -49,17 +49,17 @@ const Partners = () => {
         // title={"Our Partners"}
         title={header}
         iconPositionClass="-top-[13px] xl:-top-[30px] left-[95px] xl:left-[492px] 2xl:left-[627px]"
-         iconWidth="w-5 xl:w-8"
+        iconWidth="w-5 xl:w-8"
         iconHeight="h-7 xl:h-12"
       ></SectionTitle>
 
-     <LogoAnimation 
-     logos={partners}
-     width={"w-40"}
-     height={"h-16"}
-     ></LogoAnimation>
+      <LogoAnimation
+        logos={partners}
+        width={"w-40"}
+        height={"h-16"}
+      ></LogoAnimation>
     </div>
   );
 };
 
-export default Partners; 
+export default Partners;

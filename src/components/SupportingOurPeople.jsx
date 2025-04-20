@@ -7,8 +7,8 @@ import ImageCardButtonGroup from "./ImageCardButtonGroup";
 import { content } from "../content/content";
 
 const SupportingOurPeople = () => {
-
-  const {heading, paragraph} = content.en.sustainabilityPage.supportingOurPeople;
+  const { heading, paragraph } =
+    content.en.sustainabilityPage.supportingOurPeople;
 
   const imageButtonCards = [
     {
@@ -39,17 +39,23 @@ const SupportingOurPeople = () => {
       buttonName: "Communication",
       image: communication,
       textContent:
-        "We continue to communicate with our facilities regularly on our procedures, new protocols, and any COVID-19 case detection."
-    }
+        "We continue to communicate with our facilities regularly on our procedures, new protocols, and any COVID-19 case detection.",
+    },
   ];
 
   return (
-    <div className="mt-40 px-40">
-      <h2 className="text-3xl uppercase">{heading}</h2>
-      <p className="text-lg mt-5 font-light mb-40">
+    <div className="mt-40 px-4 sm:px-10 md:px-20 lg:px-40">
+      <h2 className="text-xl sm:text-2xl md:text-3xl uppercase">{heading}</h2>
+      <p className="text-base sm:text-lg mt-4 mb-10 sm:mt-5 sm:mb-40 font-light">
         {paragraph}
       </p>
-      <ImageCardButtonGroup data={imageButtonCards} width={"w-36"} height={"h-36"}></ImageCardButtonGroup>
+      <ImageCardButtonGroup
+        data={imageButtonCards}
+        width={"w-36"}
+        height={"h-36"}
+        mobileWidthImg="w-[100px]"
+        mobileHeightImg="h-[100px]"
+      ></ImageCardButtonGroup>
     </div>
   );
 };

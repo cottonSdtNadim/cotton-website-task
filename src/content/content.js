@@ -124,6 +124,13 @@ export const content = {
       },
       ourAwards: {
         heading: "Our Awards",
+        descriptionForLargeScreen: `Cotton Group's influence spans across pivotal industries, with our
+        Board members holding director-level positions in Banking, Insurance,
+        Telecom, and Securities Brokerage. This strategic leadership defines our
+        role in shaping and impacting these interconnected sectors of
+        Bangladesh, emphasizing our dynamic presence and substantial
+        contributions.`,
+        descriptionForMobileScreen:`Pacific Cotton Group is a dynamic conglomerate, boasting affiliations with a range of companies. Its expansive influence is evident through a diverse portfolio, solidifying its position as a key player in shaping the landscape of these interconnected industries.`
       },
     },
     workPage: {

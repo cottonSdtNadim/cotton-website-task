@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {  useState } from "react";
 // import checkIcon from "../assets/icons/Check Icon.png";
 import PropTypes from "prop-types";
 import { FaCheck } from "react-icons/fa";
@@ -178,7 +178,7 @@ const MultiStepForm = () => {
           className="bg-gray-50 p-6 rounded-lg relative"
         >
           {/* Container of Name and Company */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 xl:gap-4 mb-12">
             {/* <div className="mb-4">
               <label htmlFor="name" className="block text-[#0B714C] mb-1">
                 Name:
@@ -227,7 +227,7 @@ const MultiStepForm = () => {
           </div>
 
           {/* Container of Email and Phone */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 xl:gap-4 mb-12">
             {/* <div>
               <div className="mb-4">
                 <label htmlFor="email" className="block text-[#0B714C] mb-1">
@@ -304,7 +304,7 @@ const MultiStepForm = () => {
             />
           </div>
 
-          <div className="mb-4">
+          <div className="mb-4 mt-16 md:mt-0">
             <h3 className="text-green-600 font-medium mb-4">Street Address</h3>
             {/* <div className="mb-4">
               <label htmlFor="country" className="block text-[#0B714C] mb-1">
@@ -332,7 +332,7 @@ const MultiStepForm = () => {
           </div>
 
           {/* Container of Address and Address 2 */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 xl:gap-4 mb-12">
             {/* <div className="mb-4">
               <label htmlFor="address" className="block text-[#0B714C] mb-1">
                 Address:
@@ -378,7 +378,7 @@ const MultiStepForm = () => {
           </div>
 
           {/* Container of City, State and Zip */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 xl:gap-4 mb-12">
             {/* <div className="mb-4">
               <label htmlFor="city" className="block text-[#0B714C] mb-1">
                 City:

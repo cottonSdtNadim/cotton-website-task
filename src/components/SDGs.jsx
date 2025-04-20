@@ -17,9 +17,9 @@ const SDGs = () => {
             {secondHeading}
           </>
         }
-        iconPositionClass="-top-[30px] left-[140px] 2xl:left-[275px]"
-        iconWidth="w-8"
-        iconHeight="h-12"
+        iconPositionClass="-top-[18px] xl:-top-[30px] xl:left-[140px] 2xl:left-[275px]"
+        iconWidth="w-5 xl:w-8"
+        iconHeight="h-7 xl:h-12"
       ></SectionTitle>
       <SDGGoalsExpandable></SDGGoalsExpandable>
     </div>

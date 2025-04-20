@@ -575,7 +575,7 @@ import { motion } from "motion/react";
 import PropTypes from "prop-types";
 import { useState, useEffect, useRef } from "react";
 
-const ImageCardButtonGroup = ({ data, width, height }) => {
+const ImageCardButtonGroup = ({ data, width, height, mobileWidthImg, mobileHeightImg }) => {
   // State for both screen sizes
   const [activeButton, setActiveButton] = useState(data[0]?.buttonName || "");
   const [isMobile, setIsMobile] = useState(false);
@@ -708,7 +708,8 @@ const ImageCardButtonGroup = ({ data, width, height }) => {
                         src={activeCard.image}
                         alt={activeCard.buttonName}
                         // className="w-full h-auto rounded-md object-cover"
-                        className="w-[334px] h-[121px] rounded-md object-cover mx-auto mb-4"
+                        // className="w-[334px] h-[121px] rounded-md object-cover mx-auto mb-4" /* w-[100px] h-[100px] xl:w-[334px] xl:h-[121px]*/
+                        className={`${mobileWidthImg || "w-[334px]"} ${mobileHeightImg || "h-[121px]"} rounded-md object-cover mx-auto mb-4`}
                       />
                     </motion.div>
                   )}
@@ -804,6 +805,8 @@ ImageCardButtonGroup.propTypes = {
   data: PropTypes.array.isRequired,
   width: PropTypes.string.isRequired,
   height: PropTypes.string.isRequired,
+  mobileWidthImg: PropTypes.string,
+  mobileHeightImg: PropTypes.string,
 };
 
 export default ImageCardButtonGroup;

@@ -47,9 +47,9 @@ const Machineries = () => {
     <div className="mt-40 mb-48">
       <SectionTitle
         title={"Machineries we trust"}
-        iconPositionClass="-top-[30px] left-[412px] 2xl:left-[545px]"
-        iconWidth="w-8"
-        iconHeight="h-12"
+        iconPositionClass="-top-[13px] xl:-top-[30px] left-[40px] xl:left-[412px] 2xl:left-[545px]"
+        iconWidth="w-5 xl:w-8"
+        iconHeight="h-7 xl:h-12"
       ></SectionTitle>
 
       <LogoAnimation

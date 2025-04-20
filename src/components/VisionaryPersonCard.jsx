@@ -55,3 +55,5 @@ VisionaryPersonCard.propTypes = {
 };
 
 export default VisionaryPersonCard;
+
+
