@@ -8,15 +8,15 @@ export const content = {
       bengaliText: "স্বাগতম",
       englishText:
         "We are a leading sustainability-inspired, 100% export-oriented readymade garments powerhouse",
-        englishTextMobile: {
-          firstText: "We are a leading",
-          secondText: "sustainability-",
-          thirdText: "inspired,",
-          fourthText: "100% export-",
-          fifthText: "oriented readymade",
-          sixthText: "garments",
-          seventhText: "powerhouse"
-        },
+      englishTextMobile: {
+        firstText: "We are a leading",
+        secondText: "sustainability-",
+        thirdText: "inspired,",
+        fourthText: "100% export-",
+        fifthText: "oriented readymade",
+        sixthText: "garments",
+        seventhText: "powerhouse",
+      },
       aboutUsButton: {
         label: "About us",
         labelColor: "white",
@@ -130,7 +130,7 @@ export const content = {
         role in shaping and impacting these interconnected sectors of
         Bangladesh, emphasizing our dynamic presence and substantial
         contributions.`,
-        descriptionForMobileScreen:`Pacific Cotton Group is a dynamic conglomerate, boasting affiliations with a range of companies. Its expansive influence is evident through a diverse portfolio, solidifying its position as a key player in shaping the landscape of these interconnected industries.`
+        descriptionForMobileScreen: `Pacific Cotton Group is a dynamic conglomerate, boasting affiliations with a range of companies. Its expansive influence is evident through a diverse portfolio, solidifying its position as a key player in shaping the landscape of these interconnected industries.`,
       },
     },
     workPage: {
@@ -184,8 +184,11 @@ export const content = {
         paragraph: `Our values guide our day-to-day operations; they inspire us, they keep us focused on our mission and they define us as an industry leader. Our environment is fast-paced and challenging, but also supportive, because we know that it takes teamwork to succeed. With a global clientbase, we recognize the importance of having a workforce that reflects the communities in which we operate. We are committed to building a workplace where people can grow, and in turn, create value for our clients.`,
         animatedLink: {
           title: "Learn about our mission and values",
-        }
-      }
-    }
+        },
+      },
+    },
+    privacyPolicayPage: {
+      header: "Privacy Policy",
+    },
   },
 };

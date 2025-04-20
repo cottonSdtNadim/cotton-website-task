@@ -116,7 +116,7 @@ const CustomerFirstMessage = () => {
       </div>
 
       {/* Container of Text and Image - Stack vertically on mobile */}
-      <div className="flex flex-col md:flex-row grow justify-start w-full 2xl:ml-6">
+      <div className="flex flex-col md:flex-row grow justify-start w-full xl:mr-36 2xl:ml-6">
         {/* Text Container - Full width on mobile */}
         <CustomerRelationship
           width="w-full md:w-[639px]"
@@ -135,18 +135,21 @@ const CustomerFirstMessage = () => {
               className="w-24 md:w-32 opacity-80"
             />
           </div>
-
           {/* Chairman Image */}
           <img
             src={chairmanSirImage}
             alt="Chairman Sir"
-            className="md:ml-[54px] relative z-10"
+            className="w-full relative z-10"
           />
 
-          {/* Name and designation overlay */}
-          <div className="absolute bottom-0 left-0 right-0 text-white bg-opacity-50 text-center px-2 py-6 z-20">
-            <p className="text-lg font-semibold">{chairmanSir}</p>
-            <p className="text-sm">{designation}</p>
+          {/* Text overlay - with improved centering for all screen sizes */}
+          <div className="absolute bottom-0 left-0 right-0 text-white bg-opacity-50 py-4 z-20 text-center">
+            <div className="container mx-auto px-4">
+              <p className="text-lg font-semibold text-center w-full">
+                {chairmanSir}
+              </p>
+              <p className="text-sm text-center w-full font-light mb-4">{designation}</p>
+            </div>
           </div>
         </div>
       </div>

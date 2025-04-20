@@ -7,6 +7,7 @@ import Work from "../pages/Work";
 import Sustainability from "../pages/Sustainability";
 import Order from "../pages/Order";
 import Contact from "../pages/Contact";
+import PrivacyPolicy from "../pages/PrivacyPolicy";
 
 const BasicRoute = () => {
   return (
@@ -27,6 +28,7 @@ const BasicRoute = () => {
           <Route path="/sustainability" element={<Sustainability></Sustainability>}></Route>
           <Route path="/order" element={<Order></Order>}></Route>
           <Route path="/contact" element={<Contact></Contact>}></Route>
+          <Route path="/privacy-policy" element={<PrivacyPolicy></PrivacyPolicy>}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

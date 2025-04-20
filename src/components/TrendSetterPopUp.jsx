@@ -8,18 +8,26 @@ export default function TrendSetterPopup() {
 
   useEffect(() => {
     // Check if popup has been shown before
-    const hasShownPopup = localStorage.getItem("trendsetterPopupShown");
+    // const hasShownPopup = localStorage.getItem("trendsetterPopupShown");
 
-    if (!hasShownPopup) {
-      // Show popup after 5 seconds
-      const timer = setTimeout(() => {
-        setIsVisible(true);
-        // Mark popup as shown
-        localStorage.setItem("trendsetterPopupShown", "true");
-      }, 5000); // 5 seconds
+    // if (!hasShownPopup) {
+    //   // Show popup after 5 seconds
+    //   const timer = setTimeout(() => {
+    //     setIsVisible(true);
+    //     // Mark popup as shown
+    //     localStorage.setItem("trendsetterPopupShown", "true");
+    //   }, 5000); // 5 seconds
 
-      return () => clearTimeout(timer);
-    }
+    //   return () => clearTimeout(timer);
+    // }
+
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+      // Mark popup as shown
+      localStorage.setItem("trendsetterPopupShown", "true");
+    }, 5000); // 5 seconds
+
+    return () => clearTimeout(timer);
   }, []);
 
   if (!isVisible) return null;
@@ -27,8 +35,8 @@ export default function TrendSetterPopup() {
   return (
     <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4">
       {/* Desktop version */}
-      <div className="hidden md:flex bg-white rounded-3xl overflow-hidden max-w-4xl w-full max-h-[500px] relative">
-        <div className="w-1/2 relative">
+      <div className="hidden md:flex bg-white rounded-3xl overflow-hidden max-w-4xl w-full max-h-[390px] relative">
+        <div className="w-1/2 relative xl:w-[348px] xl:h-[526px]">
           <img
             src={trendSetter}
             alt="Model in green dress"
@@ -37,10 +45,10 @@ export default function TrendSetterPopup() {
         </div>
 
         <div className="w-1/2 p-8 flex flex-col justify-center">
-          <h2 className="text-[#0B714C] text-4xl font-bold mb-4">
+          <h2 className="text-[#0B714C] text-4xl font-black mb-4">
             BE A TRENDSETTER
           </h2>
-          <p className="text-gray-800 text-lg mb-6">
+          <p className="text-gray-800 text-lg font-light mb-6">
             Elevate your wardrobe with our exclusive catalog. Subscribe for your
             front-row seat.
           </p>

@@ -63,8 +63,8 @@
 //               reserved. */}
 //               {copyRightText}
 //             </p>
-//             <AnimatedLink 
-//             // content="Privacy Policy" 
+//             <AnimatedLink
+//             // content="Privacy Policy"
 //             content={privacyPolicyLink.label}
 //             />
 //           </div>
@@ -74,14 +74,23 @@
 //   );
 // }
 
+import { Link } from "react-router";
 import factoryOutside from "../../assets/images/factory-outside.jpg";
 import AnimatedButton from "../../components/AnimatedButton";
 import AnimatedLink from "../../components/AnimatedLink";
 import { content } from "../../content/content";
 
 export default function Footer() {
-  const {firstHeader, secondHeader, contactUsButton, copyRightText, privacyPolicyLink} = content.en.footer;
-  
+  const {
+    firstHeader,
+    secondHeader,
+    contactUsButton,
+    copyRightText,
+    privacyPolicyLink,
+  } = content.en.footer;
+
+
+
   return (
     <footer className="relative w-full">
       <div
@@ -99,7 +108,7 @@ export default function Footer() {
               {firstHeader} <br />
               {secondHeader}
             </h2>
-            
+
             {/* Contact button - positioned with correct spacing */}
             <div className="mt-8 md:mt-8">
               <AnimatedButton
@@ -109,16 +118,21 @@ export default function Footer() {
               />
             </div>
           </div>
-          
+
           {/* Bottom section with privacy policy and copyright */}
           <div className="pb-8 flex flex-col space-y-4 px-6 md:pb-10 md:px-8 lg:px-28 md:flex-row md:justify-between md:space-y-0">
             {/* Privacy policy link - left aligned */}
+            {/* <Link to={"/privacy-policy"}>
+              <div className="order-1 md:order-2">
+                <AnimatedLink content={privacyPolicyLink.label} />
+              </div>
+            </Link> */}
             <div className="order-1 md:order-2">
-              <AnimatedLink 
-                content={privacyPolicyLink.label}
-              />
+              <Link to={"/privacy-policy"}>
+                <AnimatedLink content={privacyPolicyLink.label} />
+              </Link>
             </div>
-            
+
             {/* Copyright text - positioned below policy on mobile */}
             <p className="text-[#F8FBFA] text-sm font-medium order-2 md:order-1 md:text-base">
               {copyRightText}
