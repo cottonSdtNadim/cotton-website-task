@@ -88,10 +88,12 @@ import hamburgerMenu from "../../assets/images/hamburger-menu-mobile/hamburger-m
 import rightArrow from "../../assets/images/hamburger-menu-mobile/right-arrow.png";
 import whiteHamburgerMenu from "../../assets/images/hamburger-menu-mobile/white-hamhurger-menu.png";
 import ellipse from "../../assets/svgs/Ellipse.svg";
+import { useMediaQuery } from "../../hooks/useMediaQuery";
 
 const Navbar = ({ nonActiveTextColor = "black" }) => {
   const [hoveredItem, setHoveredItem] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const location = useLocation();
 
@@ -118,7 +120,8 @@ const Navbar = ({ nonActiveTextColor = "black" }) => {
 
   const isHomePage = location.pathname === "/";
   const isNewsPage = location.pathname === "/news";
-  const isMobile = windowWidth < 768;
+  // const isMobile = windowWidth < 768;
+  const isMobile = useMediaQuery("(max-width: 768px)");
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
