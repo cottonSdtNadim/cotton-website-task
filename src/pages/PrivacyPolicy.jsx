@@ -7,7 +7,7 @@ const PrivacyPolicy = () => {
   return (
     <div>
       <Cover image={blackBG} heading={header}></Cover>
-      <div className="mt-28 mx-60 mb-5">
+      <div className="mt-12 xl:mt-28 mx-5 xl:mx-60 xl:mb-5">
         <p className="text-lg font-light">
           Our values guide our day-to-day operations; they inspire us, they keep
           us focused on our mission and they define us as an industry leader.
