@@ -135,21 +135,18 @@ const CustomerFirstMessage = () => {
               className="w-24 md:w-32 opacity-80"
             />
           </div>
+
           {/* Chairman Image */}
           <img
             src={chairmanSirImage}
             alt="Chairman Sir"
-            className="w-full relative z-10"
+            className="relative z-10"
           />
 
-          {/* Text overlay - with improved centering for all screen sizes */}
-          <div className="absolute bottom-0 left-0 right-0 text-white bg-opacity-50 py-4 z-20 text-center">
-            <div className="container mx-auto px-4">
-              <p className="text-lg font-semibold text-center w-full">
-                {chairmanSir}
-              </p>
-              <p className="text-sm text-center w-full font-light mb-4">{designation}</p>
-            </div>
+          {/* Name and designation overlay */}
+          <div className="absolute bottom-0 left-0 right-0 text-white bg-opacity-50 px-2 py-6 z-20 text-center">
+            <p className="text-lg font-semibold">{chairmanSir}</p>
+            <p className="text-sm font-light">{designation}</p>
           </div>
         </div>
       </div>

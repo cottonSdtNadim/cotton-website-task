@@ -74,7 +74,6 @@
 //   );
 // }
 
-import { Link } from "react-router";
 import factoryOutside from "../../assets/images/factory-outside.jpg";
 import AnimatedButton from "../../components/AnimatedButton";
 import AnimatedLink from "../../components/AnimatedLink";
@@ -88,8 +87,6 @@ export default function Footer() {
     copyRightText,
     privacyPolicyLink,
   } = content.en.footer;
-
-
 
   return (
     <footer className="relative w-full">
@@ -122,15 +119,8 @@ export default function Footer() {
           {/* Bottom section with privacy policy and copyright */}
           <div className="pb-8 flex flex-col space-y-4 px-6 md:pb-10 md:px-8 lg:px-28 md:flex-row md:justify-between md:space-y-0">
             {/* Privacy policy link - left aligned */}
-            {/* <Link to={"/privacy-policy"}>
-              <div className="order-1 md:order-2">
-                <AnimatedLink content={privacyPolicyLink.label} />
-              </div>
-            </Link> */}
             <div className="order-1 md:order-2">
-              <Link to={"/privacy-policy"}>
-                <AnimatedLink content={privacyPolicyLink.label} />
-              </Link>
+              <AnimatedLink content={privacyPolicyLink.label} to={'/privacy-policy'} />
             </div>
 
             {/* Copyright text - positioned below policy on mobile */}
