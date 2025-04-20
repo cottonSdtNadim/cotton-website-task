@@ -117,6 +117,7 @@ const Navbar = ({ nonActiveTextColor = "black" }) => {
   ];
 
   const isHomePage = location.pathname === "/";
+  const isNewsPage = location.pathname === "/news";
   const isMobile = windowWidth < 768;
 
   const toggleMobileMenu = () => {
@@ -185,7 +186,7 @@ const Navbar = ({ nonActiveTextColor = "black" }) => {
       <div className="flex justify-between items-center">
         {/* Cotton Logo - Fixed to show the correct logo based on homepage status */}
         <img
-          src={isHomePage ? cottonGreenLogo : cottonWhiteLogo}
+          src={isHomePage || isNewsPage ? cottonGreenLogo : cottonWhiteLogo}
           alt="Cotton Logo"
           className={isMobile ? "w-20 h-16" : "w-24 h-20"}
         />{" "}
@@ -289,7 +290,7 @@ const Navbar = ({ nonActiveTextColor = "black" }) => {
                   ></span>
                 </div> */}
 
-                {isHomePage ? (
+                {isHomePage || isNewsPage ? (
                   <img src={hamburgerMenu} alt="" />
                 ) : (
                   <img src={whiteHamburgerMenu} alt="" />

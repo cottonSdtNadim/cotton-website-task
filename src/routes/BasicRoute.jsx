@@ -2,12 +2,13 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import MainLayout from "../layouts/MainLayout";
 import PageLayout from "../layouts/PageLayout";
 import AboutCotton from "../pages/AboutCotton";
-import Home from "../pages/HomePage/Home";
-import Work from "../pages/Work";
-import Sustainability from "../pages/Sustainability";
-import Order from "../pages/Order";
 import Contact from "../pages/Contact";
+import Home from "../pages/HomePage/Home";
+import News from "../pages/News";
+import Order from "../pages/Order";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
+import Sustainability from "../pages/Sustainability";
+import Work from "../pages/Work";
 
 const BasicRoute = () => {
   return (
@@ -25,11 +26,19 @@ const BasicRoute = () => {
             element={<AboutCotton></AboutCotton>}
           ></Route>
           <Route path="/work" element={<Work></Work>}></Route>
-          <Route path="/sustainability" element={<Sustainability></Sustainability>}></Route>
+          <Route
+            path="/sustainability"
+            element={<Sustainability></Sustainability>}
+          ></Route>
           <Route path="/order" element={<Order></Order>}></Route>
           <Route path="/contact" element={<Contact></Contact>}></Route>
-          <Route path="/privacy-policy" element={<PrivacyPolicy></PrivacyPolicy>}></Route>
+          <Route
+            path="/privacy-policy"
+            element={<PrivacyPolicy></PrivacyPolicy>}
+          ></Route>
         </Route>
+
+        <Route path="/news" element={<News></News>}></Route>
       </Routes>
     </BrowserRouter>
   );

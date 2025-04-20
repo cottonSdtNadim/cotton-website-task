@@ -63,7 +63,7 @@ const ImageCard = ({ singleNews }) => {
   const { image, title, details } = singleNews;
   
   return (
-    <div className="w-[280px] md:w-[308px] h-[420px] md:h-[450px] bg-white shadow-sm">
+    <div className="  bg-white shadow-sm w-[280px] md:w-auto"> {/* w-[280px] md:w-[308px] h-[420px] md:h-[450px] */}
       {/* Image Section - Fixed height */}
       <div className="h-48 md:h-60 overflow-hidden">
         <img

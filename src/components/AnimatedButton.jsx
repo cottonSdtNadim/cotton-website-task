@@ -3,8 +3,9 @@ import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 // import rightArrow from "../assets/svgs/right-arrow.svg"
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { Link } from "react-router";
 
-const AnimatedButton = ({ label, labelColor, bgColor }) => {
+const AnimatedButton = ({ label, labelColor, bgColor, url }) => {
   // const [isHovered, setIsHovered] = useState(false);
   const [isActive, setIsActive] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -14,7 +15,7 @@ const AnimatedButton = ({ label, labelColor, bgColor }) => {
     const checkMobile = () => {
       setIsMobile(window.matchMedia("(max-width: 768px)").matches);
     };
-    
+
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
@@ -27,8 +28,8 @@ const AnimatedButton = ({ label, labelColor, bgColor }) => {
     }
   };
 
-   // For mobile, we want the active state to persist for a short time after touch
-   const handleTouchEnd = () => {
+  // For mobile, we want the active state to persist for a short time after touch
+  const handleTouchEnd = () => {
     if (isMobile) {
       // Keep the effect active for a moment after touch ends
       setTimeout(() => {
@@ -55,33 +56,35 @@ const AnimatedButton = ({ label, labelColor, bgColor }) => {
 
   return (
     <div>
-      <motion.button
-        className="px-5 py-2 rounded-lg transition-all duration-300 ease-in-out flex items-center justify-center text-[16px] font-semibold"
-        style={buttonStyle}
-        // onMouseEnter={() => setIsHovered(true)}
-        // onMouseLeave={() => setIsHovered(false)}
-        // onTouchStart={() => setIsHovered(true)} // Touch start for mobile
-        // onTouchEnd={() => setIsHovered(false)} // Touch end for mobile
-        onMouseEnter={isMobile ? null : () => setIsActive(true)}
-        onMouseLeave={isMobile ? null : () => setIsActive(false)}
-        onTouchStart={handleTouchStart}
-        onTouchEnd={handleTouchEnd}
-        // whileHover={{ scaleX: 1.1 }} // Increase button size on hover
-        // animate={{ scaleX: isHovered ? 1.1 : 1 }} // Scale only in the horizontal direction
-      >
-        {label}
-        <motion.span
-          // className="inline-flex ml-1"
-          initial="hidden"
-          // animate={isHovered ? "visible" : "hidden"}
-          animate={isActive ? "visible" : "hidden"}
-          variants={arrowVariants}
-          transition={{ duration: 0.3 }}
+      <Link to={url}>
+        <motion.button
+          className="px-5 py-2 rounded-lg transition-all duration-300 ease-in-out flex items-center justify-center text-[16px] font-semibold"
+          style={buttonStyle}
+          // onMouseEnter={() => setIsHovered(true)}
+          // onMouseLeave={() => setIsHovered(false)}
+          // onTouchStart={() => setIsHovered(true)} // Touch start for mobile
+          // onTouchEnd={() => setIsHovered(false)} // Touch end for mobile
+          onMouseEnter={isMobile ? null : () => setIsActive(true)}
+          onMouseLeave={isMobile ? null : () => setIsActive(false)}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+          // whileHover={{ scaleX: 1.1 }} // Increase button size on hover
+          // animate={{ scaleX: isHovered ? 1.1 : 1 }} // Scale only in the horizontal direction
         >
-          {/* <img src={rightArrow} alt="Right Arrow Symbol" /> */}
-          <MdKeyboardArrowRight className="w-6 h-6" />
-        </motion.span>
-      </motion.button>
+          {label}
+          <motion.span
+            // className="inline-flex ml-1"
+            initial="hidden"
+            // animate={isHovered ? "visible" : "hidden"}
+            animate={isActive ? "visible" : "hidden"}
+            variants={arrowVariants}
+            transition={{ duration: 0.3 }}
+          >
+            {/* <img src={rightArrow} alt="Right Arrow Symbol" /> */}
+            <MdKeyboardArrowRight className="w-6 h-6" />
+          </motion.span>
+        </motion.button>
+      </Link>
     </div>
   );
 };
@@ -90,6 +93,7 @@ AnimatedButton.propTypes = {
   label: PropTypes.string.isRequired,
   labelColor: PropTypes.string.isRequired,
   bgColor: PropTypes.string.isRequired,
+  url: PropTypes.string,
 };
 
 export default AnimatedButton;
