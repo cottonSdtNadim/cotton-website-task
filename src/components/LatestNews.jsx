@@ -141,11 +141,12 @@ const LatestNews = () => {
       {/* Mobile swipeable horizontal scroll container */}
       <div className="md:hidden px-4 mb-8 overflow-x-auto scrollbar-hide">
         <div className="flex space-x-4 pb-4 w-max">
-          {displayedNews.map((singleNews, index) => (
-            <div key={index} className="flex-shrink-0">
-              <ImageCard singleNews={singleNews} />
-            </div>
-          ))}
+        {displayedNews.map((singleNews, index) => {
+          const paths = ["/blogOne", "/blogTwo"];
+          const path = paths[index] || "";
+
+          return <ImageCard key={index} singleNews={singleNews} url={path} />;
+        })}
         </div>
       </div>
 
