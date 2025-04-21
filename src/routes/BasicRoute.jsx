@@ -10,6 +10,7 @@ import PrivacyPolicy from "../pages/PrivacyPolicy";
 import Sustainability from "../pages/Sustainability";
 import Work from "../pages/Work";
 import BlogOne from "../components/BlogOne";
+import BlogTwo from "../components/BlogTwo";
 
 const BasicRoute = () => {
   return (
@@ -38,6 +39,7 @@ const BasicRoute = () => {
             element={<PrivacyPolicy></PrivacyPolicy>}
           ></Route>
           <Route path="/blogOne" element={<BlogOne></BlogOne>}></Route>
+          <Route path="/blogTwo" element={<BlogTwo></BlogTwo>}></Route>
         </Route>
 
         <Route path="/news" element={<News></News>}></Route>

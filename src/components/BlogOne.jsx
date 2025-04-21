@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router";
 import imgOne from "../assets/images/blogs/image-1.png";
 import imgTwo from "../assets/images/blogs/image-2.png";
 import imgThree from "../assets/images/blogs/image-3.png";
@@ -10,44 +11,30 @@ import { useMediaQuery } from "../hooks/useMediaQuery";
 import Cover from "../pages/Shared/Cover";
 import AnimatedButton from "./AnimatedButton";
 import CatalogButton from "./CatalogButton";
+import ParagraphOne from "../components/blogContent/ParagraphOne";
+import ParagraphTwo from "../components/blogContent/ParagraphTwo";
 
-const ParagraphOne = ({ header, paragraph }) => {
-  return (
-    <>
-      <h2 className="text-2xl font-semibold my-10">{header}</h2>
-      <p className="text-lg font-light">{paragraph}</p>
-    </>
-  );
-};
-
-const ParagraphTwo = ({ subHeader, paragraph, image }) => {
-  return (
-    <>
-      <h4 className="text-lg font-semibold mt-10">{subHeader}</h4>
-      <p className="text-lg font-light mb-10">{paragraph}</p>
-      <img src={image} alt="" />
-    </>
-  );
-};
 
 const NavigateToTheNextBlog = () => {
   return (
-    <div className="flex w-full max-w-md overflow-hidden rounded-2xl shadow-md">
-      {/* Left side with text content */}
-      <div className="bg-emerald-800 text-white flex flex-col justify-between p-4 w-5/6">
-        <h2 className="text-2xl font-extrabold">Behind the Seams</h2>
-        <p className="text-base font-semibold mt-auto">Next Post</p>
-      </div>
+    <Link to={"/blogTwo"}>
+      <div className="flex w-full max-w-md overflow-hidden rounded-2xl shadow-md">
+        {/* Left side with text content */}
+        <div className="bg-emerald-800 text-white flex flex-col justify-between p-4 w-5/6">
+          <h2 className="text-xl font-extrabold">Behind the Seams</h2>
+          <p className="text-base font-semibold mt-auto">Next Post</p>
+        </div>
 
-      {/* Right side with image */}
-      <div className="w-3/6 bg-gray-800">
-        <img
-          src={gerber}
-          alt="Gerber XLS50 Spreader"
-          className="w-full h-full object-cover"
-        />
+        {/* Right side with image */}
+        <div className="w-3/6 bg-gray-800">
+          <img
+            src={gerber}
+            alt="Gerber XLS50 Spreader"
+            className="w-full h-full object-cover"
+          />
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
@@ -57,6 +44,7 @@ const NavigateToTheNextBlogMobile = () => {
       label={"Next Post"}
       labelColor={"white"}
       bgColor={"#0B714C"}
+      url={"/blogTwo"}
     ></AnimatedButton>
   );
 };
