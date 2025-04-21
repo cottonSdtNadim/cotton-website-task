@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-router";
 
-const AnimatedButton = ({ label, labelColor, bgColor, url }) => {
+const AnimatedButton = ({ label, labelColor, bgColor, url}) => {
   // const [isHovered, setIsHovered] = useState(false);
   const [isActive, setIsActive] = useState(false);
   const [isMobile, setIsMobile] = useState(false);

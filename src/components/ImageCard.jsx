@@ -58,7 +58,7 @@ import PropTypes from "prop-types";
 import { content } from "../content/content.js";
 import AnimatedLink from "./AnimatedLink";
 
-const ImageCard = ({ singleNews }) => {
+const ImageCard = ({ singleNews, url }) => {
   const { label } = content.en.readTheStoryLink;
   const { image, title, details } = singleNews;
   
@@ -92,6 +92,7 @@ const ImageCard = ({ singleNews }) => {
           <AnimatedLink
             content={label}
             paddingBottom="pb-4 md:pb-6"
+            to={url}
           />
         </div>
       </div>
@@ -105,6 +106,7 @@ ImageCard.propTypes = {
     title: PropTypes.string.isRequired,
     details: PropTypes.string.isRequired,
   }).isRequired,
+  url: PropTypes.string // Added url prop
 };
 
 export default ImageCard;

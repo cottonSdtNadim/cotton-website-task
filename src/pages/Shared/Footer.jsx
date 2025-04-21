@@ -99,7 +99,7 @@ export default function Footer() {
         {/* Main container with proper padding for all screen sizes */}
         <div className="h-full flex flex-col justify-between">
           {/* Top section with heading and button */}
-          <div className="pt-12 px-6 md:pt-14 md:px-8 lg:px-28">
+          <div className="pt-12 px-6 md:pt-14 md:px-8 lg:px-28 xl:flex xl:justify-between">
             {/* Text heading - left aligned on all screens */}
             <h2 className="text-2xl font-bold text-white text-left max-w-[350px] md:text-3xl md:max-w-[686px]">
               {firstHeader} <br />
@@ -120,7 +120,10 @@ export default function Footer() {
           <div className="pb-8 flex flex-col space-y-4 px-6 md:pb-10 md:px-8 lg:px-28 md:flex-row md:justify-between md:space-y-0">
             {/* Privacy policy link - left aligned */}
             <div className="order-1 md:order-2">
-              <AnimatedLink content={privacyPolicyLink.label} to={'/privacy-policy'} />
+              <AnimatedLink
+                content={privacyPolicyLink.label}
+                to={"/privacy-policy"}
+              />
             </div>
 
             {/* Copyright text - positioned below policy on mobile */}

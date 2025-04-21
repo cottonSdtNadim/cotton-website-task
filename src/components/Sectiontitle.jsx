@@ -6,9 +6,10 @@ const SectionTitle = ({
   iconPositionClass,
   iconWidth,
   iconHeight,
+  marginBottom = "mb-20",
 }) => {
   return (
-    <div className="relative mb-20">
+    <div className={`relative ${marginBottom}`}>
       <img
         src={greenLeafSmallIcon}
         alt="Green Leaf Small Icon"
@@ -24,6 +25,7 @@ SectionTitle.propTypes = {
   iconWidth: PropTypes.string,
   iconHeight: PropTypes.string,
   iconPositionClass: PropTypes.string,
+  marginBottom: PropTypes.string,
 };
 
 
@@ -31,6 +33,7 @@ SectionTitle.defaultProps = {
   iconPositionClass: '-top-[25px] left-[495px] 2xl:left-[605px]',
   iconWidth: 'w-7',
   iconHeight: 'h-11',
+  marginBottom: 'mb-20',
 };
 
 export default SectionTitle;

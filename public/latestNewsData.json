@@ -1,31 +1,31 @@
 [
   {
-    "image": "../src/assets/images/sdg.png",
+    "image": "/images/sdg.png",
     "title": "Crafting Sustainable Fashion",
     "details": "How Pacific Cotton Group Champions SDGs in the Garment Industry"
   },
   {
-    "image": "../src/assets/images/gerber.png",
+    "image": "/images/gerber.png",
     "title": "Behind the Seams",
     "details": "The Technology Driving Premium Quality at Pacific Cotton Group"
   },
   {
-    "image": "../src/assets/images/fashion.png",
+    "image": "/images/fashion.png",
     "title": "From Cotton to Couture",
     "details": "The Journey of Premium Apparel at Pacific Cotton Group"
   },
   {
-    "image": "../src/assets/images/blogs/cotton-inside.png",
+    "image": "/images/cotton-inside.png",
     "title": "Fashioning a Better Future",
     "details": "Pacific Cotton Group's Impact on Communities and Employees"
   },
   {
-    "image": "../src/assets/images/blogs/cotton-inside2.png",
+    "image": "/images/cotton-inside2.png",
     "title": "Beyond Borders",
     "details": "Pacific Cotton Group's Global Reach in the Fashion Industry"
   },
   {
-    "image": "../src/assets/images/blogs/cotton-inside-3.png",
+    "image": "/images/cotton-inside-3.png",
     "title": "25 Million Pieces a Year",
     "details": "Celebrating 30+ Years of Excellence with Pacific Cotton Group"
   }

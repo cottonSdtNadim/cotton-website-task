@@ -151,9 +151,12 @@ const LatestNews = () => {
 
       {/* Desktop grid layout - hidden on mobile */}
       <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-4 md:mx-[150px] 2xl:mx-[280px] mb-12 md:mb-24">
-        {displayedNews.map((singleNews, index) => (
-          <ImageCard key={index} singleNews={singleNews} />
-        ))}
+        {displayedNews.map((singleNews, index) => {
+          const paths = ["/blogOne", "/blogTwo"];
+          const path = paths[index] || "";
+
+          return <ImageCard key={index} singleNews={singleNews} url={path} />;
+        })}
       </div>
 
       {/* Only show the View More button on the home page */}

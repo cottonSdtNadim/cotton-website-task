@@ -45,7 +45,7 @@ import PropTypes from "prop-types";
 import Navbar from "./Navbar";
 import { useState, useEffect } from "react";
 
-const Cover = ({ image, heading, subHeading = "" }) => {
+const Cover = ({ image, heading, subHeading = "", tagLine = "" }) => {
   const [scrollIndicator, setScrollIndicator] = useState(false);
 
   // Show scroll indicator on mobile only after a delay
@@ -86,6 +86,13 @@ const Cover = ({ image, heading, subHeading = "" }) => {
           <h1 className="text-5xl font-extrabold text-[#F8FBFA] text-center leading-tight px-4">
             {heading}
           </h1>
+          {
+            tagLine && (
+              <p className="text-lg text-white mt-4 text-center px-4 font-light">
+                {tagLine}
+              </p>
+            ) 
+          }
         </div>
         
         {/* Scroll Indicator - Mobile Only */}
@@ -117,6 +124,7 @@ Cover.propTypes = {
   heading: PropTypes.string.isRequired,
   subHeading: PropTypes.string,
   pageName: PropTypes.string,
+  tagLine: PropTypes.string,
 };
 
 export default Cover;
