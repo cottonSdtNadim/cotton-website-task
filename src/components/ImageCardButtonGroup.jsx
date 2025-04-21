@@ -733,7 +733,7 @@ const ImageCardButtonGroup = ({ data, width, height, mobileWidthImg, mobileHeigh
 
   // DESKTOP LAYOUT
   return (
-    <div className="xl:mx-44 2xl:mx-40">
+    <div className="2xl:mx-40">
       <div className="flex flex-col md:flex-row gap-6 mb-20 lg:mb-40 xl:mb-60">
         {/* Left column - Vertical buttons */}
         <div className="xl:w-4/12 2xl:w-1/3 flex flex-col gap-4">
