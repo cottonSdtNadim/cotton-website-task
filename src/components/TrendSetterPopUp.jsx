@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import trendSetter from "../assets/images/blogs/popup-image.png"
+import { useEffect, useState } from "react";
+import trendSetter from "../assets/images/blogs/popup-image.png";
+import AnimatedButton from "./AnimatedButton";
 
 export default function TrendSetterPopup() {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,8 +24,6 @@ export default function TrendSetterPopup() {
 
     const timer = setTimeout(() => {
       setIsVisible(true);
-      // Mark popup as shown
-      localStorage.setItem("trendsetterPopupShown", "true");
     }, 5000); // 5 seconds
 
     return () => clearTimeout(timer);
@@ -36,15 +35,15 @@ export default function TrendSetterPopup() {
     <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4">
       {/* Desktop version */}
       <div className="hidden md:flex bg-white rounded-3xl overflow-hidden max-w-4xl w-full max-h-[390px] relative">
-        <div className="w-1/2 relative xl:w-[348px] xl:h-[526px]">
+        <div className="w-1/2 relative xl:w-[450px] xl:h-[350px]">
           <img
             src={trendSetter}
             alt="Model in green dress"
-            className="object-cover"
+            className="w-full h-full object-cover"
           />
         </div>
 
-        <div className="w-1/2 p-8 flex flex-col justify-center">
+        <div className="w-full p-8 flex flex-col justify-center">
           <h2 className="text-[#0B714C] text-4xl font-black mb-4">
             BE A TRENDSETTER
           </h2>
@@ -54,15 +53,24 @@ export default function TrendSetterPopup() {
           </p>
 
           <div className="space-y-4">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0B714C]"
-            />
+            <div className="flex justify-between gap-4">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="w-3/5 px-4 py-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0B714C]"
+              />
 
-            <button className="w-full bg-[#0B714C] text-white py-3 rounded-lg font-medium hover:bg-[#095a3d] transition-colors">
-              Access Catalog
-            </button>
+              {/* <button className="w-full bg-[#0B714C] text-white py-3 rounded-lg font-medium hover:bg-[#095a3d] transition-colors">
+                Access Catalog
+              </button> */}
+              <div className="w-2/5">
+                <AnimatedButton
+                  label={"Access Catalog"}
+                  labelColor={"white"}
+                  bgColor={"#0B714C"}
+                ></AnimatedButton>
+              </div>
+            </div>
 
             <div className="text-center">
               <button

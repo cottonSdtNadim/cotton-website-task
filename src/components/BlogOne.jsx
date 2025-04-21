@@ -9,7 +9,7 @@ import sdgCover from "../assets/images/covers/sdg-cover.png";
 import gerber from "../assets/images/gerber.png";
 import { useMediaQuery } from "../hooks/useMediaQuery";
 import Cover from "../pages/Shared/Cover";
-import AnimatedButton from "./AnimatedButton";
+// import AnimatedButton from "./AnimatedButton";
 import CatalogButton from "./CatalogButton";
 import ParagraphOne from "../components/blogContent/ParagraphOne";
 import ParagraphTwo from "../components/blogContent/ParagraphTwo";
@@ -40,12 +40,16 @@ const NavigateToTheNextBlog = () => {
 
 const NavigateToTheNextBlogMobile = () => {
   return (
-    <AnimatedButton
-      label={"Next Post"}
-      labelColor={"white"}
-      bgColor={"#0B714C"}
-      url={"/blogTwo"}
-    ></AnimatedButton>
+    // <AnimatedButton
+    //   label={"Next Post"}
+    //   labelColor={"white"}
+    //   bgColor={"#0B714C"}
+    //   url={"/blogTwo"}
+    // ></AnimatedButton>
+
+    <button className="w-full bg-[#0B714C] text-white py-3 rounded-lg font-medium hover:bg-[#095a3d] transition-colors">
+   Next Post
+  </button>
   );
 };
 

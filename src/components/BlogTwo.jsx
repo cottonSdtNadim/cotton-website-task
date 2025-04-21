@@ -8,7 +8,7 @@ import gerber from "../assets/images/gerber.png";
 import sdg from "../assets/images/sdg.png";
 import { useMediaQuery } from "../hooks/useMediaQuery";
 import Cover from "../pages/Shared/Cover";
-import AnimatedButton from "./AnimatedButton";
+// import AnimatedButton from "./AnimatedButton";
 import ParagraphOne from "./blogContent/ParagraphOne";
 import ParagraphTwo from "./blogContent/ParagraphTwo";
 import CatalogButton from "./CatalogButton";
@@ -40,12 +40,15 @@ const NavigateToThePrevBlog = () => {
 
 const NavigateToThePrevBlogMobile = () => {
   return (
-    <AnimatedButton
-      label={"Previous Post"}
-      labelColor={"white"}
-      bgColor={"#0B714C"}
-      url={"/blogOne"}
-    ></AnimatedButton>
+    // <AnimatedButton
+    //   label={"Previous Post"}
+    //   labelColor={"white"}
+    //   bgColor={"#0B714C"}
+    //   url={"/blogOne"}
+    // ></AnimatedButton>
+    <button className="w-full bg-[#0B714C] text-white py-3 rounded-lg font-medium hover:bg-[#095a3d] transition-colors">
+      Previous Post
+    </button>
   );
 };
 
@@ -136,8 +139,8 @@ const BlogTwo = () => {
         </p>
       </div>
       {isMobile ? (
-          <div className="flex justify-center items-center mb-20">
-         <NavigateToThePrevBlogMobile></NavigateToThePrevBlogMobile>
+        <div className="flex justify-center items-center mb-20">
+          <NavigateToThePrevBlogMobile></NavigateToThePrevBlogMobile>
         </div>
       ) : (
         <div className="ml-28">
