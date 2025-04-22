@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 const TextCard = ({ svg, textBold, textSmall }) => {
   return (
-    <div className="bg-[#0B714C] rounded-md flex justify-start items-center p-2 w-56 h-24 text-white border-2">
+    <div className="bg-[#0B714C] rounded-2xl flex justify-start items-center p-3.5 w-64 h-36 text-white"> {/* border-2 p-2 */}
       {/* Svg */}
       <img src={svg} alt="" className="w-[65px] h-[65px]" />
 

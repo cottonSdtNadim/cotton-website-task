@@ -10,17 +10,26 @@ import VideoModule from "../../components/VideoModule";
 
 const Home = () => {
   return (
-    <div className="my-9 xl:my-64 2xl:my-52">
-      <TrendSetterPopup></TrendSetterPopup>
-      <ImageSlider></ImageSlider>
-      <Process></Process>
-      <VideoModule></VideoModule>
-      <ClientCollaborationHeader></ClientCollaborationHeader>
-      <CustomerFirstMessage></CustomerFirstMessage>
-      <LatestNews></LatestNews>
-      <Partners></Partners>
-      <ReadOurStory></ReadOurStory>
-    </div>
+    <>
+      <div>
+        <div className="my-9 xl:my-64 2xl:my-52">
+          <TrendSetterPopup></TrendSetterPopup>
+          <ImageSlider></ImageSlider>
+          <Process></Process>
+          <VideoModule></VideoModule>
+        </div>
+        <div>
+          <ClientCollaborationHeader></ClientCollaborationHeader>
+        </div>
+        <div className="my-9 xl:my-64 2xl:my-52">
+          {/*  */}
+          <CustomerFirstMessage></CustomerFirstMessage>
+          <LatestNews></LatestNews>
+          <Partners></Partners>
+          <ReadOurStory></ReadOurStory>
+        </div>
+      </div>
+    </>
   );
 };
 

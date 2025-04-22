@@ -42,7 +42,7 @@ const ClientCollaborationHeader = () => {
       }}
     >
       <div className="flex items-center justify-center h-[250px] md:h-[350px] px-6 md:px-12">
-        <h2 className="text-white font-extrabold text-2xl md:text-4xl text-center">
+        <h2 className="text-white font-extrabold text-2xl md:text-4xl text-center 2xl:px-40">
           {description}
         </h2>
       </div>

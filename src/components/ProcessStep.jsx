@@ -4,14 +4,14 @@ const ProcessStep = ({ icon, label, isActive }) => {
   return (
     <div className="flex flex-col items-center">
       <div
-        className={`w-12 h-12 rounded-full flex items-center justify-center mb-2 z-20 relative ${
+        className={`w-20 h-20 rounded-full flex items-center justify-center mb-2 z-20 relative ${
           isActive ? "bg-[#0B714C]" : "bg-white border-2 border-[#0B714C]"
         }`}
       >
         <img
           src={icon || "/placeholder.svg"}
           alt={label}
-          className="w-6 h-6"
+          className="w-10 h-10"
           style={{
             filter: isActive
               ? "brightness(0) invert(1)"

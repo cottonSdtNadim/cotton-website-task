@@ -457,7 +457,7 @@ const VideoModule = () => {
       {/* DESKTOP DESIGN - Will show on screens md and larger */}
       <div
         ref={containerRef}
-        className="hidden md:block relative mx-auto max-w-[1236px] h-[550px]"
+        className="hidden md:block relative mx-auto max-w-[1300px] h-[550px]" /*  max-w-[1250px] */
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >

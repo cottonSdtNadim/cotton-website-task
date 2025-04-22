@@ -142,21 +142,21 @@ const ProcessFlow = () => {
         {/* Steps container with green line */}
         <div className="flex items-center relative min-w-max px-6">
           {/* The main horizontal line that spans across all steps */}
-          <div className="h-[2px] bg-[#0B714C] absolute top-6 left-0 right-0 z-0"></div>
+          <div className="h-[2px] bg-[#0B714C] absolute top-6 left-0 right-0 z-0 mt-14"></div>
 
           {/* The completed portion of the line with increased thickness */}
           <div
-            className="h-[4px] bg-[#0B714C] absolute top-[23px] left-0 z-10 transition-all duration-300"
+            className="h-[4px] bg-[#0B714C] absolute top-[23px] left-0 z-10 transition-all duration-300 mt-14"
             /*  style={{
               width: `${activeStepIndex * 80 + 40}px`, // Adjust based on your spacing
             }} */
-            style={{
-              width: `${(activeStepIndex + 1) * 135}px`, // Adjust the multiplier based on actual step width
-            }}
+              style={{
+                width: `${(activeStepIndex + 1) * 135}px`, // Adjust the multiplier based on actual step width
+              }}
           ></div>
 
           {/* Process steps with proper spacing */}
-          <div className="flex space-x-16">
+          <div className="flex space-x-16  mt-10">
             {processSteps.map((step, index) => (
               <ProcessStep
                 key={step.label}

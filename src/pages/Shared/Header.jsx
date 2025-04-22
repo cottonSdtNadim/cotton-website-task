@@ -29,7 +29,7 @@ const Header = () => {
           src={leftGreenLeafVector}
           alt=""
           // className="absolute top-30 left-0 w-[200px] h-[600px]"
-          className="absolute top-28 left-0 2xl:left-[185px] w-48 h-[600px] hidden lg:block"
+          className="absolute top-28 left-0  w-48 h-[600px] hidden lg:block" /* 2xl:left-[185px] */
         />
         {/* Header Container */}
         <div className="relative pl-5 pr-10 xl:px-56">
@@ -76,8 +76,8 @@ const Header = () => {
           src={rightGreenLeafVector}
           alt=""
           // className="absolute top-100 right-0 w-[100px] h-[272px] "
-          className="absolute top-100 right-0 2xl:right-[185px] w-28 h-72 hidden lg:block"
-        />
+          className="absolute top-100 right-0  w-28 h-72 hidden lg:block"
+        /> {/* 2xl:right-[185px] */}
       </div>
     </div>
   );
