@@ -85,14 +85,14 @@ const CustomerRelationship = ({
   return (
     <div className="w-full max-w-4xl mx-auto">
       <div className="mt-6 md:mt-14">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold italic">
+        <h2 className="text-2xl sm:text-3xl mx-5 md:mx-0 md:text-4xl font-bold italic">
           &quot;{header}&quot;
         </h2>
         <div className="mt-4 md:mt-9">
           <h4 className="text-lg sm:text-xl font-semibold">{quotee}</h4>
           <p className="text-xs sm:text-sm font-light">{designation}</p>
         </div>
-        <p className="text-sm sm:text-base md:text-lg mt-4 md:mt-9 font-light">{description}</p>
+        <p className="text-sm sm:text-base md:text-lg mt-4 md:mt-9 font-light mx-5 md:mx-0">{description}</p>
       </div>
     </div>
   );
