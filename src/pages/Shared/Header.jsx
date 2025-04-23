@@ -65,6 +65,7 @@ const Header = () => {
             label={aboutUsButton.label}
             labelColor={aboutUsButton.labelColor}
             bgColor={aboutUsButton.bgColor}
+            url={"/aboutCotton"}
           ></AnimatedButton>
         </div>
         <img
@@ -77,7 +78,8 @@ const Header = () => {
           alt=""
           // className="absolute top-100 right-0 w-[100px] h-[272px] "
           className="absolute top-100 right-0  w-28 h-72 hidden lg:block"
-        /> {/* 2xl:right-[185px] */}
+        />{" "}
+        {/* 2xl:right-[185px] */}
       </div>
     </div>
   );
