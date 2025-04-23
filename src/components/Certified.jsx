@@ -77,44 +77,44 @@ const Certified = () => {
         <img 
           src={certified} 
           alt="Certified" 
-          className="absolute z-10 w-24 md:w-auto left-1/2 md:left-32 transform -translate-x-1/2 md:-translate-x-0"
+          className="absolute z-10 w-36 md:w-auto left-1/2 md:left-32 transform -translate-x-1/2 md:-translate-x-0"
         />
 
         {/* Surrounding Images - Repositioned for mobile */}
         <img 
           src={sedex} 
           alt="Sedex" 
-          className="absolute w-16 md:w-auto top-[5%] left-1/2 transform -translate-x-1/2" 
+          className="absolute w-16 md:w-auto top-[5%] md:top-[-5%] left-1/2 transform -translate-x-1/2" 
         />
         <img 
           src={organic} 
           alt="Organic" 
-          className="absolute w-14 md:w-auto top-[10%] right-[20%] md:right-[15%]" 
+          className="absolute w-14 md:w-auto top-[12%] md:top-[10%] right-[20%] md:right-[15%]" 
         />
         <img 
           src={leftRightArrow} 
           alt="Left Right Arrow" 
-          className="absolute w-14 md:w-auto top-[25%] right-[5%] md:right-[1%]" 
+          className="absolute w-14 md:w-auto top-[25%] right-[3%] md:right-[1%]" 
         />
         <img 
           src={AFA} 
           alt="AFA" 
-          className="absolute w-14 md:w-auto right-[8%] md:right-0 top-[40%] md:top-[52%] transform -translate-y-1/2" 
+          className="absolute w-14 md:w-auto right-[-3%] md:right-0 top-[48%] md:top-[52%] transform -translate-y-1/2" 
         />
         <img 
           src={WRAP} 
           alt="WRAP" 
-          className="absolute w-16 md:w-auto right-[15%] md:right-4 top-[60%] md:top-72 transform -translate-y-1/2" 
+          className="absolute w-16 md:w-auto right-[5%] md:right-4 top-[65%] md:top-72 transform -translate-y-1/2" 
         />
         <img 
           src={confidence} 
           alt="Confidence" 
-          className="absolute w-14 md:w-auto top-[75%] right-[30%] md:right-[25%]" 
+          className="absolute w-14 md:w-auto top-[70%] md:top-[75%] right-[20%] md:right-[25%]" 
         />
         <img 
           src={swedenTextile} 
           alt="Sweden Textile" 
-          className="absolute w-14 md:w-auto top-[77%] right-[55%]" 
+          className="absolute w-14 md:w-auto top-[73%] md:top-[77%] md:right-[55%]" 
         />
         <img 
           src={amfori} 
@@ -124,12 +124,12 @@ const Certified = () => {
         <img 
           src={rso} 
           alt="RSO" 
-          className="absolute w-14 md:w-auto bottom-[35%] left-[10%] md:left-[5%]" 
+          className="absolute w-14 md:w-auto bottom-[35%] left-[7%] md:left-[5%]" 
         />
         <img 
           src={bci} 
           alt="BCI" 
-          className="absolute w-16 md:w-auto bottom-[55%] left-[10%] md:left-[5%]" 
+          className="absolute w-16 md:w-auto bottom-[55%] left-[5%] md:left-[5%]" 
         />
         <img 
           src={global} 

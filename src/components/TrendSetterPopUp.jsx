@@ -141,7 +141,7 @@ export default function TrendSetterPopup() {
             <div className="text-center pt-2">
               <button
                 onClick={() => setIsVisible(false)}
-                className="text-white text-lg font-light opacity-90 hover:opacity-100"
+                className="text-white text-lg font-light opacity-90 hover:opacity-100 underline"
               >
                 Maybe Later
               </button>
