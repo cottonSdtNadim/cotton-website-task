@@ -710,7 +710,7 @@ const ImageCardTimelineSlider = () => {
       </div>
 
       {/* Mobile Pagination Dots */}
-      <div className="md:hidden flex justify-center py-6 space-x-2">
+      {/* <div className="md:hidden flex justify-center py-6 space-x-2">
         {timelineData.map((_, index) => (
           <div
             key={index}
@@ -718,7 +718,7 @@ const ImageCardTimelineSlider = () => {
             onClick={() => setCurrentSlide(index)}
           ></div>
         ))}
-      </div>
+      </div> */}
     </div>
   )
 }
