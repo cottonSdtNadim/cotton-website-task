@@ -315,34 +315,12 @@ const Navbar = ({ nonActiveTextColor = "black" }) => {
             animate="visible"
             exit="exit"
           >
-            {/* Exit arrow */}
-            {/* <div className="absolute top-5 right-5">
-              <div
-                className="w-8 h-8 flex items-center justify-center cursor-pointer"
-                onClick={toggleMobileMenu}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <line x1="19" y1="12" x2="5" y2="12"></line>
-                  <polyline points="12 19 5 12 12 5"></polyline>
-                </svg>
-              </div>
-            </div> */}
-
             {/* Mobile menu content */}
             <div className="flex flex-col items-start justify-center h-full px-10">
               <ul className="flex flex-col gap-8 w-full">
                 {navItemsList.map(({ name, path }) => {
                   const isActive = location.pathname === path;
+                  const isHovered = hoveredItem === name;
 
                   return (
                     <motion.li
@@ -353,7 +331,6 @@ const Navbar = ({ nonActiveTextColor = "black" }) => {
                       <NavLink
                         to={path}
                         className="relative flex items-center text-white text-xl font-semibold"
-                        // onClick={() => setMobileMenuOpen(false)}
                         onClick={() => {
                           setHoveredItem(null);
                           setMobileMenuOpen(false);
@@ -363,20 +340,20 @@ const Navbar = ({ nonActiveTextColor = "black" }) => {
                         onMouseEnter={() => setHoveredItem(name)}
                         onMouseLeave={() => setHoveredItem(null)}
                       >
-                        {/* Always show white ellipse for the active item */}
-                        {isActive && (
-                          <div className="w-2 h-2 bg-white rounded-full mr-4"></div>
-                          //   <img
-                          //   src={ellipse}
-                          //   alt="Bullet Point"
-                          //   className="w-1.5 h-1.5 bg-white rounded-full"
-                          // />
+                        {/* Show white ellipse for active items or when hovered */}
+                        {(isActive || isHovered) && (
+                          <motion.div
+                            className="w-2 h-2 bg-white rounded-full mr-4"
+                            initial={{ opacity: 0, scale: 0 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.2 }}
+                          />
                         )}
 
-                        {/* Nav Item Name with automatic movement for active items */}
+                        {/* Nav Item Name with movement */}
                         <motion.div
                           animate={{
-                            x: isActive ? 10 : 0,
+                            x: isActive || isHovered ? 10 : 0,
                           }}
                           transition={{ duration: 0.3 }}
                         >
