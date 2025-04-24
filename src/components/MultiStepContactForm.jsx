@@ -343,7 +343,7 @@ const MultiStepContactForm = () => {
 
             {isMobile ? (
               // Mobile view - full width button centered
-              <div className="pt-2 pb-4">
+              <div className="pt-2 pb-4" onClick={handleSubmit}>
                 <button
                   type="submit"
                   className="w-full bg-[#0B714C] text-white font-medium py-3 px-6 rounded-lg hover:bg-[#095a3d] transition-colors duration-300"
@@ -353,7 +353,7 @@ const MultiStepContactForm = () => {
               </div>
             ) : (
               // Desktop view - original animated button positioning
-              <div className="mb-12">
+              <div className="mb-12" onClick={handleSubmit}>
                 <div>
                   <div className="absolute left-7/12 transform translate-x-1/6">
                     <AnimatedButton

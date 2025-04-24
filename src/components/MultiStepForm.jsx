@@ -1,7 +1,8 @@
-import {  useState } from "react";
+import { useState } from "react";
 // import checkIcon from "../assets/icons/Check Icon.png";
 import PropTypes from "prop-types";
 import { FaCheck } from "react-icons/fa";
+import { useMediaQuery } from "../hooks/useMediaQuery";
 import AnimatedButton from "./AnimatedButton";
 import AnimatedFileUpload from "./AnimatedFileUpload";
 import AnimatedNavLink from "./AnimatedNavLink";
@@ -26,8 +27,12 @@ const MultiStepForm = () => {
     comment: "",
   });
 
+  const isMobile = useMediaQuery("(max-width: 768px)");
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
+    console.log("handleInputChange", e.target);
+    console.log("Input Field Name:", name, ",", "Input Field Value:", value);
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
@@ -90,7 +95,7 @@ const MultiStepForm = () => {
           name={name}
           type={type}
           placeholder={placeholder}
-          value={value}
+          value={value || ""}
           onChange={onChange}
           // className="border border-[#0B714C] rounded-md h-10 pt-1"
           className="shadow appearance-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-[#0B714C] divide-solid border-[1px]"
@@ -111,10 +116,18 @@ const MultiStepForm = () => {
           id={name}
           name={name}
           placeholder={placeholder}
-          value={value}
+          value={value || ""}
           onChange={onChange}
           className="border border-[#0B714C] rounded-md min-h-[200px] w-full pt-2 px-3 resize-none"
         />
+      </div>
+    );
+  };
+
+  const FormLabel = ({ label }) => {
+    return (
+      <div className="absolute -top-[14px] left-[10px] px-1 bg-white z-10">
+        <span className="text-[#0B714C] text-base">{label}</span>
       </div>
     );
   };
@@ -179,10 +192,11 @@ const MultiStepForm = () => {
         >
           {/* Container of Name and Company */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 xl:gap-4 mb-12">
-            {/* <div className="mb-4">
-              <label htmlFor="name" className="block text-[#0B714C] mb-1">
+            <div className="mb-4 relative">
+              {/* <label htmlFor="name" className="block text-[#0B714C] mb-1">
                 Name:
-              </label>
+              </label> */}
+              <FormLabel label="Name" />
               <input
                 type="text"
                 id="name"
@@ -193,20 +207,22 @@ const MultiStepForm = () => {
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 required
               />
-            </div> */}
+            </div>
 
-            <FormInput
+            {/* <FormInput
+              id="name"
               label="Name"
               name="name"
               placeholder="Your name"
               value={formData.name}
               onChange={handleInputChange}
-            />
+            /> */}
 
-            {/* <div className="mb-4">
-              <label htmlFor="company" className="block text-[#0B714C] mb-1">
+            <div className="mb-4 relative">
+              {/* <label htmlFor="company" className="block text-[#0B714C] mb-1">
                 Company:
-              </label>
+              </label> */}
+              <FormLabel label="Company" />
               <input
                 type="text"
                 id="company"
@@ -216,23 +232,25 @@ const MultiStepForm = () => {
                 onChange={handleInputChange}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
-            </div> */}
-            <FormInput
+            </div>
+
+            {/* <FormInput
               label="Company"
               name="company"
               placeholder="Your company name"
               value={formData.company}
               onChange={handleInputChange}
-            />
+            /> */}
           </div>
 
           {/* Container of Email and Phone */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 xl:gap-4 mb-12">
-            {/* <div>
-              <div className="mb-4">
-                <label htmlFor="email" className="block text-[#0B714C] mb-1">
+            <div>
+              <div className="mb-4 relative">
+                {/* <label htmlFor="email" className="block text-[#0B714C] mb-1">
                   Email:
-                </label>
+                </label> */}
+                <FormLabel label="Email" />
                 <input
                   type="email"
                   id="email"
@@ -245,10 +263,11 @@ const MultiStepForm = () => {
                 />
               </div>
             </div>
-            <div className="mb-4">
-              <label htmlFor="phone" className="block text-[#0B714C] mb-1">
+            <div className="mb-4 relative">
+              {/* <label htmlFor="phone" className="block text-[#0B714C] mb-1">
                 Phone:
-              </label>
+              </label> */}
+              <FormLabel label="Phone" />
               <input
                 type="tel"
                 id="phone"
@@ -258,9 +277,9 @@ const MultiStepForm = () => {
                 onChange={handleInputChange}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
-            </div> */}
+            </div>
 
-            <FormInput
+            {/*  <FormInput
               label="Email"
               name="email"
               type="email"
@@ -272,16 +291,18 @@ const MultiStepForm = () => {
             <FormInput
               label="Phone"
               name="phone"
+              type="number"
               placeholder="Your phone number"
               value={formData.phone}
               onChange={handleInputChange}
-            />
+            /> */}
           </div>
 
-          {/* <div className="mb-10">
-            <label htmlFor="website" className="block text-[#0B714C] mb-1">
+          <div className="mb-10 relative">
+            {/* <label htmlFor="website" className="block text-[#0B714C] mb-1">
               Website:
-            </label>
+            </label> */}
+            <FormLabel label="Website" />
             <input
               type="url"
               id="website"
@@ -291,25 +312,27 @@ const MultiStepForm = () => {
               onChange={handleInputChange}
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
-          </div> */}
+          </div>
 
           {/* Website */}
-          <div className="mb-14">
+          {/* <div className="mb-14">
             <FormInput
               label="Website"
               name="website"
+              type="url"
               placeholder="Your website url"
               value={formData.website}
               onChange={handleInputChange}
             />
-          </div>
+          </div> */}
 
           <div className="mb-4 mt-16 md:mt-0">
-            <h3 className="text-green-600 font-medium mb-4">Street Address</h3>
-            {/* <div className="mb-4">
-              <label htmlFor="country" className="block text-[#0B714C] mb-1">
+            <h3 className="text-[#0B714C] font-medium mb-4">Street Address</h3>
+            <div className="mb-22 relative">
+              {/* <label htmlFor="country" className="block text-[#0B714C] mb-1">
                 Country
-              </label>
+              </label> */}
+              <FormLabel label="Country" />
               <input
                 type="text"
                 id="country"
@@ -319,8 +342,8 @@ const MultiStepForm = () => {
                 onChange={handleInputChange}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
-            </div> */}
-            <div className="mb-12">
+            </div>
+            {/* <div className="mb-12">
               <FormInput
                 label="Country"
                 name="country"
@@ -328,15 +351,16 @@ const MultiStepForm = () => {
                 value={formData.country}
                 onChange={handleInputChange}
               />
-            </div>
+            </div> */}
           </div>
 
           {/* Container of Address and Address 2 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 xl:gap-4 mb-12">
-            {/* <div className="mb-4">
-              <label htmlFor="address" className="block text-[#0B714C] mb-1">
+            <div className="mb-4 relative">
+              {/* <label htmlFor="address" className="block text-[#0B714C] mb-1">
                 Address:
-              </label>
+              </label> */}
+              <FormLabel label="Address" />
               <input
                 type="text"
                 id="address"
@@ -346,18 +370,20 @@ const MultiStepForm = () => {
                 onChange={handleInputChange}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
-            </div> */}
-            <FormInput
+            </div>
+            {/* <FormInput
               label="Address"
               name="address"
               placeholder="Your street address, P.O. box"
               value={formData.address}
               onChange={handleInputChange}
-            />
-            {/* <div className="mb-4">
-              <label htmlFor="address2" className="block text-[#0B714C] mb-1">
+            /> */}
+
+            <div className="mb-4 relative">
+              {/* <label htmlFor="address2" className="block text-[#0B714C] mb-1">
                 Address 2 (Optional):
-              </label>
+              </label> */}
+              <FormLabel label="Address 2 (Optional)" />
               <input
                 type="text"
                 id="address2"
@@ -367,22 +393,24 @@ const MultiStepForm = () => {
                 onChange={handleInputChange}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
-            </div> */}
-            <FormInput
+            </div>
+
+            {/* <FormInput
               label="Address 2 (Optional)"
               name="address2"
               placeholder="Suite, unit, building, floor"
               value={formData.address2}
               onChange={handleInputChange}
-            />
+            /> */}
           </div>
 
           {/* Container of City, State and Zip */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 xl:gap-4 mb-12">
-            {/* <div className="mb-4">
-              <label htmlFor="city" className="block text-[#0B714C] mb-1">
+            <div className="mb-4 relative">
+              {/* <label htmlFor="city" className="block text-[#0B714C] mb-1">
                 City:
-              </label>
+              </label> */}
+              <FormLabel label="City" />
               <input
                 type="text"
                 id="city"
@@ -393,10 +421,11 @@ const MultiStepForm = () => {
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
-            <div className="mb-4">
-              <label htmlFor="state" className="block text-[#0B714C] mb-1">
+            <div className="mb-4 relative">
+              {/* <label htmlFor="state" className="block text-[#0B714C] mb-1">
                 State:
-              </label>
+              </label> */}
+              <FormLabel label="State" />
               <input
                 type="text"
                 id="state"
@@ -407,10 +436,11 @@ const MultiStepForm = () => {
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
-            <div className="mb-4">
-              <label htmlFor="zip" className="block text-[#0B714C] mb-1">
+            <div className="mb-4 relative">
+              {/* <label htmlFor="zip" className="block text-[#0B714C] mb-1">
                 Zip:
-              </label>
+              </label> */}
+              <FormLabel label="ZIP" />
               <input
                 type="text"
                 id="zip"
@@ -420,8 +450,9 @@ const MultiStepForm = () => {
                 onChange={handleInputChange}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
-            </div> */}
-            <FormInput
+            </div>
+
+            {/* <FormInput
               label="City"
               name="city"
               placeholder="Select city"
@@ -443,20 +474,32 @@ const MultiStepForm = () => {
               placeholder="Enter ZIP code"
               value={formData.zip}
               onChange={handleInputChange}
-            />
+            /> */}
           </div>
 
-          <div>
-            <div className="mt-12">
-              <div className="absolute left-10/12 transform translate-x-1/4">
-                <AnimatedButton
-                  label="Next"
-                  labelColor="White"
-                  bgColor="#0B714C"
-                ></AnimatedButton>
+          {isMobile ? (
+            // Mobile view - full width button centered
+            <div className="pt-2 pb-4" onClick={nextStep}>
+              <button
+                type="submit"
+                className="w-full bg-[#0B714C] text-white font-medium py-3 px-6 rounded-lg hover:bg-[#095a3d] transition-colors duration-300"
+              >
+                Next
+              </button>
+            </div>
+          ) : (
+            <div>
+              <div className="mt-12" onClick={nextStep}>
+                <div className="absolute xl:left-10/12 xl:transform xl:translate-x-1/4">
+                  <AnimatedButton
+                    label="Next"
+                    labelColor="White"
+                    bgColor="#0B714C"
+                  ></AnimatedButton>
+                </div>
               </div>
             </div>
-          </div>
+          )}
         </form>
       )}
 
@@ -511,22 +554,23 @@ const MultiStepForm = () => {
               accept=".pdf,.doc,.docx,.xlsx" // Optional: specify accepted file types
             />
           </div>
-          {/* <div className="mb-4">
-            <label
+          <div className="mb-4 relative">
+            {/* <label
               htmlFor="comment"
               className="block text-[#0B714C] mb-1 font-bold"
             >
               Comment
-            </label>
+            </label> */}
+            <FormLabel label="Comment" />
             <textarea
               id="comment"
               name="comment"
               value={formData.comment}
-              onChange={handleFileChange}
-              className="shadow appearance-none border rounded w-full h-40 py-2 px-3 text-[#0B714C] leading-tight focus:outline-none focus:shadow-outline"
+              onChange={handleInputChange}
+              className="shadow appearance-none border rounded w-full h-40 py-2 px-3  leading-tight focus:outline-none focus:shadow-outline" /* text-[#0B714C] */
             />
-          </div> */}
-          <div className="pt-4">
+          </div>
+          {/* <div className="pt-4">
             <FormTextarea
               label="Comment"
               name="comment"
@@ -534,7 +578,7 @@ const MultiStepForm = () => {
               value={formData.comment}
               onChange={handleInputChange}
             />
-          </div>
+          </div> */}
           <div className="flex justify-between relative mt-12">
             {/* <button
               type="button"
@@ -550,7 +594,10 @@ const MultiStepForm = () => {
             ></AnimatedNavLink>
             <div>
               <div>
-                <div className="absolute left-8/12 translate-x-2/3">
+                <div
+                  className="absolute left-8/12 translate-x-2/3"
+                  onClick={handleSubmit}
+                >
                   <AnimatedButton
                     label="Submit Request"
                     labelColor="white"
@@ -560,6 +607,25 @@ const MultiStepForm = () => {
               </div>
             </div>
           </div>
+
+          {/* <div className={`flex ${isMobile ? 'flex-col' : 'flex-row justify-between'} w-full gap-6 mt-12`}>
+  <div className={`${isMobile ? 'self-center mb-4' : ''}`}>
+    <AnimatedNavLink
+      label="Personal info"
+      labelColor="#0B714C"
+      onClick={prevStep}
+    />
+  </div>
+  
+  <div className={`${isMobile ? 'self-center' : ''}`}>
+    <AnimatedButton
+      label="Submit Request"
+      labelColor="white"
+      bgColor="#0B714C"
+      onClick={handleSubmit}
+    />
+  </div>
+</div> */}
         </form>
       )}
 
@@ -576,7 +642,7 @@ const MultiStepForm = () => {
           <button
             type="button"
             onClick={resetForm}
-            className="px-6 py-3 bg-[#0B714C] text-white rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
+            className="px-6 py-3 bg-[#0B714C] text-white rounded-lg" /* hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 */
           >
             Add another order request
           </button>
