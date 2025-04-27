@@ -259,6 +259,82 @@ const processSteps = [
 ];
 
 // Mobile Process Steps Card Component
+// const MobileProcessCard = ({ processSteps }) => {
+//   const [currentStep, setCurrentStep] = useState(0);
+//   const touchStartX = useRef(null);
+
+//   // Handle swipe gestures
+//   const handleTouchStart = (e) => {
+//     touchStartX.current = e.touches[0].clientX;
+//   };
+
+//   const handleTouchEnd = (e) => {
+//     if (!touchStartX.current) return;
+    
+//     const touchEndX = e.changedTouches[0].clientX;
+//     const diff = touchStartX.current - touchEndX;
+    
+//     // Swipe threshold
+//     if (Math.abs(diff) > 50) {
+//       if (diff > 0) {
+//         // Swipe left - next
+//         setCurrentStep((prev) => (prev === processSteps.length - 1 ? 0 : prev + 1));
+//       } else {
+//         // Swipe right - previous
+//         setCurrentStep((prev) => (prev === 0 ? processSteps.length - 1 : prev - 1));
+//       }
+//     }
+    
+//     touchStartX.current = null;
+//   };
+
+//   return (
+//     <div className="w-full mt-8 flex justify-center md:hidden">
+//       <div className="max-w-xs w-full px-4">
+//         <div 
+//           className="relative"
+//           onTouchStart={handleTouchStart}
+//           onTouchEnd={handleTouchEnd}
+//         >
+//           {/* Process Card with Multiple Shadows */}
+//           <div className="bg-white rounded-lg overflow-hidden relative border-2 border-red-500">
+//             {/* Multiple Shadow Layers */}
+//             <div className="absolute -bottom-1 left-2 right-2 h-full bg-[#0B714C]/20 rounded-lg -z-10"></div>
+//             <div className="absolute -bottom-2 left-4 right-4 h-full bg-[#0B714C]/15 rounded-lg -z-20"></div>
+//             <div className="absolute -bottom-3 left-6 right-6 h-full bg-[#0B714C]/10 rounded-lg -z-30"></div>
+//             <div className="absolute -bottom-4 left-8 right-8 h-full bg-[#0B714C]/5 rounded-lg -z-40"></div>
+            
+//             {/* Factory Image */}
+//             <div className="h-32 bg-gray-200">
+//               {/* <img src={cottonFactory} alt="Manufacturing Process" className="w-full h-full object-cover" /> */}
+//               {
+//                 processSteps[currentStep].image && (
+//                   <img 
+//                     src={processSteps[currentStep].image} 
+//                     alt="factory images" 
+//                     className="w-full h-full object-cover"
+//                   />
+//                 )
+//               }
+//             </div>
+            
+//             {/* Green Background Bar with Label and Number */}
+//             <div className="bg-[#0B714C] p-4 flex justify-between items-center">
+//               <div>
+//                 <h3 className="font-bold text-lg text-white">{processSteps[currentStep].label}</h3>
+//               </div>
+//               <div className="text-[#9CCCBA] text-4xl font-bold opacity-80">
+//                 {processSteps[currentStep].number}
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// Mobile Process Steps Card Component
 const MobileProcessCard = ({ processSteps }) => {
   const [currentStep, setCurrentStep] = useState(0);
   const touchStartX = useRef(null);
@@ -290,42 +366,72 @@ const MobileProcessCard = ({ processSteps }) => {
 
   return (
     <div className="w-full mt-8 flex justify-center md:hidden">
-      <div className="max-w-xs w-full px-4">
+      <div className="max-w-sm w-full px-4">
         <div 
           className="relative"
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
         >
-          {/* Process Card with Multiple Shadows */}
-          <div className="bg-white rounded-lg overflow-hidden relative">
-            {/* Multiple Shadow Layers */}
-            <div className="absolute -bottom-1 left-2 right-2 h-full bg-[#0B714C]/20 rounded-lg -z-10"></div>
-            <div className="absolute -bottom-2 left-4 right-4 h-full bg-[#0B714C]/15 rounded-lg -z-20"></div>
-            <div className="absolute -bottom-3 left-6 right-6 h-full bg-[#0B714C]/10 rounded-lg -z-30"></div>
-            <div className="absolute -bottom-4 left-8 right-8 h-full bg-[#0B714C]/5 rounded-lg -z-40"></div>
-            
-            {/* Factory Image */}
-            <div className="h-32 bg-gray-200">
-              {/* <img src={cottonFactory} alt="Manufacturing Process" className="w-full h-full object-cover" /> */}
-              {
-                processSteps[currentStep].image && (
-                  <img 
-                    src={processSteps[currentStep].image} 
-                    alt="factory images" 
-                    className="w-full h-full object-cover"
-                  />
-                )
-              }
+          {/* Main Process Card with the exact shadow layers beneath it */}
+          <div className="relative">
+            {/* Shadow Layers - precisely matching the design */}
+            <div className="absolute top-0 left-0 right-0 rounded-xl overflow-hidden" style={{ zIndex: 1 }}>
+              {/* Main card */}
+              <div className="bg-white rounded-lg overflow-hidden">
+                {/* Factory Image */}
+                <div className="h-48 bg-gray-200">
+                  {processSteps[currentStep].image && (
+                    <img 
+                      src={processSteps[currentStep].image} 
+                      alt="Manufacturing process" 
+                      className="w-full h-full object-cover"
+                    />
+                  )}
+                </div>
+                
+                {/* Green Background Bar with Label and Number */}
+                <div className="bg-emerald-800 p-4 flex justify-between items-center">
+                  <div>
+                    <h3 className="font-bold text-xl text-white">{processSteps[currentStep].label}</h3>
+                  </div>
+                  <div className="text-emerald-200/80 text-5xl font-bold">
+                    {String(currentStep + 1).padStart(2, '0')}
+                  </div>
+                </div>
+              </div>
             </div>
             
-            {/* Green Background Bar with Label and Number */}
-            <div className="bg-[#0B714C] p-4 flex justify-between items-center">
-              <div>
-                <h3 className="font-bold text-lg text-white">{processSteps[currentStep].label}</h3>
+           {/* Shadow Layer 1 - closest to the card */}
+           <div className="absolute top-[-70px] left-4 right-4 rounded-xl bg-emerald-800/40 h-full" style={{ zIndex: 0 }}></div>
+            
+            {/* Shadow Layer 2 */}
+            <div className="absolute top-[-50px] left-8 right-8 rounded-xl bg-emerald-800/30 h-full" style={{ zIndex: -1 }}></div>
+            
+            {/* Shadow Layer 3 */}
+            <div className="absolute top-[-30px] left-12 right-12 rounded-xl bg-emerald-800/20 h-full" style={{ zIndex: -2 }}></div>
+            
+            {/* Shadow Layer 4 */}
+            <div className="absolute top-[-10px] left-16 right-16 rounded-xl bg-emerald-800/15 h-full" style={{ zIndex: -3 }}></div>
+            
+            {/* Shadow Layer 5 */}
+            {/* <div className="absolute top-[5px] left-20 right-20 rounded-lg bg-emerald-800/10 h-full" style={{ zIndex: -4 }}></div> */}
+            
+            {/* Shadow Layer 6 - furthest from the card */}
+            {/* <div className="absolute top-[20px] left-24 right-24 rounded-lg bg-emerald-800/5 h-full" style={{ zIndex: -5 }}></div> */}
+            
+            {/* Spacer div to maintain proper height with shadows */}
+            <div className="invisible">
+              <div className="bg-white rounded-lg overflow-hidden">
+                <div className="h-48"></div>
+                <div className="p-4 flex justify-between items-center">
+                  <div>
+                    <h3 className="font-bold text-xl text-white">Spacer</h3>
+                  </div>
+                  <div className="text-5xl font-bold">00</div>
+                </div>
               </div>
-              <div className="text-[#9CCCBA] text-4xl font-bold opacity-80">
-                {processSteps[currentStep].number}
-              </div>
+              {/* Extra space for shadows */}
+              <div className="h-24"></div>
             </div>
           </div>
         </div>
