@@ -140,7 +140,7 @@ const MultiStepForm = () => {
         <div className="flex justify-between items-center">
           {/* Circle 1 Container with Label */}
           <div className="flex flex-col items-center">
-            <span className="mb-2 text-[#0B714C] font-medium">
+            <span className="mb-2 text-[#0B714C] font-bold">
               Personal Info
             </span>
             <div
@@ -153,7 +153,7 @@ const MultiStepForm = () => {
           {/* Circle 2 Container with Label */}
           <div className="flex flex-col items-center">
             <span
-              className={`mb-2 font-medium ${
+              className={`mb-2 font-bold ${
                 currentStep === 2 ? "text-[#0B714C]" : "text-transparent"
               }`}
             >
@@ -204,7 +204,7 @@ const MultiStepForm = () => {
                 placeholder="Your name"
                 value={formData.name}
                 onChange={handleInputChange}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border border-[#0B714C] rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 required
               />
             </div>
@@ -230,7 +230,7 @@ const MultiStepForm = () => {
                 placeholder="Your company name"
                 value={formData.company}
                 onChange={handleInputChange}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border border-[#0B714C] rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
 
@@ -258,7 +258,7 @@ const MultiStepForm = () => {
                   placeholder="Your email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  className="shadow appearance-none border border-[#0B714C] rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   required
                 />
               </div>
@@ -275,7 +275,7 @@ const MultiStepForm = () => {
                 placeholder="Your phone number"
                 value={formData.phone}
                 onChange={handleInputChange}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border border-[#0B714C] rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
 
@@ -310,7 +310,7 @@ const MultiStepForm = () => {
               placeholder="Your website url"
               value={formData.website}
               onChange={handleInputChange}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border border-[#0B714C] rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
 
@@ -340,7 +340,7 @@ const MultiStepForm = () => {
                 placeholder="Select Country"
                 value={formData.country}
                 onChange={handleInputChange}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border border-[#0B714C] rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
             {/* <div className="mb-12">
@@ -368,7 +368,7 @@ const MultiStepForm = () => {
                 placeholder="Your street address, P.O. box"
                 value={formData.address}
                 onChange={handleInputChange}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border border-[#0B714C] rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
             {/* <FormInput
@@ -391,7 +391,7 @@ const MultiStepForm = () => {
                 placeholder="Suite, unit, building, floor"
                 value={formData.address2}
                 onChange={handleInputChange}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border border-[#0B714C] rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
 
@@ -418,7 +418,7 @@ const MultiStepForm = () => {
                 placeholder="Select city"
                 value={formData.city}
                 onChange={handleInputChange}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border border-[#0B714C] rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
             <div className="mb-4 relative">
@@ -433,7 +433,7 @@ const MultiStepForm = () => {
                 placeholder="Select state"
                 value={formData.state}
                 onChange={handleInputChange}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border border-[#0B714C] rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
             <div className="mb-4 relative">
@@ -448,7 +448,7 @@ const MultiStepForm = () => {
                 placeholder="Enter ZIP code"
                 value={formData.zip}
                 onChange={handleInputChange}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border border-[#0B714C] rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
 
@@ -582,7 +582,7 @@ const MultiStepForm = () => {
               name="comment"
               value={formData.comment}
               onChange={handleInputChange}
-              className="shadow appearance-none border rounded w-full h-40 py-2 px-3  leading-tight focus:outline-none focus:shadow-outline" /* text-[#0B714C] */
+              className="shadow appearance-none border border-[#0B714C] rounded w-full h-40 py-2 px-3  leading-tight focus:outline-none focus:shadow-outline" /* text-[#0B714C] */
             />
           </div>
           {/* <div className="pt-4">
