@@ -88,7 +88,7 @@ const CustomerRelationship = ({
         <h2 className="text-2xl sm:text-3xl mx-5 md:mx-0 md:text-4xl font-bold italic">
           &quot;{header}&quot;
         </h2>
-        <div className="mt-4 md:mt-9">
+        <div className="mt-4 md:mt-9 px-5 md:px-0">
           <h4 className="text-lg sm:text-xl font-semibold">{quotee}</h4>
           <p className="text-xs sm:text-sm font-light">{designation}</p>
         </div>

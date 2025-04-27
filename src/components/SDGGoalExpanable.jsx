@@ -1,5 +1,3 @@
-
-
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
@@ -261,14 +259,16 @@ const SDGGoalsExpandable = () => {
               onClick={() => toggleGoal(index)}
             >
               <div className="flex items-center">
-                <span className="text-white text-3xl mr-4">{goal.icon}</span>
+                <span className="text-white text-3xl mr-4 w-8 flex justify-center">{goal.icon}</span>
                 <span className="text-white text-4xl font-bold">
                   {goal.number}
                 </span>
               </div>
-              <div className="text-white text-sm">
-                TAP TO {isExpanded ? "CLOSE" : "LEARN MORE"}
-              </div>
+              {index === 0 && (
+                <div className="text-white text-sm">
+                  TAP TO {isExpanded ? "CLOSE" : "LEARN MORE"}
+                </div>
+              )}
             </motion.div>
 
             {/* Expandable content */}

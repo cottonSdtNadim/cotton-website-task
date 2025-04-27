@@ -77,52 +77,52 @@ const MultiStepForm = () => {
   };
 
   // Custom input component with label integrated into border
-  const FormInput = ({
-    label,
-    name,
-    placeholder,
-    value,
-    onChange,
-    type = "text",
-  }) => {
-    return (
-      <div className="relative">
-        <div className="absolute -top-[14px] left-[10px] px-1 bg-white z-10">
-          <span className="text-[#0B714C] text-base">{label}</span>
-        </div>
-        <input
-          id={name}
-          name={name}
-          type={type}
-          placeholder={placeholder}
-          value={value || ""}
-          onChange={onChange}
-          // className="border border-[#0B714C] rounded-md h-10 pt-1"
-          className="shadow appearance-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-[#0B714C] divide-solid border-[1px]"
-          required
-        />
-      </div>
-    );
-  };
+  // const FormInput = ({
+  //   label,
+  //   name,
+  //   placeholder,
+  //   value,
+  //   onChange,
+  //   type = "text",
+  // }) => {
+  //   return (
+  //     <div className="relative">
+  //       <div className="absolute -top-[14px] left-[10px] px-1 bg-white z-10">
+  //         <span className="text-[#0B714C] text-base">{label}</span>
+  //       </div>
+  //       <input
+  //         id={name}
+  //         name={name}
+  //         type={type}
+  //         placeholder={placeholder}
+  //         value={value || ""}
+  //         onChange={onChange}
+  //         // className="border border-[#0B714C] rounded-md h-10 pt-1"
+  //         className="shadow appearance-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-[#0B714C] divide-solid border-[1px]"
+  //         required
+  //       />
+  //     </div>
+  //   );
+  // };
 
   // Custom Text Area component with label integrated into border
-  const FormTextarea = ({ label, name, placeholder, value, onChange }) => {
-    return (
-      <div className="relative">
-        <div className="absolute -top-[14px] left-[10px] px-1 bg-white z-10">
-          <span className="text-[#0B714C] text-base">{label}</span>
-        </div>
-        <textarea
-          id={name}
-          name={name}
-          placeholder={placeholder}
-          value={value || ""}
-          onChange={onChange}
-          className="border border-[#0B714C] rounded-md min-h-[200px] w-full pt-2 px-3 resize-none"
-        />
-      </div>
-    );
-  };
+  // const FormTextarea = ({ label, name, placeholder, value, onChange }) => {
+  //   return (
+  //     <div className="relative">
+  //       <div className="absolute -top-[14px] left-[10px] px-1 bg-white z-10">
+  //         <span className="text-[#0B714C] text-base">{label}</span>
+  //       </div>
+  //       <textarea
+  //         id={name}
+  //         name={name}
+  //         placeholder={placeholder}
+  //         value={value || ""}
+  //         onChange={onChange}
+  //         className="border border-[#0B714C] rounded-md min-h-[200px] w-full pt-2 px-3 resize-none"
+  //       />
+  //     </div>
+  //   );
+  // };
 
   const FormLabel = ({ label }) => {
     return (
@@ -479,13 +479,25 @@ const MultiStepForm = () => {
 
           {isMobile ? (
             // Mobile view - full width button centered
-            <div className="pt-2 pb-4" onClick={nextStep}>
-              <button
-                type="submit"
-                className="w-full bg-[#0B714C] text-white font-medium py-3 px-6 rounded-lg hover:bg-[#095a3d] transition-colors duration-300"
-              >
-                Next
-              </button>
+            // <div className="pt-2 pb-4" onClick={nextStep}>
+            //   <button
+            //     type="submit"
+            //     className="w-full bg-[#0B714C] text-white font-medium py-3 px-6 rounded-lg hover:bg-[#095a3d] transition-colors duration-300"
+            //   >
+            //     Next
+            //   </button>
+            // </div>
+            <div>
+              <div className="mt-12" onClick={nextStep}>
+                <div className="w-full sm:w-auto sm:absolute xl:left-10/12 xl:transform xl:translate-x-1/4">
+                  <AnimatedButton
+                    label="Next"
+                    labelColor="White"
+                    bgColor="#0B714C"
+                    fullWidthOnMobile={true}
+                  ></AnimatedButton>
+                </div>
+              </div>
             </div>
           ) : (
             <div>
@@ -505,7 +517,10 @@ const MultiStepForm = () => {
 
       {/* Step 2: Technical Specifications */}
       {currentStep === 2 && (
-        <form onSubmit={handleSubmit} className="bg-gray-50 p-6 rounded-lg">
+        <form
+          onSubmit={handleSubmit}
+          className="bg-gray-50 p-0 md:p-6 rounded-lg"
+        >
           <div className="mb-4">
             <label
               htmlFor="technicalSpecFile"
@@ -579,14 +594,7 @@ const MultiStepForm = () => {
               onChange={handleInputChange}
             />
           </div> */}
-          <div className="flex justify-between relative mt-12">
-            {/* <button
-              type="button"
-              onClick={prevStep}
-              className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            >
-              Previous
-            </button> */}
+          {/* <div className="flex justify-between relative mt-12">
             <AnimatedNavLink
               label="Personal info"
               labelColor="#0B714C"
@@ -605,6 +613,31 @@ const MultiStepForm = () => {
                   ></AnimatedButton>
                 </div>
               </div>
+            </div>
+          </div> */}
+
+          <div className="flex flex-col md:flex-row justify-between relative mt-12 px-4 md:px-0">
+            {/* First Button - AnimatedNavLink */}
+            <div className="w-full md:w-auto mb-4 md:mb-0 px-8 md:px-0">
+              <AnimatedNavLink
+                label="Personal info"
+                labelColor="#0B714C"
+                onClick={prevStep}
+                fullWidthOnMobile={true}
+              />
+            </div>
+
+            {/* Second Button - AnimatedButton */}
+            <div
+              className="w-full md:w-auto md:absolute md:left-8/12 md:translate-x-2/3"
+              onClick={handleSubmit}
+            >
+              <AnimatedButton
+                label="Submit Request"
+                labelColor="white"
+                bgColor="#0B714C"
+                fullWidthOnMobile={true}
+              />
             </div>
           </div>
 
@@ -631,7 +664,7 @@ const MultiStepForm = () => {
 
       {/* [CHANGED] Added Step 3: Success/Confirmation */}
       {currentStep === 3 && (
-        <div className="bg-gray-50 p-6 rounded-lg text-center">
+        <div className="bg-gray-50 p-0 md:p-6 rounded-lg text-center">
           <h2 className="text-2xl font-bold text-[#0B714C] mb-4">
             Request Submitted
           </h2>
@@ -639,13 +672,21 @@ const MultiStepForm = () => {
             Thank you for your submission! We will contact you shortly regarding
             your order.
           </p>
-          <button
+          {/* <button
             type="button"
             onClick={resetForm}
-            className="px-6 py-3 bg-[#0B714C] text-white rounded-lg" /* hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 */
+            className="px-6 py-3 bg-[#0B714C] text-white rounded-lg" 
           >
             Add another order request
-          </button>
+          </button> */}
+          <div className="flex justify-center items-center">
+            <AnimatedNavLink
+              label={"Add another order request"}
+              labelColor="white"
+              bgColor="#0B714C"
+              onClick={resetForm}
+            />
+          </div>
         </div>
       )}
     </div>

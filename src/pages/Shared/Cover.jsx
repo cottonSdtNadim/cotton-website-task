@@ -61,7 +61,7 @@ const Cover = ({ image, heading, subHeading = "", tagLine = "" }) => {
   }, []);
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden rounded-b-2xl md:rounded-b-none">
       <div
         className="w-full h-screen md:h-[585px]"
         style={{

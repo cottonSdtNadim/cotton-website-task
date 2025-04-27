@@ -3,12 +3,13 @@ import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 
-const AnimatedNavLink = ({ label, labelColor, onClick }) => {
+const AnimatedNavLink = ({ label, labelColor, bgColor= "", onClick }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   // Create the style object with dynamic colors
   const buttonStyle = {
     color: labelColor,
+    backgroundColor: bgColor,
   };
 
   // Framer Motion animation properties for the arrow
@@ -59,6 +60,7 @@ const AnimatedNavLink = ({ label, labelColor, onClick }) => {
 AnimatedNavLink.propTypes = {
   label: PropTypes.string.isRequired,
   labelColor: PropTypes.string.isRequired,
+  bgColor: PropTypes.string,
   onClick: PropTypes.func.isRequired,
 };
 
