@@ -309,7 +309,7 @@ const Navbar = ({ nonActiveTextColor = "black" }) => {
         {isMobile && mobileMenuOpen && (
           <motion.div
             className="fixed top-0 right-0 w-full h-screen bg-[#0B714C] z-40 flex flex-col"
-            style={{ minHeight: "100vh" }}
+            // style={{ minHeight: "100vh" }}
             variants={menuVariants}
             initial="hidden"
             animate="visible"
